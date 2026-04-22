@@ -145,8 +145,8 @@ const FeaturedWork = () => {
       <div className="absolute inset-0 bg-black/60 z-0" />
 
       {/* HEADER */}
-      <div className="relative z-10 w-full max-w-6xl flex flex-col justify-between items-start md:items-center gap-6 mb-16 pb-20">
-        <h2 className="text-5xl font-black text-white uppercase tracking-tighter italic">
+      <div className="relative z-10 w-full max-w-6xl flex flex-col justify-between items-center gap-6 mb-16 pb-20">
+        <h2 className="sm:text-5xl text-3xl font-black text-white uppercase tracking-tighter italic">
           Featured Work
         </h2>
         <p className="max-w-md text-white text-center text-sm leading-relaxed font-medium">
@@ -189,7 +189,7 @@ const FeaturedWork = () => {
               >
                 {/* LEFT SIDE */}
                 <div className="lg:col-span-4 flex flex-col items-start gap-6">
-                  <h3 className="text-3xl font-semibold text-white uppercase tracking-wider leading-none">
+                  <h3 className="sm:text-3xl text-xl font-semibold text-white uppercase tracking-wider leading-none">
                     {project.title}
                   </h3>
                   <p className="text-gray-300 text-sm leading-relaxed">

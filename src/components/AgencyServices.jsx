@@ -65,30 +65,30 @@ const AgencyServices = () => {
             Why WBN Agency?
           </motion.span>
 
-          <h2 className="text-5xl md:text-6xl font-black text-white leading-[0.95] tracking-tighter uppercase">
+          <h2 className="text-3xl md:text-6xl font-black text-white leading-[0.95] tracking-tighter uppercase">
             WE CREATE WEBSITES FOR EVERY{" "}
             <span className="text-secondery">MAJOR INDUSTRY</span>
           </h2>
 
           <div className="space-y-6 max-w-md text-white/80">
-            <p className="text-[14px]">
+            <p className="sm:text-[14px] text-[11px]">
               At Digital Silk, we are web design company that handles everything
               related to web design and development, branding and digital
               marketing.
             </p>
-            <p className="text-[14px]">
+            <p className="sm:text-[14px] text-[11px]">
               We begin by taking the time to understand your business, your
               goals, and what success actually looks like for you. From there,
               we build a clear, tailored digital marketing strategy grounded in
               research and real opportunity, not assumptions.
             </p>
-            <p className="text-[14px]">
+            <p className="sm:text-[14px] text-[11px]">
               Once the direction is set, we move into execution. That means
               designing and implementing the right mix of tactics to bring
               qualified people to your site and turn that attention into
               measurable results.
             </p>
-            <p className="text-[14px]">
+            <p className="sm:text-[14px] text-[11px]">
               Everything is handled in-house by our team, so you have full
               alignment, accountability and speed. If it lives in the digital
               space and supports your growth, we can take it on and deliver it.
@@ -142,12 +142,12 @@ const AgencyServices = () => {
                 </div>
 
                 {/* TITLE */}
-                <h3 className="text-xl font-bold text-white uppercase tracking-tight">
+                <h3 className="sm:text-xl text-[16px] font-bold text-white uppercase tracking-tight">
                   {service.title}
                 </h3>
 
                 {/* DESC */}
-                <p className="text-white/70 leading-relaxed font-medium max-w-sm text-sm">
+                <p className="text-white/70 leading-relaxed font-medium max-w-sm sm:text-sm text-[11px]">
                   {service.desc}
                 </p>
 
