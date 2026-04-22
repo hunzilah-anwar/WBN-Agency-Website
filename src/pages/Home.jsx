@@ -1,14 +1,15 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import HeroBg from "../assets/hero-bg.webp";
 import GlowButton from "../components/GlowButton";
-import { motion } from "framer-motion";
-import { Check, CheckIcon } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Check, CheckIcon, ArrowUpRight, X } from "lucide-react";
 
 import TrophyImage from "../assets/web-designs-trophy.png";
 import FeaturedWork from "../components/FeaturedWork";
 import AgencyServices from "../components/AgencyServices";
 import PartnerSection from "../components/PartnerSection";
 import WhitepaperSection from "../components/WhitepaperSection";
+import ProjectCards from "../components/ProjectCards";
 const Home = () => {
   const logos = [
     "https://www.digitalsilk.com/wp-content/uploads/2024/05/xerox_logo-1.png",
@@ -47,6 +48,53 @@ const Home = () => {
       transition: { duration: 0.6, ease: "easeOut" },
     },
   };
+  const [selected, setSelected] = useState(null);
+
+  // ESC CLOSE
+  useEffect(() => {
+    const handleEsc = (e) => {
+      if (e.key === "Escape") setSelected(null);
+    };
+    window.addEventListener("keydown", handleEsc);
+    return () => window.removeEventListener("keydown", handleEsc);
+  }, []);
+  const projects = [
+    {
+      title: "Andersen Global",
+      category: "Web Design",
+      desc: "Corporate finance & consulting platform with modern UX focused on clarity, trust, and performance.",
+      image: "https://www.loungelizard.com/wp-content/uploads/Andersen_CS.png",
+      tags: ["Finance", "Corporate", "UX Design"],
+      tech: ["React", "UI/UX", "Tailwind"],
+      duration: "3 Months",
+      link: "#",
+      featured: true,
+    },
+    {
+      title: "Colorado Rafting",
+      category: "Development",
+      desc: "Adventure booking platform with immersive booking flow and smooth user experience for travelers.",
+      image:
+        "https://www.loungelizard.com/wp-content/uploads/ll_portfolio-ava.jpg",
+      tags: ["Travel", "Booking System", "UI Design"],
+      tech: ["Next.js", "Node.js", "MongoDB"],
+      duration: "2.5 Months",
+      link: "#",
+      featured: false,
+    },
+    {
+      title: "E-Commerce Store",
+      category: "Shopify",
+      desc: "High converting online store with optimized checkout flow and conversion-focused UI design.",
+      image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30",
+      tags: ["E-Commerce", "Shopify", "Conversion"],
+      tech: ["Shopify", "Liquid", "JS"],
+      duration: "4 Months",
+      link: "#",
+      featured: true,
+    },
+  ];
+
   return (
     <>
       <section
@@ -95,7 +143,7 @@ const Home = () => {
               />
 
               {/* Modern Action Button */}
-              <button className="rounded-full group/btn relative sm:px-6 px-1 sm:py-5 py-3 bg-black text-white text-[11px] sm:text-xs font-black uppercase tracking-widest overflow-hidden transition-all duration-300 whitespace-nowrap cursor-pointer w-45">
+              <button className="rounded-full group/btn relative sm:px-6 px-1 sm:py-5 py-3 bg-black text-white text-[10px] sm:text-xs sm:font-black uppercase tracking-widest overflow-hidden transition-all duration-300 whitespace-nowrap cursor-pointer w-45">
                 {/* 45-Degree Hover Layer (Violet) */}
                 <div className="absolute top-[-80%] left-[-80%] w-[200%] h-[300%] z-0 bg-secondery rotate-45 translate-y-[150%] group-hover/btn:translate-y-[-30%] transition-transform duration-500 ease-out" />
 
@@ -266,6 +314,91 @@ const Home = () => {
       </section>
       <WhitepaperSection />
       <PartnerSection />
+      <section className={`relative w-full py-28 overflow-hidden bg-[url("https://www.digitalsilk.com/wp-content/uploads/2023/05/San-francisco-web-design-technology-stack.jpg")] bg-no-repeat bg-cover bg-fixed`} >
+        <div className="absolute inset-0 bg-black/60" />
+
+        {/* HEADER */}
+        <div className="max-w-7xl mx-auto px-6 text-center mb-16 relative z-10">
+          <motion.h2
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            className="text-2xl sm:text-5xl font-bold text-white uppercase tracking-tighter"
+          >
+            Featured <span className="text-secondery">Projects</span>
+          </motion.h2>
+
+          <p className="text-white/60 mt-4 max-w-2xl mx-auto text-sm">
+            A selection of our latest work that combines creativity,
+            performance, and modern UI design.
+          </p>
+        </div>
+
+        {/* GRID */}
+        <div className="max-w-7xl mx-auto px-6 relative z-10">
+          <ProjectCards projects={projects} setSelected={setSelected} />
+        </div>
+
+        {/* CTA */}
+        <div className="mt-24 text-center">
+          <button className="relative px-10 sm:py-5 py-3 bg-white text-black font-bold uppercase text-sm cursor-pointer tracking-widest overflow-hidden group">
+            <span className="relative z-10 tracking-tight">
+              View All Projects
+            </span>
+            <div className="absolute inset-0 bg-secondery translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
+          </button>
+        </div>
+
+        {/* ================= MODAL ================= */}
+        <AnimatePresence>
+          {selected && (
+            <motion.div
+              className="fixed inset-0 z-9999 flex items-center justify-center bg-black/80 backdrop-blur-xl p-4"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setSelected(null)}
+            >
+              <motion.div
+                onClick={(e) => e.stopPropagation()}
+                initial={{ scale: 0.85, y: 30 }}
+                animate={{ scale: 1, y: 0 }}
+                exit={{ scale: 0.85, y: 30 }}
+                className="relative w-full max-w-4xl rounded-2xl overflow-hidden bg-white/5 border border-white/10 backdrop-blur-2xl"
+              >
+                {/* CLOSE */}
+                <button
+                  onClick={() => setSelected(null)}
+                  className="absolute top-4 right-4 w-10 h-10 cursor-pointer rounded-full bg-black/60 text-white flex items-center justify-center hover:bg-white hover:text-black transition z-10"
+                >
+                  <X size={18} />
+                </button>
+
+                {/* IMAGE */}
+                <div className="h-80 md:h-105 overflow-hidden">
+                  <img
+                    src={selected?.image}
+                    alt={selected?.title}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+
+                {/* CONTENT */}
+                <div className="p-8 space-y-2">
+                  <p className="text-secondery text-xs uppercase tracking-widest">
+                    {selected?.category}
+                  </p>
+
+                  <h2 className="text-2xl uppercase font-bold text-white">
+                    {selected?.title}
+                  </h2>
+
+                  <p className="text-white/70 text-sm">{selected?.desc}</p>
+                </div>
+              </motion.div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </section>
     </>
   );
 };

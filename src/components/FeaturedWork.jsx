@@ -135,7 +135,7 @@ const FeaturedWork = () => {
     <section className="relative min-h-screen w-full bg-[#050505] overflow-hidden flex flex-col items-center justify-center py-20 px-6 font-sans">
       {/* BACKGROUND */}
       <div
-        className="absolute inset-0 opacity-40 grayscale"
+        className="absolute inset-0 opacity-40 grayscale bg-fixed"
         style={{
           backgroundImage: `url('https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2070')`,
           backgroundSize: "cover",
@@ -220,7 +220,7 @@ const FeaturedWork = () => {
                   {/* STAND */}
                   <div className="absolute -bottom-34 left-1/2 -translate-x-1/2 flex flex-col items-center">
                     <div
-                      className="relative w-44 h-32 border-x border-black/10 shadow-lg"
+                      className="relative sm:w-44 w-25 h-32 border-x border-black/10 shadow-lg"
                       style={{
                         background:
                           "linear-gradient(to right, #9ca3af 0%, #f3f4f6 50%, #9ca3af 100%)",

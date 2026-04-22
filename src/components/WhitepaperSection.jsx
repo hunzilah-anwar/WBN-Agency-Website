@@ -16,8 +16,8 @@ const WhitepaperSection = () => {
       {/* HUMAN DESIGN ELEMENT: The "Silk" Aura Gradient */}
       <div className="absolute inset-0 pointer-events-none">
         {/* Deep Indigo Base */}
-        <div className={`absolute inset-0 bg-[url("https://www.digitalsilk.com/wp-content/uploads/2023/03/real-estate-branding-agency-portfolio-example-NewDevRev.jpg")] bg-no-repeat bg-cover`} />
-        <div className="absolute inset-0 bg-black/80" />
+        <div className={`absolute inset-0 bg-[url("https://www.digitalsilk.com/wp-content/uploads/2023/03/real-estate-branding-agency-portfolio-example-NewDevRev.jpg")] bg-no-repeat bg-cover bg-fixed`} />
+        <div className="absolute inset-0 bg-black/55" />
         {/* Bright Secondary Glow (Top Right) */}
         <div className="absolute top-[-20%] right-[-10%] w-200 h-200 rounded-full bg-secondery/20 blur-[140px]" />
         {/* Soft Secondary Light Leak (Bottom Left) */}

@@ -123,8 +123,8 @@ const PartnerSection = () => {
 
       {/* CTA */}
       <div className="mt-24 text-center">
-        <button className="relative px-10 py-5 bg-white text-black font-bold uppercase text-sm cursor-pointer tracking-widest overflow-hidden group">
-          <span className="relative z-10">Explore Our Services</span>
+        <button className="relative sm:px-10 px-4 sm:py-5 py-2 bg-white text-black sm:font-bold font-medium uppercase sm:text-sm text-[12px] cursor-pointer tracking-widest overflow-hidden group">
+          <span className="relative z-10 tracking-tight">Explore Our Services</span>
           <div className="absolute inset-0 bg-secondery translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
         </button>
       </div>
@@ -165,7 +165,7 @@ const PartnerSection = () => {
 const LogoCard = ({ brand }) => (
   <div className="items-center gap-3 group">
     {/* GLASS CARD */}
-    <div className="relative flex items-center justify-center h-28 w-60 bg-white/5 backdrop-blur-xl border border-white/10 overflow-hidden transition-all duration-500 hover:bg-white/10 hover:border-secondery group p-4">
+    <div className="relative flex items-center justify-center h-28 sm:w-60 w-30 bg-white/5 backdrop-blur-xl border border-white/10 overflow-hidden transition-all duration-500 hover:bg-white/10 hover:border-secondery group p-4">
       {/* shine */}
       <div className="absolute inset-0 bg-linear-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
 
