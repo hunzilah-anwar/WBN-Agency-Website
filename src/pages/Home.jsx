@@ -6,6 +6,7 @@ import { Check, CheckIcon } from "lucide-react";
 
 import TrophyImage from "../assets/web-designs-trophy.png";
 import FeaturedWork from "../components/FeaturedWork";
+import AgencyServices from "../components/AgencyServices";
 const Home = () => {
   const logos = [
     "https://www.digitalsilk.com/wp-content/uploads/2024/05/xerox_logo-1.png",
@@ -258,6 +259,9 @@ const Home = () => {
         </div>
       </section>
       <FeaturedWork />
+      <section className="bg-[#00042A]">
+        <AgencyServices />
+      </section>
     </>
   );
 };
