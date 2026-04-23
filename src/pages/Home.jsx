@@ -11,6 +11,8 @@ import PartnerSection from "../components/PartnerSection";
 import WhitepaperSection from "../components/WhitepaperSection";
 import ProjectCards from "../components/ProjectCards";
 import CircularTestimonials from "../components/CircularTestimonials";
+import FAQ from "../components/FAQ";
+import BlogCard from "../components/BlogCard";
 const Home = () => {
   const logos = [
     "https://www.digitalsilk.com/wp-content/uploads/2024/05/xerox_logo-1.png",
@@ -125,6 +127,93 @@ const Home = () => {
       src: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1374&auto=format&fit=crop",
     },
   ];
+  const posts = [
+    {
+      id: 1,
+      title: "AI is Changing the Future of Web Development",
+      category: "AI",
+      imageUrl: "https://images.unsplash.com/photo-1677442135136-760c813028c0",
+      views: "12K",
+      readTime: 5,
+      author: "Hassan Ali",
+      rating: 5,
+      description:
+        "AI tools are transforming how developers build modern applications.",
+      content:
+        "Artificial Intelligence is rapidly changing the landscape of web development. From code generation to UI design, AI is now part of every modern workflow. Developers are becoming more productive and creative than ever before...",
+    },
+    {
+      id: 2,
+      title: "Modern UI/UX Design Trends in 2026",
+      category: "Design",
+      imageUrl: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f",
+      views: "8.2K",
+      readTime: 4,
+      author: "Sara Khan",
+      rating: 4,
+      description:
+        "Minimal, glassmorphism and motion UI are dominating design world.",
+      content:
+        "UI/UX design is evolving rapidly. In 2026, we see a strong shift towards glassmorphism, micro-interactions, and motion-based interfaces that enhance user experience...",
+    },
+    {
+      id: 3,
+      title: "Building Scalable SaaS Applications",
+      category: "SaaS",
+      imageUrl: "https://images.unsplash.com/photo-1555066931-4365d14bab8c",
+      views: "10K",
+      readTime: 6,
+      author: "Ahmed Raza",
+      rating: 5,
+      description: "Learn how to build scalable SaaS apps using modern stacks.",
+      content:
+        "Scalable SaaS architecture requires proper planning, microservices, and cloud infrastructure. Tools like AWS, Docker, and Kubernetes make scaling easier...",
+    },
+    {
+      id: 4,
+      title: "React Performance Optimization Tips",
+      category: "Development",
+      imageUrl: "https://images.unsplash.com/photo-1587620962725-abab7fe55159",
+      views: "9K",
+      readTime: 7,
+      author: "Ali Hassan",
+      rating: 5,
+      description: "Improve React app performance with simple techniques.",
+      content:
+        "React performance can be improved using memoization, lazy loading, and efficient state management. Avoid unnecessary re-renders...",
+    },
+    {
+      id: 5,
+      title: "Future of JavaScript Frameworks",
+      category: "Tech",
+      imageUrl: "https://images.unsplash.com/photo-1504639725590-34d0984388bd",
+      views: "11K",
+      readTime: 5,
+      author: "Usman Tariq",
+      rating: 4,
+      description: "Which JS framework will dominate the future?",
+      content:
+        "JavaScript ecosystem is growing fast. React, Vue, and Svelte are competing, but new frameworks are also emerging with better performance...",
+    },
+    {
+      id: 6,
+      title: "Cybersecurity in Modern Web Apps",
+      category: "Security",
+      imageUrl: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b",
+      views: "7.5K",
+      readTime: 6,
+      author: "Zain Malik",
+      rating: 5,
+      description: "Protect your apps from modern cyber threats.",
+      content:
+        "Security is one of the most important aspects of modern web development. HTTPS, encryption, and secure authentication are essential...",
+    },
+  ];
+  const [selectedPost, setSelectedPost] = useState(null);
+
+  const handlePostClick = (post) => {
+    setSelectedPost(post);
+  };
   return (
     <>
       <section
@@ -354,7 +443,7 @@ const Home = () => {
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            className="text-2xl sm:text-5xl font-bold text-white uppercase tracking-tighter"
+            className="text-2xl sm:text-4xl font-bold text-white italic uppercase tracking-tighter"
           >
             Featured <span className="text-secondery">Projects</span>
           </motion.h2>
@@ -441,6 +530,68 @@ const Home = () => {
           }}
         />
       </section>
+      <section
+        className={`relative w-full overflow-hidden bg-[url("https://images.unsplash.com/photo-1457369804613-52c61a468e7d?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")] bg-no-repeat bg-cover bg-fixed`}
+      >
+        <div className="absolute inset-0 bg-black/60" />
+        <BlogCard
+          title="Latest Blogs"
+          description="Explore our latest thoughts, ideas, and innovations shaping the future."
+          posts={posts}
+          onPostClick={handlePostClick}
+        />
+        {selectedPost && (
+          <div className="fixed inset-0 z-9999 flex items-center justify-center bg-black/80 backdrop-blur-md p-4">
+            {/* MODAL BOX */}
+            <div className="relative w-full max-w-3xl max-h-[90vh] overflow-y-auto rounded-2xl bg-[#0b0b0b] border border-white/10 shadow-2xl">
+              {/* CLOSE BUTTON */}
+              <button
+                onClick={() => setSelectedPost(null)}
+                className="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/10 text-white hover:bg-white cursor-pointer hover:text-black transition flex items-center justify-center"
+              >
+                ✕
+              </button>
+
+              {/* IMAGE */}
+              <div
+                className="h-72 md:h-96 bg-cover bg-center"
+                style={{ backgroundImage: `url(${selectedPost.imageUrl})` }}
+              />
+
+              {/* CONTENT */}
+              <div className="p-6 md:p-10 space-y-6 text-white">
+                {/* CATEGORY */}
+                <span className="inline-block px-3 py-1 text-[10px] font-bold uppercase tracking-widest bg-white/10 border border-white/20 rounded-full">
+                  {selectedPost.category}
+                </span>
+
+                {/* TITLE */}
+                <h2 className="text-2xl md:text-4xl font-black leading-tight">
+                  {selectedPost.title}
+                </h2>
+
+                {/* META */}
+                <div className="flex flex-wrap gap-4 text-xs text-white/60">
+                  <span>{selectedPost.views} views</span>
+                  <span>{selectedPost.readTime} min read</span>
+                  <span>Author: {selectedPost.author}</span>
+                </div>
+
+                {/* DESCRIPTION */}
+                <p className="text-white/70 leading-relaxed text-sm md:text-base">
+                  {selectedPost.description}
+                </p>
+
+                {/* LONG CONTENT (optional) */}
+                <p className="text-white/50 text-sm leading-relaxed">
+                  {selectedPost.content}
+                </p>
+              </div>
+            </div>
+          </div>
+        )}
+      </section>
+      <FAQ />
     </>
   );
 };

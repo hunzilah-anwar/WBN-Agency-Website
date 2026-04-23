@@ -151,8 +151,8 @@ const CircularTestimonials = ({
       ref={containerRef}
     >
       <div className="text-center mb-20">
-        <h2 className="text-3xl md:text-4xl font-bold text-white tracking-tight">
-          What Our Clients Say
+        <h2 className="text-3xl md:text-4xl italic font-bold text-white tracking-tight">
+          What Our <span className="text-secondery"> Clients Say</span>
         </h2>
 
         <p className="mt-4 text-white/60 max-w-xl mx-auto text-sm">

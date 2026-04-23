@@ -56,7 +56,7 @@ const Footer = () => {
               whileTap={{ scale: 0.95 }}
               className="group cursor-pointer flex items-center gap-3 sm:gap-5 bg-white text-black px-1 pr-5 sm:pr-8 py-1 rounded-full"
             >
-              <div className="h-8 w-8 sm:h-10 sm:w-10 bg-secondery rounded-full flex items-center justify-center text-white group-hover:rotate-45 transition duration-500">
+              <div className="h-8 w-8 sm:h-10 sm:w-10 bg-secondery ease-in-out rounded-full flex items-center justify-center text-white group-hover:rotate-45 transition duration-500">
                 <ArrowUpRight size={18} />
               </div>
 
@@ -157,7 +157,7 @@ const Footer = () => {
         }
         .animate-marquee {
           display: flex;
-          animation: marquee 25s linear infinite;
+          animation: marquee 10s linear infinite;
         }
       `}</style>
     </footer>

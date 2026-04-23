@@ -1,0 +1,101 @@
+import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { ChevronDown } from "lucide-react";
+
+const faqs = [
+  {
+    question: "What services do you offer?",
+    answer:
+      "We provide web development, SaaS applications, AI solutions, and custom software tailored to your needs.",
+  },
+  {
+    question: "How long does a project take?",
+    answer:
+      "It depends on complexity, but most projects are completed within 2–6 weeks.",
+  },
+  {
+    question: "Do you provide support after delivery?",
+    answer:
+      "Yes, we offer ongoing support, maintenance, and updates after project completion.",
+  },
+  {
+    question: "Can I request custom features?",
+    answer:
+      "Absolutely! We specialize in building fully customized solutions based on your requirements.",
+  },
+];
+
+const FAQ = () => {
+  const [activeIndex, setActiveIndex] = useState(null);
+
+  const toggleFAQ = (index) => {
+    setActiveIndex(activeIndex === index ? null : index);
+  };
+
+  return (
+    <section className="w-full py-20 bg-[#00042A]">
+      <div className="max-w-6xl mx-auto px-6">
+        
+        {/* ===== Heading ===== */}
+        <div className="text-center mb-14">
+
+          <h2 className="mt-5 text-3xl md:text-4xl font-black text-white">
+            Frequently <span className="text-secondery">Asked Questions</span>
+          </h2>
+
+          <p className="mt-4 text-white/60 max-w-xl mx-auto text-sm md:text-base">
+            Everything you need to know about our services and process.
+          </p>
+        </div>
+
+        {/* ===== FAQ List ===== */}
+        <div className="space-y-6">
+          {faqs.map((faq, index) => {
+            const isOpen = activeIndex === index;
+
+            return (
+              <div
+                key={index}
+                className="border-b border-white/10"
+              >
+                {/* Question */}
+                <button
+                  onClick={() => toggleFAQ(index)}
+                  className="w-full flex items-center justify-between py-5 text-left"
+                >
+                  <span className="text-white text-sm md:text-3xl font-medium">
+                    {faq.question}
+                  </span>
+
+                  <motion.div
+                    animate={{ rotate: isOpen ? 180 : 0 }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    <ChevronDown className="text-white/70" size={20} />
+                  </motion.div>
+                </button>
+
+                {/* Answer */}
+                <AnimatePresence initial={false}>
+                  {isOpen && (
+                    <motion.div
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: "auto", opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.3 }}
+                      className="pb-5 text-white/60 text-sm leading-relaxed"
+                    >
+                      {faq.answer}
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default FAQ;

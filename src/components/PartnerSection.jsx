@@ -86,16 +86,16 @@ const PartnerSection = () => {
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          className="text-3xl md:text-6xl font-black text-white leading-[0.9] uppercase mt-6"
+          className="text-2xl md:text-4xl font-black text-white italic leading-[0.9] uppercase mt-6"
         >
-          Full-Service <br />
-          <span className="text-secondery">Digital Agency</span>
+          Full-Service 
+          <span className="text-secondery"> Digital Agency</span>
         </motion.h2>
 
         <motion.p
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          className="max-w-2xl mx-auto text-zinc-400 md:text-[18px] text-sm mt-6"
+          className="max-w-2xl mx-auto text-zinc-400 md:text-[16px] text-sm mt-6"
         >
           From startups to Fortune 500 companies, we create{" "}
           <span className="text-white font-medium">custom solutions</span> that
