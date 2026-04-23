@@ -10,6 +10,7 @@ import AgencyServices from "../components/AgencyServices";
 import PartnerSection from "../components/PartnerSection";
 import WhitepaperSection from "../components/WhitepaperSection";
 import ProjectCards from "../components/ProjectCards";
+import CircularTestimonials from "../components/CircularTestimonials";
 const Home = () => {
   const logos = [
     "https://www.digitalsilk.com/wp-content/uploads/2024/05/xerox_logo-1.png",
@@ -94,7 +95,36 @@ const Home = () => {
       featured: true,
     },
   ];
-
+  const yourData = [
+    {
+      quote:
+        "The integration of Meta AI into the classic Wayfarer silhouette is seamless. It’s the first time wearable tech actually feels like a fashion statement rather than a gadget.",
+      name: "Elena Rodriguez",
+      designation: "Creative Director @ Vogue",
+      src: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1374&auto=format&fit=crop",
+    },
+    {
+      quote:
+        "In-lens intelligence during my training sessions is a total game changer. Having my stats visible without breaking my stride is exactly what the future of performance looks like.",
+      name: "Marcus Chen",
+      designation: "Pro Ironman Athlete",
+      src: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1374&auto=format&fit=crop",
+    },
+    {
+      quote:
+        "We've been waiting for hands-free connectivity that doesn't look bulky. These glasses are a masterpiece of engineering and style. Digital Silk really captured the essence.",
+      name: "Julian Vane",
+      designation: "Tech Entrepreneur",
+      src: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1374&auto=format&fit=crop",
+    },
+    {
+      quote:
+        "The audio quality and voice command responsiveness are incredible. I can manage my entire digital life while keeping my phone in my pocket. Pure freedom.",
+      name: "Sarah Jenkins",
+      designation: "Digital Nomad",
+      src: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1374&auto=format&fit=crop",
+    },
+  ];
   return (
     <>
       <section
@@ -400,6 +430,16 @@ const Home = () => {
             </motion.div>
           )}
         </AnimatePresence>
+      </section>
+      <section className="bg-[#00042A]">
+        <CircularTestimonials
+          testimonials={yourData}
+          autoplay={true}
+          colors={{
+            arrowBackground: "#050505",
+            arrowHoverBackground: "#009cff", // Your Secondary
+          }}
+        />
       </section>
     </>
   );
