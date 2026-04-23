@@ -314,7 +314,9 @@ const Home = () => {
       </section>
       <WhitepaperSection />
       <PartnerSection />
-      <section className={`relative w-full py-28 overflow-hidden bg-[url("https://www.digitalsilk.com/wp-content/uploads/2023/05/San-francisco-web-design-technology-stack.jpg")] bg-no-repeat bg-cover bg-fixed`} >
+      <section
+        className={`relative w-full py-28 overflow-hidden bg-[url("https://www.digitalsilk.com/wp-content/uploads/2023/05/San-francisco-web-design-technology-stack.jpg")] bg-no-repeat bg-cover bg-fixed`}
+      >
         <div className="absolute inset-0 bg-black/60" />
 
         {/* HEADER */}

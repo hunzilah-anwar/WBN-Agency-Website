@@ -22,8 +22,6 @@ const WhitepaperSection = () => {
         <div className="absolute top-[-20%] right-[-10%] w-200 h-200 rounded-full bg-secondery/20 blur-[140px]" />
         {/* Soft Secondary Light Leak (Bottom Left) */}
         <div className="absolute bottom-[-10%] left-[-5%] w-150 h-150 rounded-full bg-secondery/10 blur-[120px]" />
-        {/* Texture */}
-        <div className="absolute inset-0 opacity-[0.03] mix-blend-overlay bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
       </div>
 
       <div className="relative z-10 max-w-6xl mx-auto">
