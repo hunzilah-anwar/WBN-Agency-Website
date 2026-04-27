@@ -128,7 +128,7 @@ const Header = () => {
             variants={menuVariants}
             className="absolute top-full left-0 w-full bg-[#0a0a0a] border-t border-white/10 overflow-hidden lg:hidden shadow-2xl"
           >
-            <div className="px-8 py-10 flex flex-col gap-2 overflow-y-auto">
+            <div className="px-8 py-10 flex flex-col gap-2 overflow-y-auto max-h-[80vh]">
               {navLinks.map((link) => {
                 const isActive = location.pathname === link.to;
                 return (
