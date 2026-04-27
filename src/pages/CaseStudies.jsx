@@ -101,7 +101,7 @@ const Counter = ({ value, label, light = false }) => {
         {value.replace(/[0-9]/g, "")}
       </h3>
       <p
-        className={`text-[10px] uppercase tracking-[0.3em] font-bold ${light ? "text-zinc-600" : "text-zinc-400"}`}
+        className={`text-[10px] uppercase tracking-[0.3em] font-bold ${light ? "text-zinc-600" : "text-zinc-300"}`}
       >
         {label}
       </p>
@@ -201,7 +201,7 @@ const CaseStudies = () => {
 
       {/* SECTION 2: STATS (EVEN - FIXED BG) */}
       <section style={fixedBgStyle} className="relative py-32 px-6">
-        <div className="absolute inset-0 bg-[#00042A]/90 backdrop-blur-sm" />{" "}
+        <div className="absolute inset-0 bg-[#00042A]/60 backdrop-blur-sm" />{" "}
         {/* Light Overlay for text readability */}
         <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-12 relative z-10">
           <Counter value="120+" label="Systems Architected" light={false} />
@@ -257,7 +257,7 @@ const CaseStudies = () => {
                   transition={{ delay: idx * 0.1 }}
                   className="group"
                 >
-                  <div className="relative aspect-4/5 overflow-hidden rounded-xl mb-8 bg-zinc-900 border border-white/5">
+                  <div className="relative aspect-4/5 overflow-hidden mb-8 bg-zinc-900 border border-white/5">
                     <img
                       src={project.image}
                       alt={project.title}
@@ -276,7 +276,7 @@ const CaseStudies = () => {
                       ))}
                     </div>
 
-                    <button className="absolute bottom-5 right-5 p-4 bg-cyan-500 rounded-full text-black translate-y-12 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+                    <button className="absolute bottom-5 right-5 p-4 bg-cyan-500 rounded-full text-black cursor-pointer translate-y-0 transition-all duration-500">
                       <ExternalLink size={20} />
                     </button>
                   </div>
@@ -308,7 +308,7 @@ const CaseStudies = () => {
         style={fixedBgStyle}
         className="relative py-48 px-6 text-center overflow-hidden"
       >
-        <div className="absolute inset-0 bg-[#00042A]/90 backdrop-blur-md" />{" "}
+        <div className="absolute inset-0 bg-[#00042A]/60 backdrop-blur-md" />{" "}
         {/* Dark Overlay for high impact */}
         <div className="max-w-4xl mx-auto space-y-12 relative z-10 text-white">
           <motion.div
@@ -325,7 +325,7 @@ const CaseStudies = () => {
             </span>
           </h2>
 
-          <p className="text-zinc-400 text-lg font-light max-w-lg mx-auto">
+          <p className="text-zinc-300 text-lg font-light max-w-lg mx-auto">
             Currently accepting high-impact projects for 2024. Let’s build
             something that moves the needle.
           </p>

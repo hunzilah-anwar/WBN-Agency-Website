@@ -27,7 +27,8 @@ const Header = () => {
   const navLinks = [
     { name: "Home", to: "/" },
     { name: "Case Studies", to: "/casestudies" },
-    { name: "Company", to: "/company" },
+    { name: "Team" , to: "/team"},
+    { name: "Contact us" , to: "/contact"},
   ];
 
   // Animation Variants
