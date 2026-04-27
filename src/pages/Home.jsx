@@ -209,6 +209,28 @@ const Home = () => {
         "Security is one of the most important aspects of modern web development. HTTPS, encryption, and secure authentication are essential...",
     },
   ];
+  const faqs = [
+    {
+      question: "What services do you offer?",
+      answer:
+        "We provide web development, SaaS applications, AI solutions, and custom software tailored to your needs.",
+    },
+    {
+      question: "How long does a project take?",
+      answer:
+        "It depends on complexity, but most projects are completed within 2–6 weeks.",
+    },
+    {
+      question: "Do you provide support after delivery?",
+      answer:
+        "Yes, we offer ongoing support, maintenance, and updates after project completion.",
+    },
+    {
+      question: "Can I request custom features?",
+      answer:
+        "Absolutely! We specialize in building fully customized solutions based on your requirements.",
+    },
+  ];
   const [selectedPost, setSelectedPost] = useState(null);
 
   const handlePostClick = (post) => {
@@ -591,7 +613,7 @@ const Home = () => {
           </div>
         )}
       </section>
-      <FAQ />
+      <FAQ faqs={faqs} />
     </>
   );
 };

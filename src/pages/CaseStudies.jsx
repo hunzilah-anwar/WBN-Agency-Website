@@ -161,11 +161,8 @@ const CaseStudies = () => {
               architectures that power modern digital ecosystems.
             </p>
 
-            <div className="flex items-center gap-6 pt-4">
+            <div className="pt-4">
               <GlowButton name="Explore More" href="#projects" />
-              <span className="text-xs uppercase tracking-widest text-zinc-500">
-                120+ Projects Delivered
-              </span>
             </div>
           </div>
 
@@ -201,7 +198,7 @@ const CaseStudies = () => {
 
       {/* SECTION 2: STATS (EVEN - FIXED BG) */}
       <section style={fixedBgStyle} className="relative py-32 px-6">
-        <div className="absolute inset-0 bg-[#00042A]/60 backdrop-blur-sm" />{" "}
+        <div className="absolute inset-0 bg-black/60" />{" "}
         {/* Light Overlay for text readability */}
         <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-12 relative z-10">
           <Counter value="120+" label="Systems Architected" light={false} />
@@ -308,7 +305,7 @@ const CaseStudies = () => {
         style={fixedBgStyle}
         className="relative py-48 px-6 text-center overflow-hidden"
       >
-        <div className="absolute inset-0 bg-[#00042A]/60 backdrop-blur-md" />{" "}
+        <div className="absolute inset-0 bg-black/60" />{" "}
         {/* Dark Overlay for high impact */}
         <div className="max-w-4xl mx-auto space-y-12 relative z-10 text-white">
           <motion.div

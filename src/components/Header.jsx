@@ -54,7 +54,7 @@ const Header = () => {
         </Link>
 
         {/* DESKTOP NAVIGATION */}
-        <nav className="hidden md:flex items-center gap-2">
+        <nav className="hidden lg:flex items-center gap-2">
           {navLinks.map((link) => {
             const isActive = location.pathname === link.to;
             return (
@@ -108,12 +108,12 @@ const Header = () => {
         </nav>
 
         {/* RIGHT ACTIONS */}
-        <div className="hidden md:flex items-center gap-4">
+        <div className="hidden lg:flex items-center gap-4">
           <GlowButton name="Contact Us" to="/contact" />
         </div>
 
         {/* MOBILE TOGGLE */}
-        <button className="md:hidden p-2 text-gray-900 hover:text-secondery transition ease-in-out duration-300 cursor-pointer" onClick={() => setIsOpen(!isOpen)}>
+        <button className="lg:hidden p-2 text-gray-900 hover:text-secondery transition ease-in-out duration-300 cursor-pointer" onClick={() => setIsOpen(!isOpen)}>
           {isOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
       </div>
@@ -126,7 +126,7 @@ const Header = () => {
             animate="open"
             exit="closed"
             variants={menuVariants}
-            className="absolute top-full left-0 w-full bg-[#0a0a0a] border-t border-white/10 overflow-hidden md:hidden shadow-2xl"
+            className="absolute top-full left-0 w-full bg-[#0a0a0a] border-t border-white/10 overflow-hidden lg:hidden shadow-2xl"
           >
             <div className="px-8 py-10 flex flex-col gap-2 overflow-y-auto">
               {navLinks.map((link) => {
