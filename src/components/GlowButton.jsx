@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const GlowButton = ({ name, to, href, className = "" }) => {
+const GlowButton = ({ name, to, href, className = "", onClick }) => {
   const baseClasses = `
     group relative inline-flex items-center justify-center 
     px-8 py-3.5 text-[13px] font-bold uppercase tracking-[0.08em] 
@@ -21,9 +21,8 @@ const GlowButton = ({ name, to, href, className = "" }) => {
 
         {/* 🔥 DIAGONAL MOVING LAYER (BOTTOM LEFT → TOP RIGHT) */}
         <div className="
-          absolute -bottom-1/2 left-[-150%] w-[200%] h-[400%]
+          absolute -bottom-1/2 left-[-180%] w-[200%] h-[400%]
           bg-secondery
-          rotate-45
           translate-y-[40%] translate-x-[-20%]
           group-hover:translate-y-[40%] group-hover:translate-x-[60%]
           transition-transform duration-700 ease-out
@@ -73,11 +72,11 @@ const GlowButton = ({ name, to, href, className = "" }) => {
   );
 
   if (to) {
-    return <Link to={to} className={baseClasses}>{content}</Link>;
+    return <Link to={to} className={baseClasses} onClick={onClick}>{content}</Link>;
   }
 
   return (
-    <a href={href} className={baseClasses} target="_blank" rel="noopener noreferrer">
+    <a href={href} className={baseClasses} onClick={onClick} target="_blank" rel="noopener noreferrer">
       {content}
     </a>
   );

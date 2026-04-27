@@ -84,7 +84,7 @@ const Team = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
           >
-            <h1 className="text-7xl md:text-[10rem] font-black italic leading-[0.8] tracking-tighter uppercase mb-10">
+            <h1 className="text-4xl md:text-[10rem] font-black italic leading-[0.8] tracking-tighter uppercase mb-10">
               OUR{" "}
               <span className="text-transparent stroke-text italic font-serif">
                 TEAM.
@@ -148,8 +148,8 @@ const Team = () => {
       {/* SECTION 3 (ODD): CORE TEAM GRID - #00042A */}
       <section className="py-40 px-6 bg-[#00042A]">
         <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col md:flex-row justify-between items-end mb-24 gap-10">
-            <h2 className="text-4xl md:text-6xl font-black tracking-tighter uppercase">
+          <div className="mb-20">
+            <h2 className="text-2xl md:text-6xl font-black tracking-tighter uppercase">
               Team Members
             </h2>
           </div>

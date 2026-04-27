@@ -18,28 +18,59 @@ const Header = () => {
   const location = useLocation();
 
   const services = [
-    { title: "Software Development", to: "/web", desc: "Custom web & mobile apps", icon: <Code size={20} /> },
-    { title: "Cloud Solutions", to: "/cloud", desc: "AWS, Azure & Google Cloud", icon: <Cloud size={20} /> },
-    { title: "Cybersecurity", to: "/security", desc: "Advanced threat protection", icon: <ShieldCheck size={20} /> },
-    { title: "AI & Data Science", to: "/ai", desc: "Modern machine learning", icon: <Cpu size={20} /> },
+    {
+      title: "Software Development",
+      to: "/web",
+      desc: "Custom web & mobile apps",
+      icon: <Code size={20} />,
+    },
+    {
+      title: "Cloud Solutions",
+      to: "/cloud",
+      desc: "AWS, Azure & Google Cloud",
+      icon: <Cloud size={20} />,
+    },
+    {
+      title: "Cybersecurity",
+      to: "/security",
+      desc: "Advanced threat protection",
+      icon: <ShieldCheck size={20} />,
+    },
+    {
+      title: "AI & Data Science",
+      to: "/ai",
+      desc: "Modern machine learning",
+      icon: <Cpu size={20} />,
+    },
   ];
 
   const navLinks = [
     { name: "Home", to: "/" },
     { name: "Case Studies", to: "/casestudies" },
-    { name: "Team" , to: "/team"},
-    { name: "Contact us" , to: "/contact"},
+    { name: "Team", to: "/team" },
   ];
 
   // Animation Variants
   const menuVariants = {
-    closed: { opacity: 0, height: 0, transition: { when: "afterChildren", staggerChildren: 0.05, staggerDirection: -1 } },
-    open: { opacity: 1, height: "auto", transition: { when: "beforeChildren", staggerChildren: 0.08 } }
+    closed: {
+      opacity: 0,
+      height: 0,
+      transition: {
+        when: "afterChildren",
+        staggerChildren: 0.05,
+        staggerDirection: -1,
+      },
+    },
+    open: {
+      opacity: 1,
+      height: "auto",
+      transition: { when: "beforeChildren", staggerChildren: 0.08 },
+    },
   };
 
   const itemVariants = {
     closed: { opacity: 0, x: -10 },
-    open: { opacity: 1, x: 0 }
+    open: { opacity: 1, x: 0 },
   };
 
   const logo = "https://static.xx.fbcdn.net/rsrc.php/y9/r/tL_v571NdZ0.svg";
@@ -47,7 +78,6 @@ const Header = () => {
   return (
     <header className="fixed top-0 left-0 w-full z-1000 bg-white/90 backdrop-blur-md border-b border-gray-100">
       <div className="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
-        
         {/* LOGO */}
         <Link to="/" className="flex items-center">
           <img src={logo} alt="Logo" className="w-20" />
@@ -62,12 +92,14 @@ const Header = () => {
                 key={link.to}
                 to={link.to}
                 className={`relative px-4 py-2 text-[13px] font-bold uppercase tracking-wider transition-colors duration-300 ${
-                  isActive ? "text-secondery" : "text-gray-700 hover:text-secondery"
+                  isActive
+                    ? "text-secondery"
+                    : "text-gray-700 hover:text-secondery"
                 }`}
               >
                 {link.name}
                 {isActive && (
-                  <motion.div 
+                  <motion.div
                     layoutId="navUnderline"
                     className="absolute bottom-0 left-0 w-full h-0.5 bg-secondery"
                   />
@@ -79,7 +111,11 @@ const Header = () => {
           {/* SERVICES MEGA MENU */}
           <div className="relative group">
             <button className="flex items-center gap-1 px-5 py-2 text-[13px] font-bold uppercase tracking-wider text-gray-700 group-hover:text-secondery transition-colors cursor-pointer">
-              Services <ChevronDown size={14} className="group-hover:rotate-180 transition-transform duration-300" />
+              Services{" "}
+              <ChevronDown
+                size={14}
+                className="group-hover:rotate-180 transition-transform duration-300"
+              />
             </button>
 
             {/* Dropdown Card */}
@@ -96,8 +132,12 @@ const Header = () => {
                         {service.icon}
                       </div>
                       <div>
-                        <h4 className="text-[11px] font-black uppercase text-gray-900">{service.title}</h4>
-                        <p className="text-[10px] text-gray-500 mt-1">{service.desc}</p>
+                        <h4 className="text-[11px] font-black uppercase text-gray-900">
+                          {service.title}
+                        </h4>
+                        <p className="text-[10px] text-gray-500 mt-1">
+                          {service.desc}
+                        </p>
                       </div>
                     </Link>
                   ))}
@@ -113,7 +153,10 @@ const Header = () => {
         </div>
 
         {/* MOBILE TOGGLE */}
-        <button className="lg:hidden p-2 text-gray-900 hover:text-secondery transition ease-in-out duration-300 cursor-pointer" onClick={() => setIsOpen(!isOpen)}>
+        <button
+          className="lg:hidden p-2 text-gray-900 hover:text-secondery transition ease-in-out duration-300 cursor-pointer"
+          onClick={() => setIsOpen(!isOpen)}
+        >
           {isOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
       </div>
@@ -147,12 +190,17 @@ const Header = () => {
               })}
 
               {/* MOBILE SERVICES ACCORDION */}
-              <motion.div variants={itemVariants} className=" border-b border-white/10 mt-2">
+              <motion.div
+                variants={itemVariants}
+                className=" border-b border-white/10 mt-2"
+              >
                 <button
                   onClick={() => setOpenServices(!openServices)}
                   className="w-full flex items-center justify-between py-6 text-xl font-bold uppercase tracking-tighter text-white"
                 >
-                  <span className={openServices ? "text-secondery" : ""}>Services</span>
+                  <span className={openServices ? "text-secondery" : ""}>
+                    Services
+                  </span>
                   <motion.div animate={{ rotate: openServices ? 180 : 0 }}>
                     <ChevronDown size={24} className="text-secondery" />
                   </motion.div>
@@ -181,8 +229,16 @@ const Header = () => {
                 </AnimatePresence>
               </motion.div>
 
-              <motion.div variants={itemVariants} className="pt-6 flex justify-center items-center">
-                <GlowButton name="Get a Quote" to="/contact" className="" />
+              <motion.div
+                variants={itemVariants}
+                className="pt-6 flex justify-center items-center"
+              >
+                <GlowButton
+                  name="Get a Quote"
+                  to="/contact"
+                  className=""
+                  onClick={() => setIsOpen(false)}
+                />
               </motion.div>
             </div>
           </motion.div>

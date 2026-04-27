@@ -116,7 +116,7 @@ const Contact = () => {
                 type="submit"
                 className="w-full relative group cursor-pointer border border-white bg-black hover:bg-white text-white hover:text-black font-black uppercase tracking-[0.3em] py-5 transition-all duration-500 flex items-center justify-center gap-3 overflow-hidden"
               >
-                <span className="relative z-10">Submit Request</span>
+                <span className="relative z-10 text-sm">Submit</span>
                 <Send
                   size={18}
                   className="relative z-10 group-hover:translate-x-1 group-hover:-translate-y-1 transition"

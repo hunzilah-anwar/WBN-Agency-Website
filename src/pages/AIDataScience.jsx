@@ -58,12 +58,6 @@ const ProjectSlider = ({ projects }) => {
         </div>
 
         <div className="p-12 flex flex-col justify-center space-y-6">
-          <div className="flex items-center gap-4">
-            <span className="h-px w-8 bg-cyan-500" />
-            <p className="font-mono text-[10px] text-cyan-400 tracking-[0.3em] uppercase">
-              Cloud_Deployment_Module
-            </p>
-          </div>
           <AnimatePresence mode="wait">
             <motion.div
               key={index}
@@ -72,10 +66,10 @@ const ProjectSlider = ({ projects }) => {
               exit={{ opacity: 0, x: -20 }}
               className="space-y-4"
             >
-              <h3 className="text-4xl font-black uppercase tracking-tighter text-white">
+              <h3 className="sm:text-4xl text-2xl font-black uppercase tracking-tighter text-white">
                 {projects[index].title}
               </h3>
-              <p className="text-zinc-400 leading-relaxed italic">
+              <p className="text-zinc-400 sm:text-lg text-xs leading-relaxed italic">
                 "{projects[index].desc}"
               </p>
               <div className="flex flex-wrap gap-2 pt-4">
@@ -526,7 +520,7 @@ const AIDataScience = () => {
               The <br />{" "}
               <span className="text-cyan-500 font-serif">Deployment</span>
             </h2>
-            <p className="text-zinc-400 text-lg leading-relaxed italic border-l border-white/10 pl-4">
+            <p className="text-zinc-400 sm:text-lg text-xs leading-relaxed italic border-l border-white/10 pl-4">
               Since 2004, OuterBox has partnered with startups through Fortune
               500 companies to design, develop, and grow high-performing
               websites. We are platform-agnostic and strategy-led, delivering
@@ -573,7 +567,7 @@ const AIDataScience = () => {
         <div className="absolute inset-0 bg-black/85 backdrop-blur-xl" />
 
         <div className="max-w-6xl mx-auto relative z-10">
-          <h2 className="text-4xl font-black text-center mb-16 tracking-widest uppercase italic text-white">
+          <h2 className="sm:text-4xl text-xl font-black text-center mb-16 tracking-widest uppercase italic text-white">
             Network Expansion History
           </h2>
           <ProjectSlider projects={projects} />
@@ -604,7 +598,7 @@ const AIDataScience = () => {
             <div className="flex justify-center">
               <Database className="text-cyan-500" size={48} />
             </div>
-            <h3 className="text-4xl md:text-6xl font-black tracking-tighter uppercase">
+            <h3 className="text-xl sm:text-4xl md:text-6xl font-black tracking-tighter uppercase">
               Ready to Secure your Node?
             </h3>
             <GlowButton name="Contact Us" href="/contact" />
