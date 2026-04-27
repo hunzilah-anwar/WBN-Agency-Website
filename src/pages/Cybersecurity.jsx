@@ -522,7 +522,7 @@ const Cybersecurity = () => {
             <h3 className="text-xl text-secondery font-['Roboto'] font-black">
               Meet OuterBox
             </h3>
-            <h2 className="text-6xl font-black italic uppercase tracking-tighter leading-[0.8] mb-8">
+            <h2 className="md:text-5xl sm:text-3xl text-xl font-black italic uppercase tracking-tighter leading-[0.8] mb-8">
               The <br />{" "}
               <span className="text-cyan-500 font-serif">Deployment</span>
             </h2>
