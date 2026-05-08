@@ -11,6 +11,7 @@ import {
   ShieldCheck,
 } from "lucide-react";
 import GlowButton from "./GlowButton";
+import logo from "../assets/WBN Agency.png";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -73,7 +74,6 @@ const Header = () => {
     open: { opacity: 1, x: 0 },
   };
 
-  const logo = "https://static.xx.fbcdn.net/rsrc.php/y9/r/tL_v571NdZ0.svg";
 
   return (
     <header className="fixed top-0 left-0 w-full z-1000 bg-white/90 backdrop-blur-md border-b border-gray-100">
