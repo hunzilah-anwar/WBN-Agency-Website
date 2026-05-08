@@ -9,10 +9,15 @@ import {
   Shield,
   Binary
 } from "lucide-react";
+import ContactBg from "../assets/Contact-bg.webp";
 
 const Contact = () => {
   return (
-    <section className={`relative w-full py-32 overflow-hidden bg-[url("https://www.loungelizard.com/wp-content/uploads/LL_Contact-1-1.jpg")] bg-cover bg-center text-white`}>
+    <section className={`relative w-full py-32 overflow-hidden bg-cover bg-center text-white`}
+    style={{
+      backgroundImage: `url(${ContactBg})`,
+    }}
+    >
 
       {/* BACKGROUND IMAGE */}
       <div className="absolute inset-0 bg-black/10 backdrop-blur-sm" />
