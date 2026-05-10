@@ -3,7 +3,6 @@ import { motion } from "motion/react";
 import {
   ArrowRight,
   Laptop,
-  Layers,
   ShoppingCart,
   Fingerprint,
   Search,
@@ -14,38 +13,32 @@ import ServicesImage from "../assets/Explore-Services.png";
 
 const services = [
   {
-    title: "Custom Web Design",
-    desc: "We build custom digital experiences around how your users actually behave. Every layout is grounded in UX research and behavioral data.",
+    title: "Web Development",
+    desc: "We create fast, responsive, and modern websites using WordPress, React, and other technologies to ensure smooth performance on every device.",
     icon: <Laptop size={32} />,
     color: "#0A1317",
   },
   {
-    title: "Web Development",
-    desc: "We build on WordPress and other platforms. Our developers write clean code and make sure your website works well on every device.",
-    icon: <Layers size={32} />,
-    color: "#0A1317",
-  },
-  {
-    title: "eCommerce Development",
-    desc: "Creating online stores on Shopify and WooCommerce designed to turn leads into buyers by making checkout simple and smooth.",
+    title: "E-Commerce",
+    desc: "We build powerful online stores with Shopify and WooCommerce, making shopping easy, secure, and user-friendly for your customers.",
     icon: <ShoppingCart size={32} />,
     color: "#0A1317",
   },
   {
-    title: "Branding & Identity",
-    desc: "Building brand identities from scratch, including logo design, visual systems, messaging and guidelines for consistency.",
+    title: "Content Building Strategy",
+    desc: "We develop creative content strategies that strengthen your brand identity, improve engagement, and help your business grow online.",
     icon: <Fingerprint size={32} />,
     color: "#0A1317",
   },
   {
-    title: "SEO & Marketing",
-    desc: "SEO best practices go into every project. We handle paid campaigns, social media, and content so your site gets found.",
+    title: "Social Media Content Management",
+    desc: "We manage your social media presence with engaging posts, content planning, and marketing strategies to increase audience reach.",
     icon: <Search size={32} />,
     color: "#0A1317",
   },
   {
-    title: "Website Optimization",
-    desc: "If your site is underperforming, we audit, keep your SEO safe, and rebuild for speed and modern user experience.",
+    title: "Video Editing Plus",
+    desc: "We provide professional video editing services with cinematic effects, transitions, color grading, and optimized content for all platforms.",
     icon: <RefreshCcw size={32} />,
     color: "#0A1317",
   },

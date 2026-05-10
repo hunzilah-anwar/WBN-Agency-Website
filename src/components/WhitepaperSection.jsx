@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Download, Mail, CheckCircle, ArrowRight } from "lucide-react";
-
+import EmailBg from "../assets/email-bg.webp";
+import EmailBookImg from "../assets/email-book.png";
 const WhitepaperSection = () => {
   const [email, setEmail] = useState("");
   const [isSent, setIsSent] = useState(false);
@@ -16,7 +17,11 @@ const WhitepaperSection = () => {
       {/* HUMAN DESIGN ELEMENT: The "Silk" Aura Gradient */}
       <div className="absolute inset-0 pointer-events-none">
         {/* Deep Indigo Base */}
-        <div className={`absolute inset-0 bg-[url("https://www.digitalsilk.com/wp-content/uploads/2023/03/real-estate-branding-agency-portfolio-example-NewDevRev.jpg")] bg-no-repeat bg-cover bg-fixed`} />
+        <div className={`absolute inset-0 bg-no-repeat bg-cover bg-fixed`}
+        style={{
+          backgroundImage: `url(${EmailBg})`,
+        }}
+        />
         <div className="absolute inset-0 bg-black/55" />
         {/* Bright Secondary Glow (Top Right) */}
         <div className="absolute top-[-20%] right-[-10%] w-200 h-200 rounded-full bg-secondery/20 blur-[140px]" />
@@ -124,7 +129,7 @@ const WhitepaperSection = () => {
             {/* The Whitepaper Mockup Image */}
             <div className="relative z-10 drop-shadow-[0_50px_50px_rgba(0,0,0,0.5)]">
               <img
-                src="https://www.digitalsilk.com/wp-content/uploads/2026/03/DS_Whitepaper_Mockup_2026_V1-1-1024x796.png"
+                src={EmailBookImg}
                 alt="2026 Trends Whitepaper"
                 className="w-full h-auto rounded-lg"
               />

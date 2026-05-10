@@ -13,44 +13,28 @@ import ProjectCards from "../components/ProjectCards";
 import CircularTestimonials from "../components/CircularTestimonials";
 import FAQ from "../components/FAQ";
 import BlogCard from "../components/BlogCard";
+import FeaturedProjectImg from "../assets/featured-project.webp";
+import BlogBg from "../assets/blog-bg.jpg";
+
+import WebDevImg from "../assets/web-dev.png";
+import DigitalMarketingImg from "../assets/digital-marketing.png";
+import TiktokImg from "../assets/tiktok.png";
+import YoutubeImg from "../assets/youtube.png";
+import VideoEditing from "../assets/video-editing.png";
+import Amazon from "../assets/amazon.png";
+
 const Home = () => {
   const logos = [
-    "https://www.digitalsilk.com/wp-content/uploads/2024/05/xerox_logo-1.png",
-    "https://www.digitalsilk.com/wp-content/uploads/2024/05/Sony-1.png",
-    "https://www.digitalsilk.com/wp-content/uploads/2024/05/PG_logo-1.png",
-    "https://www.digitalsilk.com/wp-content/uploads/2024/05/nyc_logo-1.png",
-    "https://www.digitalsilk.com/wp-content/uploads/2024/05/nfl_logo-1.png",
-    "https://www.digitalsilk.com/wp-content/uploads/2024/05/MicrosoftTeams-image-2.png",
-    "https://www.digitalsilk.com/wp-content/uploads/2024/05/mcds_logo-1.png",
-    "https://www.digitalsilk.com/wp-content/uploads/2024/05/grenco_logo-1.png",
-    "https://www.digitalsilk.com/wp-content/uploads/2024/05/g2_logo-1.png",
-    "https://www.digitalsilk.com/wp-content/uploads/2024/05/enchant_logo-1.png",
-    "https://www.digitalsilk.com/wp-content/uploads/2024/05/BRU_Logo-1.png",
+    WebDevImg,
+    DigitalMarketingImg,
+    TiktokImg,
+    YoutubeImg,
+    VideoEditing,
+    Amazon,
   ];
 
   // We duplicate the array to ensure a seamless infinite loop
-  const duplicatedLogos = [...logos, ...logos];
-  const fadeLeft = {
-    hidden: { opacity: 0, x: -40 },
-    show: (i = 1) => ({
-      opacity: 1,
-      x: 0,
-      transition: {
-        delay: i * 0.15,
-        duration: 0.6,
-        ease: "easeOut",
-      },
-    }),
-  };
-
-  const fadeRight = {
-    hidden: { opacity: 0, x: 40 },
-    show: {
-      opacity: 1,
-      x: 0,
-      transition: { duration: 0.6, ease: "easeOut" },
-    },
-  };
+  const duplicatedLogos = Array(5).fill(logos).flat();
   const [selected, setSelected] = useState(null);
 
   // ESC CLOSE
@@ -61,42 +45,42 @@ const Home = () => {
     window.addEventListener("keydown", handleEsc);
     return () => window.removeEventListener("keydown", handleEsc);
   }, []);
-  const projects = [
-    {
-      title: "Andersen Global",
-      category: "Web Design",
-      desc: "Corporate finance & consulting platform with modern UX focused on clarity, trust, and performance.",
-      image: "https://www.loungelizard.com/wp-content/uploads/Andersen_CS.png",
-      tags: ["Finance", "Corporate", "UX Design"],
-      tech: ["React", "UI/UX", "Tailwind"],
-      duration: "3 Months",
-      link: "#",
-      featured: true,
-    },
-    {
-      title: "Colorado Rafting",
-      category: "Development",
-      desc: "Adventure booking platform with immersive booking flow and smooth user experience for travelers.",
-      image:
-        "https://www.loungelizard.com/wp-content/uploads/ll_portfolio-ava.jpg",
-      tags: ["Travel", "Booking System", "UI Design"],
-      tech: ["Next.js", "Node.js", "MongoDB"],
-      duration: "2.5 Months",
-      link: "#",
-      featured: false,
-    },
-    {
-      title: "E-Commerce Store",
-      category: "Shopify",
-      desc: "High converting online store with optimized checkout flow and conversion-focused UI design.",
-      image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30",
-      tags: ["E-Commerce", "Shopify", "Conversion"],
-      tech: ["Shopify", "Liquid", "JS"],
-      duration: "4 Months",
-      link: "#",
-      featured: true,
-    },
-  ];
+  // const projects = [
+  //   {
+  //     title: "Andersen Global",
+  //     category: "Web Design",
+  //     desc: "Corporate finance & consulting platform with modern UX focused on clarity, trust, and performance.",
+  //     image: "https://www.loungelizard.com/wp-content/uploads/Andersen_CS.png",
+  //     tags: ["Finance", "Corporate", "UX Design"],
+  //     tech: ["React", "UI/UX", "Tailwind"],
+  //     duration: "3 Months",
+  //     link: "#",
+  //     featured: true,
+  //   },
+  //   {
+  //     title: "Colorado Rafting",
+  //     category: "Development",
+  //     desc: "Adventure booking platform with immersive booking flow and smooth user experience for travelers.",
+  //     image:
+  //       "https://www.loungelizard.com/wp-content/uploads/ll_portfolio-ava.jpg",
+  //     tags: ["Travel", "Booking System", "UI Design"],
+  //     tech: ["Next.js", "Node.js", "MongoDB"],
+  //     duration: "2.5 Months",
+  //     link: "#",
+  //     featured: false,
+  //   },
+  //   {
+  //     title: "E-Commerce Store",
+  //     category: "Shopify",
+  //     desc: "High converting online store with optimized checkout flow and conversion-focused UI design.",
+  //     image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30",
+  //     tags: ["E-Commerce", "Shopify", "Conversion"],
+  //     tech: ["Shopify", "Liquid", "JS"],
+  //     duration: "4 Months",
+  //     link: "#",
+  //     featured: true,
+  //   },
+  // ];
   const yourData = [
     {
       quote:
@@ -247,14 +231,16 @@ const Home = () => {
       >
         <div className="z-50 max-w-2xl w-full">
           <h1 className="font-sans text-white text-3xl md:text-5xl font-black leading-tight flex flex-col justify-start">
-            Full-Service Performance{" "}
-            <span className="text-secondery">Marketing Agency</span>
+            Digital Growth Solutions{" "}
+            <span className="text-secondery">for Modern Brands</span>
           </h1>
-          <p className="mt-4 text-gray-300 text-sm md:text-base sm:max-w-xl max-w-sm font-sans">
-            Achieve durable growth for your brand via end-to-end solutions
-            across the entire digital marketing landscape. We'll meet you where
-            you are in your marketing journey and develop a one-size-fits-one
-            approach specific to your needs.
+          <p className="mt-4 text-gray-300 text-sm sm:max-w-xl max-w-sm font-sans">
+            Drive long-term success for your business with powerful end-to-end
+            digital services. From web development and digital marketing to AI
+            solutions and content creation, we craft customized strategies
+            tailored to your brand’s unique goals and vision. No generic
+            formulas — only smart, results-driven solutions designed
+            specifically for your growth journey.
           </p>
           <form className="relative flex items-center justify-start group/form max-w-xl mt-8">
             <div className="rounded-full relative flex w-full bg-white border border-gray-200 shadow-xl overflow-hidden">
@@ -313,50 +299,125 @@ const Home = () => {
             </style>
           </form>
           <div className="flex flex-wrap justify-start items-center gap-6 mt-10">
-            <img
-              src="https://www.outerboxdesign.com/wp-content/uploads/2026/03/Inc.-5000-Color-Medallion-Logo.webp"
-              alt=""
-              className="h-8 md:h-10"
-            />
-            <img
-              src="https://www.outerboxdesign.com/wp-content/uploads/2026/03/google-premier-partner-26-sm.webp"
-              alt=""
-              className="h-8 md:h-10"
-            />
-            <img
-              src="https://www.outerboxdesign.com/wp-content/uploads/2026/03/clutch-logo-24-white.webp"
-              alt=""
-              className="h-8 md:h-10"
-            />
-            <img
-              src="https://www.outerboxdesign.com/wp-content/uploads/2026/03/Forbes-advisor-white-2025-sm.webp"
-              alt=""
-              className="h-8 md:h-10"
-            />
-            <img
-              src="https://www.outerboxdesign.com/wp-content/uploads/2026/03/us-agency-award-white.webp"
-              alt=""
-              className="h-8 md:h-10"
-            />
-            <img
-              src="https://www.outerboxdesign.com/wp-content/uploads/2026/03/microsoft-select-partner.webp"
-              alt=""
-              className="h-8 md:h-10"
-            />
+            <img src={WebDevImg} alt="" className="h-12 md:h-20" />
+            <img src={DigitalMarketingImg} alt="" className="h-12 md:h-18" />
+            <img src={TiktokImg} alt="" className="h-12 md:h-20" />
+            <img src={YoutubeImg} alt="" className="h-12 md:h-20" />
+            <img src={VideoEditing} alt="" className="h-12 md:h-20" />
           </div>
         </div>
       </section>
-      <section className="py-10 bg-[#03042a] overflow-hidden">
+      <section className="bg-[#00042A]">
+        <AgencyServices />
+      </section>
+      <section
+        className="relative py-28 overflow-hidden bg-cover bg-center"
+        style={{
+          backgroundImage: `url(${FeaturedProjectImg})`,
+        }}
+      >
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-black/70"></div>
+
+        <div className="relative z-10 max-w-7xl mx-auto px-6">
+          <div className="grid lg:grid-cols-2 gap-20 items-center">
+            {/* LEFT CONTENT */}
+            <div>
+              <p className="text-[10px] font-black uppercase tracking-[0.4em] text-secondery">
+                Why Choose Us
+              </p>
+
+              <h2 className="text-2xl md:text-4xl font-black text-white leading-[0.95] tracking-tighter uppercase flex flex-col gap-2 mb-6">
+                We Follow a Proven
+                <span className="text-secondery">Creative Process</span>
+              </h2>
+
+              <p className="text-gray-300 text-sm leading-relaxed mb-12 max-w-xl">
+                Our workflow is designed to deliver high-quality digital
+                solutions with creativity, strategy, and performance at every
+                stage of the project lifecycle.
+              </p>
+
+              {/* POINTS */}
+              <div className="space-y-8">
+                {[
+                  {
+                    title: "Planning & Strategy",
+                    desc: "We analyze business goals, market trends, and user needs to create a strong project roadmap before development starts.",
+                  },
+                  {
+                    title: "Modern UI/UX Design",
+                    desc: "Our team creates visually stunning and user-friendly interfaces focused on engagement and smooth user experience.",
+                  },
+                  {
+                    title: "Clean Development",
+                    desc: "We develop scalable, secure, and optimized solutions using modern technologies and industry best practices.",
+                  },
+                  {
+                    title: "Testing & Launch",
+                    desc: "Every project goes through detailed testing and optimization to ensure flawless performance before deployment.",
+                  },
+                ].map((item, i) => (
+                  <div key={i} className="flex items-start gap-5 group">
+                    {/* Number */}
+                    <div className="min-w-[50px] h-[50px] bg-gradient-to-br from-cyan-400 to-blue-500 flex items-center justify-center text-white font-bold text-xl">
+                      0{i + 1}
+                    </div>
+
+                    {/* Content */}
+                    <div>
+                      <h3 className="text-xl font-semibold text-white mb-1 group-hover:text-cyan-400 transition-all duration-300">
+                        {item.title}
+                      </h3>
+
+                      <p className="text-gray-300 leading-relaxed text-sm">
+                        {item.desc}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* RIGHT IMAGE */}
+            <div className="relative">
+              {/* Main Image */}
+              <div className="relative overflow-hidden border border-white/10">
+                <img
+                  src={TrophyImage}
+                  alt="Team Work"
+                  className="w-full h-[500px] object-cover"
+                />
+
+                {/* Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-[#020817] via-transparent to-transparent"></div>
+              </div>
+
+              {/* Floating Stats */}
+              <div className="absolute top-0 left-0 bg-white/10 backdrop-blur-xl border border-white/10 px-6 py-4">
+                <h3 className="text-2xl font-bold text-cyan-400">99%</h3>
+                <p className="text-white text-sm">Project Success</p>
+              </div>
+
+              <div className="absolute bottom-0 right-0 bg-white/10 backdrop-blur-xl border border-white/10 px-6 py-4">
+                <h3 className="text-2xl font-bold text-cyan-400">250+</h3>
+                <p className="text-white text-sm">Completed Projects</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="py-8 bg-[#03042a] overflow-hidden">
         {/* The Wrapper with Faded Edges */}
         <div className="flex overflow-hidden">
           <motion.div
-            className="flex flex-none gap-8 items-center"
+            className="flex flex-none gap-16 items-center"
             animate={{
-              x: ["0%", "-50%"], // Move from start to half (since it's duplicated)
+              x: ["0%", "-20%"], // Move from start to half (since it's duplicated)
             }}
             transition={{
               ease: "linear",
-              duration: 25, // Adjust speed here (higher = slower)
+              duration: 10, // Adjust speed here (higher = slower)
               repeat: Infinity,
             }}
           >
@@ -368,192 +429,20 @@ const Home = () => {
                 <img
                   src={logo}
                   alt={`Client Logo ${index}`}
-                  className="h-8 w-full object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500"
+                  className="h-16 w-full object-contain scale-80 hover:scale-100 transition-all duration-500"
                 />
               </div>
             ))}
           </motion.div>
         </div>
       </section>
-      <section
-        className="relative text-white w-full min-h-screen bg-[#00042A] overflow-hidden py-20 md:py-24 px-6 md:px-20"
-        style={{
-          backgroundImage:
-            "radial-gradient(circle 750px at 20% -10%, rgba(136, 66, 220, 0.15) 0, transparent 80%)",
-        }}
-      >
-        <div className="grid md:grid-cols-2 grid-cols-1 gap-10 items-center">
-          {/* LEFT CONTENT */}
-          <motion.div
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true }}
-            className="flex flex-col items-start justify-center"
-          >
-            <motion.h1
-              variants={fadeLeft}
-              custom={0}
-              className="text-3xl md:text-5xl font-bold leading-tight"
-            >
-              <span className="text-secondery">Web Design Agency</span>{" "}
-              Delivering Custom Solutions
-            </motion.h1>
-
-            <ul className="mt-6 md:mt-8 pl-2 flex flex-col gap-4 md:gap-6 max-w-full md:max-w-100">
-              {[
-                "Digital Marketing To Generate Growth",
-                "Web Design Solutions To Drive Conversions",
-                "Branding Strategies To Drive Engagement",
-              ].map((text, i) => (
-                <motion.li
-                  key={i}
-                  variants={fadeLeft}
-                  custom={i + 1}
-                  className="flex items-start gap-3 md:gap-4"
-                >
-                  <Check size={24} className="text-secondery mt-1" />
-                  <h2 className="text-base md:text-xl font-bold leading-tight">
-                    {text.split("To")[0]}{" "}
-                    <span className="text-secondery">
-                      To {text.split("To")[1]}
-                    </span>
-                  </h2>
-                </motion.li>
-              ))}
-            </ul>
-
-            <motion.p
-              variants={fadeLeft}
-              custom={4}
-              className="mt-6 md:mt-8 max-w-full md:max-w-130 text-sm md:text-[16px] opacity-90"
-            >
-              Our award-winning company handles the full process, including
-              strategy, UX, design, development, branding, marketing and ongoing
-              optimization after launch.
-            </motion.p>
-          </motion.div>
-
-          {/* RIGHT IMAGE */}
-          <motion.div
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true }}
-            variants={fadeRight}
-            className="flex justify-center md:justify-end"
-          >
-            <img
-              src={TrophyImage}
-              alt=""
-              className="w-[80%] sm:w-[60%] md:w-[90%] max-w-125 object-contain"
-            />
-          </motion.div>
-        </div>
-      </section>
       <FeaturedWork />
-      <section className="bg-[#00042A]">
-        <AgencyServices />
-      </section>
-      <WhitepaperSection />
       <PartnerSection />
       <section
-        className={`relative w-full py-28 overflow-hidden bg-[url("https://www.digitalsilk.com/wp-content/uploads/2023/05/San-francisco-web-design-technology-stack.jpg")] bg-no-repeat bg-cover bg-fixed`}
-      >
-        <div className="absolute inset-0 bg-black/60" />
-
-        {/* HEADER */}
-        <div className="max-w-7xl mx-auto px-6 text-center mb-16 relative z-10">
-          <motion.h2
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            className="text-2xl sm:text-4xl font-bold text-white italic uppercase tracking-tighter"
-          >
-            Featured <span className="text-secondery">Projects</span>
-          </motion.h2>
-
-          <p className="text-white/60 mt-4 max-w-2xl mx-auto text-sm">
-            A selection of our latest work that combines creativity,
-            performance, and modern UI design.
-          </p>
-        </div>
-
-        {/* GRID */}
-        <div className="max-w-7xl mx-auto px-6 relative z-10">
-          <ProjectCards projects={projects} setSelected={setSelected} />
-        </div>
-
-        {/* CTA */}
-        <div className="mt-24 text-center">
-          <button className="relative px-10 sm:py-5 py-3 bg-white text-black font-bold uppercase text-sm cursor-pointer tracking-widest overflow-hidden group">
-            <span className="relative z-10 tracking-tight">
-              View All Projects
-            </span>
-            <div className="absolute inset-0 bg-secondery translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
-          </button>
-        </div>
-
-        {/* ================= MODAL ================= */}
-        <AnimatePresence>
-          {selected && (
-            <motion.div
-              className="fixed inset-0 z-9999 flex items-center justify-center bg-black/80 backdrop-blur-xl p-4"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              onClick={() => setSelected(null)}
-            >
-              <motion.div
-                onClick={(e) => e.stopPropagation()}
-                initial={{ scale: 0.85, y: 30 }}
-                animate={{ scale: 1, y: 0 }}
-                exit={{ scale: 0.85, y: 30 }}
-                className="relative w-full max-w-4xl rounded-2xl overflow-hidden bg-white/5 border border-white/10 backdrop-blur-2xl"
-              >
-                {/* CLOSE */}
-                <button
-                  onClick={() => setSelected(null)}
-                  className="absolute top-4 right-4 w-10 h-10 cursor-pointer rounded-full bg-black/60 text-white flex items-center justify-center hover:bg-white hover:text-black transition z-10"
-                >
-                  <X size={18} />
-                </button>
-
-                {/* IMAGE */}
-                <div className="h-80 md:h-105 overflow-hidden">
-                  <img
-                    src={selected?.image}
-                    alt={selected?.title}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-
-                {/* CONTENT */}
-                <div className="p-8 space-y-2">
-                  <p className="text-secondery text-xs uppercase tracking-widest">
-                    {selected?.category}
-                  </p>
-
-                  <h2 className="text-2xl uppercase font-bold text-white">
-                    {selected?.title}
-                  </h2>
-
-                  <p className="text-white/70 text-sm">{selected?.desc}</p>
-                </div>
-              </motion.div>
-            </motion.div>
-          )}
-        </AnimatePresence>
-      </section>
-      <section className="bg-[#00042A]">
-        <CircularTestimonials
-          testimonials={yourData}
-          autoplay={true}
-          colors={{
-            arrowBackground: "#050505",
-            arrowHoverBackground: "#009cff", // Your Secondary
-          }}
-        />
-      </section>
-      <section
-        className={`relative w-full overflow-hidden bg-[url("https://images.unsplash.com/photo-1457369804613-52c61a468e7d?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")] bg-no-repeat bg-cover bg-fixed`}
+        className={`relative w-full overflow-hidden bg-no-repeat bg-cover bg-fixed`}
+        style={{
+          backgroundImage: `url(${BlogBg})`,
+        }}
       >
         <div className="absolute inset-0 bg-black/60" />
         <BlogCard
@@ -613,6 +502,17 @@ const Home = () => {
           </div>
         )}
       </section>
+      <section className="bg-[#00042A]">
+        <CircularTestimonials
+          testimonials={yourData}
+          autoplay={true}
+          colors={{
+            arrowBackground: "#050505",
+            arrowHoverBackground: "#009cff", // Your Secondary
+          }}
+        />
+      </section>
+      <WhitepaperSection />
       <FAQ faqs={faqs} />
     </>
   );

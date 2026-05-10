@@ -1,65 +1,63 @@
 import React from "react";
 import { motion } from "framer-motion";
+import WebDevImg from "../assets/web-dev.png";
+import DigitalMarketingImg from "../assets/digital-marketing.png";
+import TiktokImg from "../assets/tiktok.png";
+import YoutubeImg from "../assets/youtube.png";
+import VideoEditing from "../assets/video-editing.png";
+import Amazon from "../assets/amazon.png";
 
 const brandsRow1 = [
   {
-    name: "Sony",
-    url: "https://www.digitalsilk.com/wp-content/uploads/2024/01/Sony-1.png",
+    name: "Web Development",
+    url: WebDevImg,
   },
   {
-    name: "IBM",
-    url: "https://www.digitalsilk.com/wp-content/uploads/2024/01/ibm.svg",
+    name: "Digital Marketing",
+    url: DigitalMarketingImg,
   },
   {
-    name: "Best Buy",
-    url: "https://www.digitalsilk.com/wp-content/uploads/2025/04/best_buy_logo-cropped.svg",
+    name: "Amazon",
+    url: Amazon,
   },
   {
-    name: "Puma",
-    url: "https://www.digitalsilk.com/wp-content/uploads/2024/01/puma.svg",
+    name: "Tik Tok",
+    url: TiktokImg,
   },
   {
-    name: "Xerox",
-    url: "https://www.digitalsilk.com/wp-content/uploads/2024/01/xerox.png",
+    name: "Youtube",
+    url: YoutubeImg,
   },
   {
-    name: "Babies R Us",
-    url: "https://www.digitalsilk.com/wp-content/uploads/2024/01/babiesrus.png",
-  },
-  {
-    name: "Rollink",
-    url: "https://www.digitalsilk.com/wp-content/uploads/2024/01/rollink.svg",
+    name: "Video Editing",
+    url: VideoEditing,
   },
 ];
 
 const brandsRow2 = [
   {
-    name: "Northwestern",
-    url: "https://www.digitalsilk.com/wp-content/uploads/2024/01/Northwestern_Qatar_Logo_2_.svg",
+    name: "Web Development",
+    url: WebDevImg,
   },
   {
-    name: "ZipTie",
-    url: "https://www.digitalsilk.com/wp-content/uploads/2025/05/logo_white-1.svg",
+    name: "Digital Marketing",
+    url: DigitalMarketingImg,
   },
   {
-    name: "Buddha Brands",
-    url: "https://www.digitalsilk.com/wp-content/uploads/2024/01/buddha.svg",
+    name: "Amazon",
+    url: Amazon,
   },
   {
-    name: "Paul Stuart",
-    url: "https://www.digitalsilk.com/wp-content/uploads/2024/01/paul-stuart.png",
+    name: "Tik Tok",
+    url: TiktokImg,
   },
   {
-    name: "Absolute Dogs",
-    url: "https://www.digitalsilk.com/wp-content/uploads/2024/12/logo.png",
+    name: "Youtube",
+    url: YoutubeImg,
   },
   {
-    name: "Enchant",
-    url: "https://www.digitalsilk.com/wp-content/uploads/2024/01/enchant.svg",
-  },
-  {
-    name: "Grenco",
-    url: "https://www.digitalsilk.com/wp-content/uploads/2024/01/grenco.png",
+    name: "Video Editing",
+    url: VideoEditing,
   },
 ];
 
@@ -70,7 +68,7 @@ const PartnerSection = () => {
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-[-20%] left-[-10%] w-200 h-200 rounded-full bg-[#00042A]/20 blur-[160px] opacity-50" />
         <div className="absolute bottom-[-10%] right-[-5%] w-150 h-150 rounded-full bg-[#00042A]/20 blur-[140px] opacity-40" />
-        <div className="absolute inset-0 opacity-[0.03] bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
+        
       </div>
 
       {/* HEADER */}
@@ -172,7 +170,7 @@ const LogoCard = ({ brand }) => (
       <img
         src={brand.url}
         alt={brand.name}
-        className="max-h-12 object-contain opacity-50 group-hover:opacity-100 transition-all duration-300"
+        className="max-h-20 object-contain opacity-50 group-hover:opacity-100 transition-all duration-300"
       />
     </div>
   </div>
