@@ -123,10 +123,6 @@ const Header = () => {
                           {service.title}
                         </h4>
 
-                        <p className="text-[10px] text-gray-500 mt-1 leading-relaxed">
-                          {service.desc}
-                        </p>
-
                         {/* CTA */}
                         <div className="flex items-center gap-1 mt-3 text-[9px] font-bold uppercase tracking-[0.2em]text-gray-400 group-hover/item:text-black transition-all">
                           Explore Service

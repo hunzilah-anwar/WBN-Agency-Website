@@ -120,7 +120,7 @@ const ProjectSlider = ({ projects }) => {
 // Roadmap Component
 const RoadmapSection = ({ roadmap }) => {
   return (
-    <section className="py-10 px-6 bg-[#00042A] overflow-hidden">
+    <section className="py-10 pb-32 px-6 bg-[#00042A] overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-black mb-4">
@@ -406,12 +406,15 @@ const ServicePages = () => {
                   transition={{ delay: i * 0.1 }}
                   viewport={{ once: true }}
                   whileHover={{ y: -10 }}
-                  className="p-8 bg-white/5 border border-white/10 rounded-2xl backdrop-blur-md group hover:border-cyan-500/50 transition-all"
+                  className="p-8 bg-white/5 border border-white/10 backdrop-blur-md group hover:border-cyan-500/50 transition-all"
                 >
                   {s.icon && (
                     <s.icon
-                      className="text-cyan-400 mb-6 group-hover:scale-110 transition-transform"
-                      size={32}
+                      className="p-3 mb-4 text-white shadow-lg backdrop-blur-xl border border-white/20 transition-transform duration-500"
+                      style={{
+                        background: `linear-gradient(135deg, #0A1317, rgba(255,255,255,0.1))`,
+                      }}
+                      size={50}
                     />
                   )}
                   <h3 className="text-xl font-black uppercase tracking-tight mb-4 text-white">

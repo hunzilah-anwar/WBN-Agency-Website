@@ -14,37 +14,49 @@ const coreTeam = [
   {
     id: 1,
     name: "Mr. Abdul Ahad",
-    role: "Manager & Web Developer",
+    role: "Web Development Head",
     image: "https://randomuser.me/api/portraits/men/32.jpg",
   },
   {
     id: 2,
-    name: "Mr. Muhammad Sami",
-    role: "Project Manager",
+    name: "Mudassir Khan",
+    role: "E-commerce Head",
     image: "https://randomuser.me/api/portraits/men/45.jpg",
   },
   {
     id: 3,
-    name: "Mr. Muhammad Tauseef",
-    role: "Marketing & Shopify Expert",
+    name: "?",
+    role: "Video Editing",
     image: "https://randomuser.me/api/portraits/men/76.jpg",
   },
   {
     id: 4,
-    name: "Mr. M Fassih Ud Din",
-    role: "Graphic Designer",
+    name: "Ruhul Hasnain",
+    role: "Python, Machine learning and AI head",
     image: "https://randomuser.me/api/portraits/men/67.jpg",
   },
   {
     id: 5,
-    name: "Mr. Babur Ali",
-    role: "Python Developer",
+    name: "Waqas Khan",
+    role: "Tool development Head",
     image: "https://randomuser.me/api/portraits/men/12.jpg",
   },
   {
     id: 6,
-    name: "Mr. Zohiab Jutt",
-    role: "SEO Expert",
+    name: "Mariyum",
+    role: "Graphics Design Head",
+    image: "https://randomuser.me/api/portraits/men/54.jpg",
+  },
+  {
+    id: 7,
+    name: "Waqas Khan",
+    role: "Wordpress",
+    image: "https://randomuser.me/api/portraits/men/54.jpg",
+  },
+  {
+    id: 8,
+    name: "Hamza",
+    role: "Digital marketing Head",
     image: "https://randomuser.me/api/portraits/men/54.jpg",
   },
 ];
@@ -118,12 +130,12 @@ const Team = () => {
             </div>
             <div className="space-y-8">
               <h3 className="text-cyan-500 font-mono text-sm tracking-[0.3em] uppercase">
-                Founder & CEO
+                CEO & Founder
               </h3>
               <h2 className="text-5xl md:text-7xl font-black tracking-tighter leading-none">
-                Abdul Bari <br />{" "}
+                Mudassir<br />{" "}
                 <span className="text-transparent stroke-text italic font-serif">
-                  Afzal
+                  Khan.
                 </span>
               </h2>
               <p className="text-zinc-300 text-2xl font-light italic leading-relaxed border-l-4 border-cyan-500 pl-8">
@@ -198,7 +210,7 @@ const Team = () => {
 
           {/* actions */}
           <div className="flex flex-col md:flex-row items-center justify-center gap-8 pt-8">
-            <GlowButton name="Let's Connect" href="/careers" />
+            <GlowButton name="Let's Connect" to="/contact" />
           </div>
         </div>
       </section>

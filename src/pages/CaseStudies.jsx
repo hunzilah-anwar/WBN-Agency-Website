@@ -1,127 +1,42 @@
-import { motion, AnimatePresence, useInView } from "framer-motion";
-import { useState, useRef, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { useState } from "react";
 import GlowButton from "../components/GlowButton";
-import { ArrowDown, Star, Filter, Zap, ExternalLink } from "lucide-react";
+import { Star, Zap, ExternalLink } from "lucide-react";
+import WebDevImg from "../assets/web-dev.png";
+import DigitalMarketingImg from "../assets/digital-marketing.png";
+import TiktokImg from "../assets/tiktok.png";
+import YoutubeImg from "../assets/youtube.png";
+import VideoEditing from "../assets/video-editing.png";
+import Amazon from "../assets/amazon.png";
+import { servicesData } from "../data/serviceData";
+import { Link } from "react-router-dom";
 
-const agencyProjects = [
-  {
-    id: 1,
-    title: "Global Fintech Cloud Transformation",
-    category: "Cloud",
-    image:
-      "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1472&auto=format&fit=crop",
-    desc: "Re-architected legacy banking systems into a multi-region AWS infrastructure handling 5M+ transactions daily.",
-    views: "18k",
-    rating: 5,
-    tech: ["AWS", "Terraform", "Kubernetes"],
-  },
-  {
-    id: 2,
-    title: "AI Threat Detection Engine",
-    category: "Security",
-    image:
-      "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=1470&auto=format&fit=crop",
-    desc: "Built a real-time AI cybersecurity platform detecting anomalies across distributed enterprise networks.",
-    views: "12k",
-    rating: 5,
-    tech: ["Python", "PyTorch", "Kafka"],
-  },
-  {
-    id: 3,
-    title: "Smart Logistics IoT Platform",
-    category: "IoT",
-    image:
-      "https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1470&auto=format&fit=crop",
-    desc: "Connected 50,000+ devices to track shipments globally with real-time analytics and predictive routing.",
-    views: "9.4k",
-    rating: 4,
-    tech: ["Node.js", "MQTT", "Azure IoT"],
-  },
-  {
-    id: 4,
-    title: "Healthcare Data Intelligence System",
-    category: "Analytics",
-    image:
-      "https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=1470&auto=format&fit=crop",
-    desc: "Designed advanced dashboards for hospitals improving patient decision-making using real-time insights.",
-    views: "15k",
-    rating: 5,
-    tech: ["React", "D3.js", "GraphQL"],
-  },
-  {
-    id: 5,
-    title: "Next-Gen E-Commerce Infrastructure",
-    category: "Development",
-    image:
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1426&auto=format&fit=crop",
-    desc: "Built a scalable commerce engine handling 1M+ daily users with microservices architecture.",
-    views: "7.2k",
-    rating: 5,
-    tech: ["Go", "Docker", "Kubernetes"],
-  },
-  {
-    id: 6,
-    title: "AI Workflow Automation SaaS",
-    category: "AI",
-    image:
-      "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=1470&auto=format&fit=crop",
-    desc: "Created an AI-driven SaaS platform automating enterprise workflows using LLM integrations.",
-    views: "21k",
-    rating: 5,
-    tech: ["Next.js", "OpenAI", "LangChain"],
-  },
-];
-
-const Counter = ({ value, label, light = false }) => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
-  const [count, setCount] = useState(0);
-
-  useEffect(() => {
-    if (isInView) {
-      let start = 0;
-      const end = parseInt(value.replace(/\D/g, ""));
-      if (start === end) return;
-      let totalMilis = 2000;
-      let incrementTime = totalMilis / end;
-      let timer = setInterval(() => {
-        start += 1;
-        setCount(start);
-        if (start === end) clearInterval(timer);
-      }, incrementTime);
-    }
-  }, [isInView, value]);
-
-  return (
-    <div ref={ref} className="space-y-1 text-center">
-      <h3
-        className={`text-5xl font-black tracking-tighter ${light ? "text-black" : "text-white"}`}
-      >
-        {count}
-        {value.replace(/[0-9]/g, "")}
-      </h3>
-      <p
-        className={`text-[10px] uppercase tracking-[0.3em] font-bold ${light ? "text-zinc-600" : "text-zinc-300"}`}
-      >
-        {label}
-      </p>
-    </div>
-  );
+// Background for even sections
+const fixedBgStyle = {
+  backgroundImage: `url('https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=2070')`,
+  backgroundAttachment: "fixed",
+  backgroundSize: "cover",
+  backgroundPosition: "center",
 };
 
 const CaseStudies = () => {
   const [activeFilter, setActiveFilter] = useState("All");
-  const filteredProjects = agencyProjects.filter(
-    (p) => activeFilter === "All" || p.category === activeFilter,
-  );
+  const filteredProjects =
+    activeFilter === "All"
+      ? servicesData
+      : servicesData.filter((p) => p.title === activeFilter);
 
-  // Background for even sections
-  const fixedBgStyle = {
-    backgroundImage: `url('https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=2070')`,
-    backgroundAttachment: "fixed",
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-  };
+  const categories = ["All", ...new Set(servicesData.map((s) => s.title))];
+
+  const logos = [
+    WebDevImg,
+    DigitalMarketingImg,
+    TiktokImg,
+    YoutubeImg,
+    VideoEditing,
+    Amazon,
+  ];
+  const duplicatedLogos = Array(5).fill(logos).flat();
 
   return (
     <main className="selection:bg-cyan-500 selection:text-white">
@@ -148,7 +63,7 @@ const CaseStudies = () => {
             <motion.h1
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
-              className="text-6xl md:text-[8rem] font-black leading-[0.8]"
+              className="text-5xl md:text-7xl lg:text-8xl font-black leading-[0.8]"
             >
               DIGITAL <br />
               <span className="text-transparent bg-clip-text bg-linear-to-r from-cyan-400 to-blue-500">
@@ -195,45 +110,59 @@ const CaseStudies = () => {
           </motion.div>
         </div>
       </section>
-
-      {/* SECTION 2: STATS (EVEN - FIXED BG) */}
-      <section style={fixedBgStyle} className="relative py-32 px-6">
-        <div className="absolute inset-0 bg-black/60" />{" "}
-        {/* Light Overlay for text readability */}
-        <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-12 relative z-10">
-          <Counter value="120+" label="Systems Architected" light={false} />
-          <Counter value="98%" label="Success Rate" light={false} />
-          <Counter value="50+" label="Global Partners" light={false} />
-          <Counter value="10M" label="Active Users" light={false} />
+      <section className="py-8 relative bg-secondery overflow-hidden">
+        {/* The Wrapper with Faded Edges */}
+        <div className="flex overflow-hidden">
+          <motion.div
+            className="flex flex-none gap-16 items-center"
+            animate={{
+              x: ["0%", "-20%"], // Move from start to half (since it's duplicated)
+            }}
+            transition={{
+              ease: "linear",
+              duration: 10, // Adjust speed here (higher = slower)
+              repeat: Infinity,
+            }}
+          >
+            {duplicatedLogos.map((logo, index) => (
+              <div
+                key={index}
+                className="flex-none w-25 flex justify-center items-center"
+              >
+                <img
+                  src={logo}
+                  alt={`Client Logo ${index}`}
+                  className="h-16 w-full object-contain scale-80 hover:scale-100 transition-all duration-500"
+                />
+              </div>
+            ))}
+          </motion.div>
         </div>
       </section>
-
       {/* SECTION 3: GRID (ODD - #00042A) */}
-      <section className="bg-[#00042A] text-white pb-32">
+      <section className="bg-[#00042A] text-white pb-28 pt-16">
         {/* Sticky Filter */}
-        <div className="sticky top-0 z-50 bg-[#00042A]/80 backdrop-blur-2xl border-b border-white/10">
-          <div className="max-w-7xl mx-auto px-6 py-6 flex flex-wrap items-center justify-between gap-6">
-            <div className="flex items-center gap-3 text-cyan-500">
-              <span className="text-2xl uppercase font-bold tracking-widest">
+        <div className="border-b border-white/10">
+          <div className="max-w-7xl mx-auto px-6 py-6 flex flex-col justify-between gap-10">
+            <div className="flex items-center gap-3 text-white">
+              <span className="text-4xl uppercase font-bold tracking-widest">
                 Engineering
               </span>
             </div>
             <div className="flex flex-wrap gap-3">
-              {["All", "AI", "Cloud", "Security", "IoT", "Development"].map(
-                (cat) => (
-                  <button
-                    key={cat}
-                    onClick={() => setActiveFilter(cat)}
-                    className={`px-6 py-2 text-[10px] cursor-pointer uppercase font-bold tracking-widest rounded-full border transition-all duration-500 ${
-                      activeFilter === cat
-                        ? "bg-cyan-500 text-black border-cyan-500 shadow-[0_0_20px_rgba(6,182,212,0.5)]"
-                        : "bg-transparent text-zinc-400 border-white/10 hover:border-white/40"
-                    }`}
-                  >
-                    {cat}
-                  </button>
-                ),
-              )}
+              {categories.map((cat) => (
+                <button
+                  key={cat}
+                  onClick={() => setActiveFilter(cat)}
+                  className={`px-6 py-2 text-[10px] cursor-pointer uppercase font-bold tracking-widest rounded-full border transition-all duration-500 ${
+                    activeFilter === cat
+                      ? "bg-cyan-500 text-black border-cyan-500 shadow-[0_0_20px_rgba(6,182,212,0.5)]"
+                      : "bg-transparent text-zinc-400 border-white/10 hover:border-white/40"
+                  }`}
+                >
+                  {cat}
+                </button>
+              ))}
             </div>
           </div>
         </div>
@@ -241,7 +170,7 @@ const CaseStudies = () => {
         <div className="max-w-7xl mx-auto px-6 pt-24">
           <motion.div
             layout
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-20"
+            className="grid md:grid-cols-2 xl:grid-cols-3 gap-10"
           >
             <AnimatePresence mode="popLayout">
               {filteredProjects.map((project, idx) => (
@@ -254,43 +183,39 @@ const CaseStudies = () => {
                   transition={{ delay: idx * 0.1 }}
                   className="group"
                 >
-                  <div className="relative aspect-4/5 overflow-hidden mb-8 bg-zinc-900 border border-white/5">
+                  <div className="relative aspect-[4/5] overflow-hidden mb-8 bg-zinc-900 border border-white/5">
                     <img
-                      src={project.image}
+                      src={project.heroImage}
                       alt={project.title}
                       className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-1000"
                     />
                     <div className="absolute inset-0 bg-linear-to-t from-[#00042A] via-transparent to-transparent opacity-60" />
 
                     <div className="absolute top-5 left-5 flex flex-wrap gap-2">
-                      {project.tech?.map((t) => (
+                      {project.tabs?.map((tab, i) => (
                         <span
-                          key={t}
-                          className="px-3 py-1 bg-black/50 backdrop-blur-md border border-white/10 text-[9px] font-bold uppercase tracking-widest rounded-sm"
+                          key={i}
+                          className="px-3 py-1 bg-black/50 backdrop-blur-md border border-white/10 text-[9px] font-bold uppercase tracking-widest rounded-full"
                         >
-                          {t}
+                          {tab.title}
                         </span>
                       ))}
                     </div>
 
-                    <button className="absolute bottom-5 right-5 p-4 bg-cyan-500 rounded-full text-black cursor-pointer translate-y-0 transition-all duration-500">
+                    <Link
+                      to={`/services/${project.slug}`}
+                      className="absolute bottom-5 right-5 p-4 bg-cyan-500 rounded-full text-black cursor-pointer transition-all duration-500 hover:scale-110"
+                    >
                       <ExternalLink size={20} />
-                    </button>
+                    </Link>
                   </div>
 
                   <div className="space-y-4">
-                    <div className="flex justify-between items-center text-[10px] font-black uppercase tracking-[0.2em] text-cyan-500">
-                      <span>{project.category}</span>
-                      <span className="flex items-center gap-1">
-                        <Star size={12} className="fill-cyan-500" />{" "}
-                        {project.rating}.0
-                      </span>
-                    </div>
                     <h3 className="text-2xl font-bold leading-tight tracking-tight group-hover:text-cyan-400 transition-colors">
-                      {project.title}
+                      {project.sectionTitle}
                     </h3>
                     <p className="text-zinc-400 text-sm leading-relaxed font-light line-clamp-2">
-                      {project.desc}
+                      {project.sectionDesc}
                     </p>
                   </div>
                 </motion.div>
@@ -299,7 +224,6 @@ const CaseStudies = () => {
           </motion.div>
         </div>
       </section>
-
       {/* SECTION 4: CTA (EVEN - FIXED BG) */}
       <section
         style={fixedBgStyle}

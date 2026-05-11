@@ -1,9 +1,12 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
+import { servicesData } from "../data/serviceData";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+  const MotionLink = motion.create(Link);
 
   return (
     <footer className="relative w-full bg-[#00042A] pb-10 overflow-hidden">
@@ -11,7 +14,6 @@ const Footer = () => {
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute bottom-[-10%] right-[-5%] w-60 h-60 md:w-80 md:h-80 bg-purple-600/10 blur-[140px]" />
         <div className="absolute top-0 left-[-10%] w-52 h-52 md:w-72 md:h-72 bg-purple-500/10 blur-[120px]" />
-        <div className="absolute inset-0 opacity-[0.03] bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
       </div>
 
       {/* ================= MARQUEE ================= */}
@@ -35,7 +37,6 @@ const Footer = () => {
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10 md:gap-16 items-start">
-          
           {/* ================= LEFT ================= */}
           <div className="space-y-8 lg:col-span-2">
             <div className="space-y-4">
@@ -51,10 +52,11 @@ const Footer = () => {
             </div>
 
             {/* CTA BUTTON */}
-            <motion.button
+            <MotionLink
+              to={"/contact"}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="group cursor-pointer flex items-center gap-3 sm:gap-5 bg-white text-black px-1 pr-5 sm:pr-8 py-1 rounded-full"
+              className="group cursor-pointer w-fit flex items-center gap-3 sm:gap-5 bg-white text-black px-1 pr-5 sm:pr-8 py-1 rounded-full"
             >
               <div className="h-8 w-8 sm:h-10 sm:w-10 bg-secondery ease-in-out rounded-full flex items-center justify-center text-white group-hover:rotate-45 transition duration-500">
                 <ArrowUpRight size={18} />
@@ -63,7 +65,7 @@ const Footer = () => {
               <span className="text-[10px] sm:text-xs font-black uppercase tracking-widest">
                 Get In Touch
               </span>
-            </motion.button>
+            </MotionLink>
           </div>
 
           {/* ================= NAV ================= */}
@@ -73,15 +75,19 @@ const Footer = () => {
             </h2>
 
             <nav className="space-y-3 sm:space-y-4">
-              {["Services", "Projects", "Agency", "Journal"].map((item) => (
-                <a
+              {["Home", "Case Studies", "Team"].map((item) => (
+                <Link
                   key={item}
-                  href={`/${item.toLowerCase()}`}
+                  to={
+                    item === "Home"
+                      ? "/"
+                      : `/${item.toLowerCase().replace(/\s+/g, "")}`
+                  }
                   className="group flex items-center w-fit gap-2 text-white/80 hover:text-secondery transition"
                 >
                   <span className="w-0 h-px bg-secondery group-hover:w-4 transition-all duration-300" />
                   <span className="text-xs sm:text-sm">{item}</span>
-                </a>
+                </Link>
               ))}
             </nav>
           </div>
@@ -93,20 +99,15 @@ const Footer = () => {
             </h2>
 
             <nav className="space-y-3 sm:space-y-4">
-              {[
-                "Software Development",
-                "Saas App Development",
-                "Web Development",
-                "AI and Data Science",
-              ].map((item) => (
-                <a
-                  key={item}
-                  href={`/${item.toLowerCase()}`}
+              {servicesData.map((item) => (
+                <Link
+                  key={item.slug}
+                  to={`/services/${item.slug}`}
                   className="group flex items-center w-fit gap-2 text-white/80 hover:text-secondery transition"
                 >
                   <span className="w-0 h-px bg-secondery group-hover:w-4 transition-all duration-300" />
-                  <span className="text-xs sm:text-sm">{item}</span>
-                </a>
+                  <span className="text-xs sm:text-sm">{item.title}</span>
+                </Link>
               ))}
             </nav>
           </div>
@@ -114,33 +115,24 @@ const Footer = () => {
           {/* ================= SERVICES (DUPLICATE) ================= */}
           <div className="space-y-4 sm:space-y-6">
             <h2 className="text-lg sm:text-xl font-bold text-white uppercase">
-              Services
+              Agency Location
             </h2>
 
-            <nav className="space-y-3 sm:space-y-4">
-              {[
-                "Software Development",
-                "Saas App Development",
-                "Web Development",
-                "AI and Data Science",
-              ].map((item) => (
-                <a
-                  key={item}
-                  href={`/${item.toLowerCase()}`}
-                  className="group flex items-center w-fit gap-2 text-white/80 hover:text-secondery transition"
-                >
-                  <span className="w-0 h-px bg-secondery group-hover:w-4 transition-all duration-300" />
-                  <span className="text-xs sm:text-sm">{item}</span>
-                </a>
-              ))}
-            </nav>
+            <div className="space-y-3 text-white/70 text-sm">
+              <p>5942 W 124th St, Alsip, IL 60803</p>
+              <p>United States</p>
+            </div>
           </div>
         </div>
 
         {/* ================= BOTTOM ================= */}
         <div className="mt-16 md:mt-24 pt-6 md:pt-8 border-t border-white/5">
           <p className="text-center text-xs sm:text-sm text-white">
-            &copy; {currentYear} Your Company. All rights reserved.
+            &copy; {currentYear}{" "}
+            <Link to={"/"} className="text-secondery underline">
+              WBN Agency
+            </Link>
+            . All rights reserved.
           </p>
         </div>
       </div>
@@ -157,7 +149,7 @@ const Footer = () => {
         }
         .animate-marquee {
           display: flex;
-          animation: marquee 10s linear infinite;
+          animation: marquee 18s linear infinite;
         }
       `}</style>
     </footer>

@@ -6,10 +6,6 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // Pages (create these files)
 import Home from "./pages/Home";
 import CaseStudies from "./pages/CaseStudies";
-import SoftwareDevelopment from "./pages/SoftwareDevelopment";
-import AIDataScience from "./pages/AIDataScience";
-import CloudSolutions from "./pages/CloudSolutions";
-import Cybersecurity from "./pages/Cybersecurity";
 import Contact from "./pages/Contact";
 import Team from "./pages/Team";
 import ProjectDetail from "./pages/ProjectDetail";
@@ -27,10 +23,6 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/team" element={<Team />} />
         <Route path="/project/:slug" element={<ProjectDetail />} />
-        <Route path="/web" element={<SoftwareDevelopment />} />
-        <Route path="/ai" element={<AIDataScience />} />
-        <Route path="/cloud" element={<CloudSolutions />} />
-        <Route path="/security" element={<Cybersecurity />} />
         <Route path="/services/:slug" element={<ServicePages />} />
       </Routes>
 

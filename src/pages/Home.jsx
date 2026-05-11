@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import HeroBg from "../assets/hero-bg.webp";
 import GlowButton from "../components/GlowButton";
 import { motion, AnimatePresence } from "framer-motion";
@@ -15,25 +15,9 @@ import FAQ from "../components/FAQ";
 import BlogCard from "../components/BlogCard";
 import FeaturedProjectImg from "../assets/featured-project.webp";
 import BlogBg from "../assets/blog-bg.jpg";
-
-import WebDevImg from "../assets/web-dev.png";
-import DigitalMarketingImg from "../assets/digital-marketing.png";
-import TiktokImg from "../assets/tiktok.png";
-import YoutubeImg from "../assets/youtube.png";
-import VideoEditing from "../assets/video-editing.png";
-import Amazon from "../assets/amazon.png";
-
+import Counter from '../components/Counter'
 const Home = () => {
-  const logos = [
-    WebDevImg,
-    DigitalMarketingImg,
-    TiktokImg,
-    YoutubeImg,
-    VideoEditing,
-    Amazon,
-  ];
-  // We duplicate the array to ensure a seamless infinite loop
-  const duplicatedLogos = Array(5).fill(logos).flat();
+  
 
   // const projects = [
   //   {
@@ -109,7 +93,7 @@ const Home = () => {
     },
     {
       question:
-        "How long does a project take?2. How do you ensure the project aligns with my specific brand vision?",
+        "2. How do you ensure the project aligns with my specific brand vision?",
       answer: `Our process begins with a "Visionary Mapping" phase. We don't just start building; we conduct a deep dive into your business goals and market positioning. By establishing a clear strategic roadmap and providing conceptual models for your review, we guarantee the final product is a perfect reflection of your brand identity.`,
     },
     {
@@ -126,7 +110,14 @@ const Home = () => {
       answer: `Yes. We believe a project’s success is measured by its performance after the debut. Our "Launch Excellence" phase includes rigorous testing to ensure everything is bug-free. Beyond delivery, we offer optimization support to help you analyze results and make data-driven adjustments for long-term scalability.`,
     },
   ];
-
+  // Background for even sections
+  const fixedBgStyle = {
+    backgroundColor: "#03042a",
+    backgroundAttachment: "fixed",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+  };
+  
   return (
     <>
       <section
@@ -205,35 +196,15 @@ const Home = () => {
           </form>
         </div>
       </section>
-      <section className="py-8 bg-[#03042a] overflow-hidden">
-        {/* The Wrapper with Faded Edges */}
-        <div className="flex overflow-hidden">
-          <motion.div
-            className="flex flex-none gap-16 items-center"
-            animate={{
-              x: ["0%", "-20%"], // Move from start to half (since it's duplicated)
-            }}
-            transition={{
-              ease: "linear",
-              duration: 10, // Adjust speed here (higher = slower)
-              repeat: Infinity,
-            }}
-          >
-            {duplicatedLogos.map((logo, index) => (
-              <div
-                key={index}
-                className="flex-none w-25 flex justify-center items-center"
-              >
-                <img
-                  src={logo}
-                  alt={`Client Logo ${index}`}
-                  className="h-16 w-full object-contain scale-80 hover:scale-100 transition-all duration-500"
-                />
-              </div>
-            ))}
-          </motion.div>
+      <section style={fixedBgStyle} className="relative py-20 px-6 border-y-2 border-[#03042a]">
+        {/* Light Overlay for text readability */}
+        <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-12 relative z-10">
+          <Counter value="120+" label="Systems Architected" light={false} />
+          <Counter value="98%" label="Success Rate" light={false} />
+          <Counter value="50+" label="Global Partners" light={false} />
+          <Counter value="10M" label="Active Users" light={false} />
         </div>
-      </section>
+      </section>   
       <section
         className="relative py-28 overflow-hidden bg-cover bg-center"
         style={{
