@@ -18,7 +18,7 @@ const Footer = () => {
       <div className="relative border-y border-white/5 py-4 md:py-6 mb-12 md:mb-20 overflow-hidden">
         <div className="flex whitespace-nowrap animate-marquee">
           {Array(3)
-            .fill("LET’S BUILD SOMETHING GREAT • ")
+            .fill("Partner with Us to Build Excellence • ")
             .map((text, i) => (
               <span
                 key={i}

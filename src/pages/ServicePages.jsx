@@ -1,0 +1,625 @@
+// ================= ServicePages.jsx (Enhanced) =================
+
+import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import GlowButton from "../components/GlowButton";
+import {
+  Cloud,
+  Server,
+  Layers,
+  Zap,
+  ArrowRight,
+  ChevronLeft,
+  ChevronRight,
+  Terminal,
+  ShieldCheck,
+  Binary,
+  Database,
+  Infinity as InfinityIcon,
+  Activity,
+  Contact,
+  Check,
+  Calendar,
+  TrendingUp,
+  Code,
+  Palette,
+  Film,
+  ShoppingCart,
+  Search,
+  BarChart,
+  Settings,
+  Rocket,
+  Target,
+  Eye,
+  Globe,
+  Cpu,
+  Brain,
+  Sparkles,
+} from "lucide-react";
+import { LineChart, Microscope, Bot, DatabaseZap, Network } from "lucide-react";
+import CircularTestimonials from "../components/CircularTestimonials";
+import FAQ from "../components/FAQ";
+import BlogCard from "../components/BlogCard";
+import { useParams } from "react-router-dom";
+import { servicesData } from "../data/serviceData";
+import BlogBg from "../assets/blog-bg.jpg";
+
+// Enhanced Project Slider
+const ProjectSlider = ({ projects }) => {
+  const [index, setIndex] = useState(0);
+
+  const next = () => setIndex((p) => (p + 1) % projects.length);
+  const prev = () =>
+    setIndex((p) => (p - 1 + projects.length) % projects.length);
+
+  return (
+    <div className="relative w-full rounded-4xl overflow-hidden border border-white/10 shadow-2xl bg-black/40 backdrop-blur-xl">
+      <div className="grid lg:grid-cols-2">
+        <div className="h-75 lg:h-125 overflow-hidden">
+          <AnimatePresence mode="wait">
+            <motion.img
+              key={index}
+              src={projects[index].image}
+              initial={{ opacity: 0, scale: 1.1 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.9 }}
+              transition={{ duration: 0.8 }}
+              className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000"
+            />
+          </AnimatePresence>
+        </div>
+
+        <div className="p-12 flex flex-col justify-center space-y-6">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -20 }}
+              className="space-y-4"
+            >
+              <h3 className="sm:text-4xl text-2xl font-black uppercase tracking-tighter text-white">
+                {projects[index].title}
+              </h3>
+              <p className="text-zinc-400 sm:text-lg text-xs leading-relaxed italic">
+                "{projects[index].desc}"
+              </p>
+              <div className="flex flex-wrap gap-2 pt-4">
+                {projects[index].tech.map((t) => (
+                  <span
+                    key={t}
+                    className="px-3 py-1 bg-white/5 border border-white/10 text-[9px] font-bold rounded-full text-zinc-300"
+                  >
+                    {t}
+                  </span>
+                ))}
+              </div>
+            </motion.div>
+          </AnimatePresence>
+
+          <div className="flex gap-4 pt-10">
+            <button
+              onClick={prev}
+              className="p-4 rounded-full border border-white/10 hover:bg-cyan-500 transition-all text-white hover:text-black cursor-pointer"
+            >
+              <ChevronLeft size={20} />
+            </button>
+            <button
+              onClick={next}
+              className="p-4 rounded-full border border-white/10 hover:bg-cyan-500 transition-all text-white hover:text-black cursor-pointer"
+            >
+              <ChevronRight size={20} />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+// Roadmap Component
+const RoadmapSection = ({ roadmap }) => {
+  return (
+    <section className="py-10 px-6 bg-[#00042A] overflow-hidden">
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-5xl font-black mb-4">
+            {roadmap?.title || "Our Process Roadmap"}
+          </h2>
+          <p className="text-zinc-400 max-w-2xl mx-auto">
+            {roadmap?.description ||
+              "A structured approach to deliver excellence"}
+          </p>
+        </div>
+        <div className="relative">
+          <div className="absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-gradient-to-b from-cyan-500 to-purple-500 hidden lg:block" />
+          <div className="space-y-12">
+            {roadmap?.steps?.map((step, idx) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, x: idx % 2 === 0 ? -50 : 50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: idx * 0.1 }}
+                viewport={{ once: true }}
+                className={`flex flex-col lg:flex-row items-center gap-8 ${
+                  idx % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
+                }`}
+              >
+                <div className="lg:w-1/2">
+                  <div className="bg-white/5 border border-white/10 p-6 backdrop-blur-sm hover:border-cyan-500/50 transition-all mx-0.5">
+                    <div className="flex items-center gap-4 mb-4">
+                      <div className="w-12 h-12 rounded-full bg-cyan-500/20 flex items-center justify-center">
+                        {React.createElement(step.icon, {
+                          size: 24,
+                          className: "text-cyan-400",
+                        })}
+                      </div>
+                      <div>
+                        <span className="text-cyan-400 text-sm font-mono">
+                          Step 0{idx + 1}
+                        </span>
+                        <h3 className="text-xl font-bold">{step.title}</h3>
+                      </div>
+                    </div>
+                    <p className="text-zinc-400">{step.description}</p>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+// Next Steps Component
+const NextStepsSection = ({ nextSteps }) => {
+  return (
+    <section className="py-20 px-6 bg-[#00042A]">
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-5xl font-black mb-4">
+            {nextSteps?.title || "Ready to Get Started?"}
+          </h2>
+          <p className="text-zinc-400 max-w-2xl mx-auto">
+            {nextSteps?.description ||
+              "Follow these simple steps to begin your journey with us"}
+          </p>
+        </div>
+        <div className="grid md:grid-cols-3 gap-8">
+          {nextSteps?.steps?.map((step, idx) => (
+            <motion.div
+              key={idx}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: idx * 0.1 }}
+              viewport={{ once: true }}
+              className="text-center group"
+            >
+              <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-gradient-to-br from-cyan-500 to-secondery flex items-center justify-center group-hover:scale-110 transition-transform">
+                <span className="text-2xl font-black">
+                  {String(idx + 1).padStart(2, "0")}
+                </span>
+              </div>
+              <h3 className="text-xl font-bold mb-3">{step.title}</h3>
+              <p className="text-zinc-400 text-sm">{step.description}</p>
+            </motion.div>
+          ))}
+        </div>
+        <div className="text-center mt-12">
+          <GlowButton
+            name={nextSteps?.buttonText || "Start Your Project"}
+            href={nextSteps?.buttonLink || "/contact"}
+          />
+        </div>
+      </div>
+    </section>
+  );
+};
+
+const ServicePages = () => {
+  const { slug } = useParams();
+  const service = servicesData.find(
+    (s) => s.slug.toLowerCase() === slug?.toLowerCase(),
+  );
+  const [active, setActive] = useState(0);
+  const [selectedPost, setSelectedPost] = useState(null);
+
+  if (!service) {
+    return (
+      <div className="min-h-screen bg-black text-white flex items-center justify-center">
+        Service Not Found
+      </div>
+    );
+  }
+
+  const tabs = service.tabs || [];
+  const projects = service.showcase?.projects || [];
+  const yourData = service.testimonials || [];
+  const faqs = service.faqs || [];
+  const capabilities = service.capabilities || [];
+  const processFeatures = service.processFeatures || [];
+  const roadmap = service.roadmap || {};
+  const nextSteps = service.nextSteps || {};
+  const blogPosts = service.blogPosts || [];
+
+  const fadeLeft = {
+    hidden: { opacity: 0, x: -40 },
+    show: (i = 1) => ({
+      opacity: 1,
+      x: 0,
+      transition: {
+        delay: i * 0.15,
+        duration: 0.6,
+        ease: "easeOut",
+      },
+    }),
+  };
+
+  return (
+    <div className="bg-[#00042A] text-white selection:bg-cyan-500 selection:text-black min-h-screen">
+      {/* NAVBAR SPACER */}
+      <div className="h-20 md:h-24" />
+
+      <main>
+        {/* SECTION 1: HERO */}
+        <section
+          className="relative w-full min-h-[90vh] bg-cover bg-center flex items-center px-6 md:px-12 overflow-hidden"
+          style={{
+            backgroundImage: `linear-gradient(135deg, rgba(0, 1, 12, 0.95) 0%, rgba(240, 240, 240, 0) 100%), url(${service.heroImage})`,
+          }}
+        >
+          {/* Animated Background Elements */}
+          <div className="absolute inset-0 overflow-hidden">
+            <div className="absolute top-20 left-10 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl animate-pulse" />
+            <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000" />
+          </div>
+
+          <div className="z-10 max-w-4xl w-full">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-6">
+                <Sparkles size={14} className="text-cyan-400" />
+                <span className="text-xs font-medium uppercase tracking-wider">
+                  Premium Service
+                </span>
+              </div>
+              <h1 className="font-sans text-white text-4xl md:text-6xl lg:text-7xl font-black leading-tight">
+                {service.heroTitle}
+              </h1>
+              <p className="mt-6 text-gray-300 text-base md:text-lg max-w-2xl font-sans">
+                {service.heroDesc}
+              </p>
+            </motion.div>
+
+            {/* Enhanced Form */}
+            <GlowButton
+              name={"Get a Quote"}
+              to={"/contact"}
+              className="mt-10"
+            />
+          </div>
+        </section>
+
+        {/* SECTION 3: TABS / FEATURES */}
+        <section className="bg-[#00042A] text-white py-32 px-6">
+          <div className="max-w-7xl mx-auto">
+            <div className="flex lg:flex-row flex-col lg:gap-12 mb-16 justify-between">
+              <div className="mb-10 lg:mb-0 lg:w-1/2">
+                <h2 className="text-2xl md:text-4xl font-black mb-6">
+                  {service.sectionTitle}
+                </h2>
+                <p className="text-zinc-400 max-w-xl">{service.sectionDesc}</p>
+              </div>
+              <div className="lg:w-1/2">
+                <img
+                  src={service.sectionImage}
+                  alt={service.title}
+                  className="rounded w-100 h-50 object-cover grayscale hover:grayscale-0 transition-all duration-1000"
+                />
+              </div>
+            </div>
+          </div>
+          <div className="max-w-7xl mx-auto">
+            <div className="grid lg:grid-cols-3 grid-cols-1 border border-white/10 overflow-hidden">
+              <div className="flex flex-col">
+                {tabs.map((tab, i) => (
+                  <button
+                    key={i}
+                    onClick={() => setActive(i)}
+                    className={`text-left px-6 py-5 cursor-pointer border transition-all duration-300
+                    ${
+                      active === i
+                        ? "bg-gradient-to-r from-cyan-500 to-purple-500 text-black border-cyan-500"
+                        : "bg-white/5 border-white/10 hover:border-cyan-500"
+                    }
+                    `}
+                  >
+                    <span className="font-bold tracking-wide uppercase text-sm">
+                      {tab.title}
+                    </span>
+                  </button>
+                ))}
+              </div>
+
+              <div className="relative lg:col-span-2">
+                <AnimatePresence mode="wait">
+                  <motion.div
+                    key={active}
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -20 }}
+                    transition={{ duration: 0.4 }}
+                    className="p-4 md:p-8 h-full"
+                  >
+                    <h3 className="text-2xl md:text-3xl font-black">
+                      {tabs[active]?.content?.heading}
+                    </h3>
+                    <p className="text-zinc-400 mb-6">
+                      {tabs[active]?.content?.desc}
+                    </p>
+                    <ul className="space-y-3">
+                      {tabs[active]?.content?.points?.map((p, i) => (
+                        <li
+                          key={i}
+                          className="flex items-start gap-3 text-sm text-zinc-300"
+                        >
+                          <span className="w-2 h-2 mt-2 bg-cyan-500 rounded-full shrink-0" />
+                          {p}
+                        </li>
+                      ))}
+                    </ul>
+                  </motion.div>
+                </AnimatePresence>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* SECTION 4: CAPABILITIES GRID */}
+        <section
+          className="relative py-40 px-6 bg-fixed bg-cover bg-center"
+          style={{
+            backgroundImage: `url(${service.capabilitiesBg})`,
+          }}
+        >
+          <div className="absolute inset-0 bg-black/70 backdrop-blur-sm" />
+          <div className="max-w-7xl mx-auto relative z-10">
+            <div className="text-center space-y-4 mb-24">
+              <h2 className="text-2xl md:text-6xl font-black tracking-tighter uppercase leading-none text-white">
+                {service.capabilitiesTitle} <br />
+                <span className="text-cyan-500 italic">
+                  {service.capabilitiesHighlight}
+                </span>
+              </h2>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {capabilities.map((s, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: i * 0.1 }}
+                  viewport={{ once: true }}
+                  whileHover={{ y: -10 }}
+                  className="p-8 bg-white/5 border border-white/10 rounded-2xl backdrop-blur-md group hover:border-cyan-500/50 transition-all"
+                >
+                  {s.icon && (
+                    <s.icon
+                      className="text-cyan-400 mb-6 group-hover:scale-110 transition-transform"
+                      size={32}
+                    />
+                  )}
+                  <h3 className="text-xl font-black uppercase tracking-tight mb-4 text-white">
+                    {s.title}
+                  </h3>
+                  <p className="text-zinc-400 text-sm leading-relaxed">
+                    {s.desc}
+                  </p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* SECTION 5: PROCESS */}
+        <section className="py-40 px-6 bg-[#00042A]">
+          <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-20 lg:items-center text-white">
+            <div className="lg:w-1/2">
+              <div className="relative p-1 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-2xl">
+                <img
+                  src={service.processImage}
+                  className="h-auto w-full object-cover grayscale hover:grayscale-0 transition-all duration-1000 rounded-2xl"
+                  alt={service.title}
+                />
+              </div>
+            </div>
+            <div className="lg:w-1/2 space-y-2">
+              <h3 className="text-xl text-cyan-400 font-black">
+                {service.processSubTitle}
+              </h3>
+              <h2 className="md:text-5xl sm:text-3xl text-xl font-black italic uppercase tracking-tighter leading-tight mb-8">
+                {service.processTitle} <br />
+                <span className="text-cyan-500 font-serif">
+                  {service.processHighlight}
+                </span>
+              </h2>
+              <p className="text-zinc-400 sm:text-lg text-xs leading-relaxed italic border-l border-white/10 pl-4">
+                {service.processDesc}
+              </p>
+              <ul className="mt-6 md:mt-8 pl-2 flex flex-col gap-4 md:gap-6 max-w-full">
+                {processFeatures.map((text, i) => (
+                  <motion.li
+                    key={i}
+                    variants={fadeLeft}
+                    custom={i + 1}
+                    initial="hidden"
+                    whileInView="show"
+                    viewport={{ once: true }}
+                    className="flex items-start gap-3 md:gap-4"
+                  >
+                    <Check size={24} className="text-cyan-400 mt-1 shrink-0" />
+                    <span className="text-base md:text-xl font-bold leading-tight">
+                      {text}
+                    </span>
+                  </motion.li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        {/* SECTION 6: ROADMAP */}
+        <RoadmapSection roadmap={roadmap} />
+
+        {/* SECTION 7: PROJECTS SHOWCASE */}
+        {projects.length > 0 && (
+          <section
+            className="relative py-48 px-6 bg-fixed bg-cover bg-center"
+            style={{
+              backgroundImage: `url(${service.showcase?.bgImage})`,
+            }}
+          >
+            <div className="absolute inset-0 bg-black/85 backdrop-blur-xl" />
+            <div className="max-w-6xl mx-auto relative z-10">
+              <h2 className="sm:text-4xl text-2xl font-black text-center mb-16 tracking-widest uppercase italic text-white">
+                {service.showcase?.title}
+              </h2>
+              <ProjectSlider projects={projects} />
+            </div>
+          </section>
+        )}
+
+        {/* SECTION 11: NEXT STEPS */}
+        {nextSteps?.steps?.length > 0 && (
+          <NextStepsSection nextSteps={nextSteps} />
+        )}
+
+        {/* SECTION 12: FINAL CTA */}
+        <section
+          className="relative py-40 px-6 bg-fixed bg-cover bg-center"
+          style={{
+            backgroundImage: `url(${service.ctaBg})`,
+          }}
+        >
+          <div className="absolute inset-0 bg-black/60 backdrop-blur-xl" />
+          <div className="max-w-7xl mx-auto text-center space-y-12 relative z-10">
+            <div className="space-y-8">
+              <div className="flex justify-center items-center bg-white/10 backdrop-blur-xl border border-white/30 w-24 h-24 rounded-full mx-auto mb-4">
+                <Rocket className="text-cyan-500" size={48} />
+              </div>
+              <h3 className="text-2xl sm:text-4xl md:text-6xl font-black tracking-tighter uppercase">
+                {service.ctaTitle}
+              </h3>
+              <GlowButton name={service.ctaButton} href={service.ctaLink} />
+            </div>
+          </div>
+          <div className="absolute inset-0 pointer-events-none opacity-10 bg-[linear-gradient(rgba(18,16,16,0)_50%,rgba(0,0,0,0.25)_50%),linear-gradient(90deg,rgba(255,0,0,0.06),rgba(0,255,0,0.02),rgba(0,0,255,0.06))] bg-size-[100%_2px,3px_100%]" />
+        </section>
+
+        {/* SECTION 9: TESTIMONIALS */}
+        {yourData.length > 0 && (
+          <section className="bg-[#00042A]">
+            <CircularTestimonials
+              testimonials={yourData}
+              autoplay={true}
+              colors={{
+                arrowBackground: "#050505",
+                arrowHoverBackground: "#009cff",
+              }}
+            />
+          </section>
+        )}
+
+        {/* SECTION 8: BLOG */}
+        {blogPosts.length > 0 && (
+          <section
+            className="relative p-6 bg-fixed bg-cover bg-center"
+            style={{
+              backgroundImage: `url(${BlogBg})`,
+            }}
+          >
+            <div className="absolute inset-0 bg-black/80" />
+            <div className="max-w-7xl mx-auto relative z-10">
+              <BlogCard
+                title={service.blogTitle || "Latest Insights"}
+                description={
+                  service.blogDescription ||
+                  "Explore our latest thoughts, ideas, and innovations shaping the future."
+                }
+                posts={blogPosts}
+                onPostClick={setSelectedPost}
+              />
+            </div>
+          </section>
+        )}
+
+        {/* SECTION 10: FAQ */}
+        {faqs.length > 0 && <FAQ faqs={faqs} />}
+      </main>
+
+      {/* Blog Modal */}
+      {selectedPost && (
+        <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/90 backdrop-blur-md p-4">
+          <div className="relative w-full max-w-3xl max-h-[90vh] overflow-y-auto rounded-2xl bg-[#0b0b0b] border border-white/10 shadow-2xl">
+            <button
+              onClick={() => setSelectedPost(null)}
+              className="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/10 text-white hover:bg-white cursor-pointer hover:text-black transition flex items-center justify-center z-10"
+            >
+              ✕
+            </button>
+            <div
+              className="h-72 md:h-96 bg-cover bg-center"
+              style={{ backgroundImage: `url(${selectedPost.imageUrl})` }}
+            />
+            <div className="p-6 md:p-10 space-y-6 text-white">
+              <span className="inline-block px-3 py-1 text-[10px] font-bold uppercase tracking-widest bg-cyan-500/20 text-cyan-400 border border-cyan-500/30 rounded-full">
+                {selectedPost.category}
+              </span>
+              <h2 className="text-2xl md:text-4xl font-black leading-tight">
+                {selectedPost.title}
+              </h2>
+              <div className="flex flex-wrap gap-4 text-xs text-white/60">
+                <span>{selectedPost.views || "1.2k"} views</span>
+                <span>{selectedPost.readTime} min read</span>
+                <span>Author: {selectedPost.author || "WBN Agency"}</span>
+              </div>
+              <p className="text-white/70 leading-relaxed text-sm md:text-base">
+                {selectedPost.description}
+              </p>
+              <p className="text-white/50 text-sm leading-relaxed">
+                {selectedPost.content ||
+                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."}
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
+
+      <style jsx>{`
+        @keyframes shine-wave {
+          0% {
+            left: -100%;
+            opacity: 0;
+          }
+          50% {
+            opacity: 0.5;
+          }
+          100% {
+            left: 100%;
+            opacity: 0;
+          }
+        }
+        .group-hover\\/btn\\:animate-shine-wave {
+          animation: shine-wave 0.8s ease-in-out forwards;
+        }
+      `}</style>
+    </div>
+  );
+};
+
+export default ServicePages;

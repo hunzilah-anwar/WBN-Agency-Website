@@ -9,41 +9,26 @@ import {
   Cloud,
   Cpu,
   ShieldCheck,
+  ArrowRight,
 } from "lucide-react";
 import GlowButton from "./GlowButton";
 import logo from "../assets/WBN Agency.png";
+import { servicesData } from "../data/serviceData";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [openServices, setOpenServices] = useState(false);
   const location = useLocation();
 
-  const services = [
-    {
-      title: "Software Development",
-      to: "/web",
-      desc: "Custom web & mobile apps",
-      icon: <Code size={20} />,
-    },
-    {
-      title: "Cloud Solutions",
-      to: "/cloud",
-      desc: "AWS, Azure & Google Cloud",
-      icon: <Cloud size={20} />,
-    },
-    {
-      title: "Cybersecurity",
-      to: "/security",
-      desc: "Advanced threat protection",
-      icon: <ShieldCheck size={20} />,
-    },
-    {
-      title: "AI & Data Science",
-      to: "/ai",
-      desc: "Modern machine learning",
-      icon: <Cpu size={20} />,
-    },
-  ];
+  const services = servicesData
+  .filter((s) => s.slug) // ❗ only valid services
+  .map((service) => ({
+    title: service.title,
+    to: `/services/${service.slug}`,
+    desc: service.desc,
+    icon: service.icon,
+    slug: service.slug,
+  }));
 
   const navLinks = [
     { name: "Home", to: "/" },
@@ -73,7 +58,6 @@ const Header = () => {
     closed: { opacity: 0, x: -10 },
     open: { opacity: 1, x: 0 },
   };
-
 
   return (
     <header className="fixed top-0 left-0 w-full z-1000 bg-white/90 backdrop-blur-md border-b border-gray-100">
@@ -126,18 +110,31 @@ const Header = () => {
                     <Link
                       key={index}
                       to={service.to}
-                      className="group/item flex items-start gap-4 p-4 hover:bg-gray-50 transition-all border border-gray-300"
+                      className="group/item flex items-start gap-4 p-4 hover:bg-gray-50 transition-all duration-300 border border-gray-300 hover:border-black/10"
                     >
-                      <div className="p-2 bg-gray-100 text-gray-600 group-hover/item:bg-black group-hover/item:text-white transition ease-in-out duration-300">
-                        {service.icon}
+                      {/* ICON */}
+                      <div className="p-2 bg-gray-100 text-gray-600 group-hover/item:bg-black group-hover/item:text-white transition-all duration-300">
+                        {React.createElement(service.icon, { size: 20 })}
                       </div>
-                      <div>
-                        <h4 className="text-[11px] font-black uppercase text-gray-900">
+
+                      {/* CONTENT */}
+                      <div className="flex-1">
+                        <h4 className="text-[11px] font-black uppercase text-gray-900 tracking-wide">
                           {service.title}
                         </h4>
-                        <p className="text-[10px] text-gray-500 mt-1">
+
+                        <p className="text-[10px] text-gray-500 mt-1 leading-relaxed">
                           {service.desc}
                         </p>
+
+                        {/* CTA */}
+                        <div className="flex items-center gap-1 mt-3 text-[9px] font-bold uppercase tracking-[0.2em]text-gray-400 group-hover/item:text-black transition-all">
+                          Explore Service
+                          <ArrowRight
+                            size={12}
+                            className="transition-transform duration-300 group-hover/item:translate-x-1"
+                          />
+                        </div>
                       </div>
                     </Link>
                   ))}
