@@ -1,6 +1,7 @@
 import React from "react";
 import { useParams, Link } from "react-router-dom";
 import { servicesData } from "../data/serviceData";
+import GlowButton from "../components/GlowButton";
 
 const ProjectDetail = () => {
   const { slug, projectSlug } = useParams();
@@ -41,41 +42,26 @@ const ProjectDetail = () => {
   // If viewing a project inside showcase.projects
   if (isProject && project) {
     return (
-      <section className="bg-[#00042A] text-white min-h-screen">
-        {/* ================= BACK BUTTON ================= */}
-        <div className="max-w-7xl mx-auto px-6 pt-8">
-          <Link
-            to={`/services/${service.slug}`}
-            className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition group"
-          >
-            ← Back to {service.title}
-          </Link>
-        </div>
-
+      <section className="bg-[#00042A] text-white min-h-screen sm:py-20 py-10 sm:px-10 px-4">
         {/* ================= HERO SECTION ================= */}
-        <div className="relative py-20 px-6">
+        <div className="relative py-20">
           <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
             <div>
-              <div className="flex items-center gap-3 mb-4">
-                <span className="text-cyan-400 uppercase tracking-[5px] text-sm">
-                  {service.title}
-                </span>
+              <div className="flex flex-col items-start gap-3 mb-4">
                 <span className="px-3 py-1 bg-cyan-400/20 text-cyan-400 text-xs rounded-full">
                   Project
                 </span>
+                <span className="text-cyan-400 uppercase tracking-[5px] text-xs font-semibold">
+                  {service.title}
+                </span>
               </div>
-              <h1 className="text-5xl font-black mb-6 leading-tight">
+              <h1 className="md:text-5xl sm:text-3xl text-xl font-black sm:mb-6 mb-2 leading-tight">
                 {project.title}
               </h1>
-              <p className="text-gray-300 text-lg leading-relaxed mb-8">
+              <p className="text-gray-300 sm:text-lg text-sm leading-relaxed mb-8">
                 {project.desc}
               </p>
-              <Link
-                to="/contact"
-                className="inline-block px-8 py-4 bg-cyan-400 text-black font-bold uppercase tracking-wider hover:bg-cyan-300 transition"
-              >
-                Get This Service
-              </Link>
+              <GlowButton to={"/contact"} name={"Get This Service"} />
             </div>
             <div className="relative">
               <img
@@ -89,8 +75,8 @@ const ProjectDetail = () => {
 
         {/* ================= OVERVIEW ================= */}
         {project.overview && (
-          <div className="max-w-6xl mx-auto px-6 py-16">
-            <h2 className="text-3xl font-bold mb-4">Overview</h2>
+          <div className="max-w-7xl mx-auto py-10 border-t border-white/10">
+            <h2 className="sm:text-3xl text-2xl font-bold mb-4">Overview</h2>
             <p className="text-gray-300 leading-relaxed text-lg">
               {project.overview}
             </p>
@@ -99,8 +85,10 @@ const ProjectDetail = () => {
 
         {/* ================= FEATURES ================= */}
         {project.features && project.features.length > 0 && (
-          <div className="max-w-6xl mx-auto px-6 py-16">
-            <h2 className="text-3xl font-bold mb-10">Key Features</h2>
+          <div className="max-w-7xl mx-auto py-16 border-t border-white/10">
+            <h2 className="sm:text-3xl text-2xl font-bold mb-10">
+              Key Features
+            </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {project.features.map((feature, i) => (
                 <div
@@ -119,8 +107,10 @@ const ProjectDetail = () => {
 
         {/* ================= TECHNOLOGIES ================= */}
         {project.tech && project.tech.length > 0 && (
-          <div className="max-w-6xl mx-auto px-6 py-16">
-            <h2 className="text-3xl font-bold mb-10">Technologies Used</h2>
+          <div className="max-w-7xl mx-auto py-16 border-t border-white/10">
+            <h2 className="sm:text-3xl text-2xl font-bold mb-10">
+              Technologies Used
+            </h2>
             <div className="flex flex-wrap gap-3">
               {project.tech.map((tech, i) => (
                 <span
@@ -136,8 +126,10 @@ const ProjectDetail = () => {
 
         {/* ================= RESULTS ================= */}
         {project.results && project.results.length > 0 && (
-          <div className="max-w-6xl mx-auto px-6 py-16">
-            <h2 className="text-3xl font-bold mb-10">Expected Results</h2>
+          <div className="max-w-7xl mx-auto py-16 border-t border-white/10">
+            <h2 className="sm:text-3xl text-2xl font-bold mb-10">
+              Expected Results
+            </h2>
             <div className="grid md:grid-cols-3 gap-6">
               {project.results.map((result, i) => (
                 <div
@@ -154,8 +146,8 @@ const ProjectDetail = () => {
 
         {/* ================= OTHER PROJECTS FROM SAME SERVICE ================= */}
         {service.showcase?.projects && service.showcase.projects.length > 1 && (
-          <div className="max-w-7xl mx-auto px-6 py-20 border-t border-white/10">
-            <h2 className="text-3xl font-bold mb-4 text-center">
+          <div className="max-w-7xl mx-auto py-20 border-t border-white/10">
+            <h2 className="sm:text-3xl text-2xl font-bold mb-4 text-center">
               Other {service.title} Projects
             </h2>
             <p className="text-gray-400 text-center mb-12">
@@ -169,7 +161,7 @@ const ProjectDetail = () => {
                   <Link
                     key={index}
                     to={`/services/${service.slug}/${p.slug}`}
-                    className="group bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:border-cyan-400 transition-all hover:scale-105 duration-300"
+                    className="group bg-white/5 border border-white/10 rounded-xl overflow-hidden hover:border-cyan-400 transition-all hover:scale-105 duration-300"
                   >
                     <div className="relative h-48 overflow-hidden">
                       <img
@@ -204,19 +196,14 @@ const ProjectDetail = () => {
         )}
 
         {/* ================= CTA ================= */}
-        <div className="px-6 py-20">
+        <div className="py-10 border-t border-white/10">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl font-black mb-4">Ready to Get Started?</h2>
+            <h2 className="sm:text-4xl text-2xl font-black mb-4">Ready to Get Started?</h2>
             <p className="text-gray-400 mb-8">
               Let's discuss how our {project.title} service can help your
               business grow.
             </p>
-            <Link
-              to="/contact"
-              className="inline-block px-8 py-4 bg-cyan-400 text-black font-bold uppercase tracking-wider hover:bg-cyan-300 transition"
-            >
-              Contact Us Today
-            </Link>
+            <GlowButton to={"/contact"} name={"Let's Contact"} />
           </div>
         </div>
       </section>
@@ -261,7 +248,9 @@ const ProjectDetail = () => {
 
       {/* ================= SECTION INTRO ================= */}
       <div className="max-w-6xl mx-auto px-6 py-16">
-        <h2 className="text-3xl font-bold mb-4">{service.sectionTitle}</h2>
+        <h2 className="sm:text-3xl text-2xl font-bold mb-4">
+          {service.sectionTitle}
+        </h2>
         <p className="text-gray-300 leading-relaxed text-lg">
           {service.sectionDesc}
         </p>
@@ -270,7 +259,7 @@ const ProjectDetail = () => {
       {/* ================= CAPABILITIES ================= */}
       {service.capabilities && (
         <div className="max-w-6xl mx-auto px-6 py-16">
-          <h2 className="text-3xl font-bold mb-10">
+          <h2 className="sm:text-3xl text-2xl font-bold mb-10">
             Our{" "}
             <span className="text-cyan-400">
               {service.capabilitiesHighlight}
@@ -297,7 +286,7 @@ const ProjectDetail = () => {
 
       {/* ================= TABS SECTION ================= */}
       {service.tabs && (
-        <div className="max-w-6xl mx-auto px-6 py-16">
+        <div className="max-w-6xl mx-auto px-6 py-16 border-t border-white/10">
           <h2 className="text-3xl font-bold mb-10">What We Offer</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {service.tabs.map((tab, i) => (
@@ -378,7 +367,7 @@ const ProjectDetail = () => {
 
       {/* ================= PROCESS ================= */}
       {service.processFeatures && (
-        <div className="max-w-6xl mx-auto px-6 py-16">
+        <div className="max-w-6xl mx-auto px-6 py-16 border-t border-white/10">
           <h2 className="text-3xl font-bold mb-4">{service.processSubTitle}</h2>
           <p className="text-gray-400 mb-10">{service.processDesc}</p>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -452,7 +441,7 @@ const ProjectDetail = () => {
 
       {/* ================= BLOG SECTION ================= */}
       {service.blogPosts && service.blogPosts.length > 0 && (
-        <div className="max-w-7xl mx-auto px-6 py-16">
+        <div className="max-w-7xl mx-auto px-6 py-16 border-t border-white/10">
           <h2 className="text-3xl font-bold mb-4 text-center">
             {service.blogTitle}
           </h2>
@@ -500,7 +489,7 @@ const ProjectDetail = () => {
 
       {/* ================= NEXT STEPS ================= */}
       {service.nextSteps && (
-        <div className="max-w-6xl mx-auto px-6 py-16">
+        <div className="max-w-6xl mx-auto px-6 py-16 border-t border-white/10">
           <h2 className="text-3xl font-bold mb-4 text-center">
             {service.nextSteps.title}
           </h2>
@@ -561,7 +550,7 @@ const ProjectDetail = () => {
 
       {/* ================= CTA SECTION ================= */}
       <div
-        className="relative py-24 px-6 bg-cover bg-center bg-fixed"
+        className="relative py-24 px-6 bg-cover bg-center bg-fixed border-t border-white/10"
         style={{ backgroundImage: `url(${service.ctaBg})` }}
       >
         <div className="absolute inset-0 bg-black/70"></div>

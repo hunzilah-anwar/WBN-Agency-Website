@@ -41,21 +41,21 @@ const CaseStudies = () => {
   return (
     <main className="selection:bg-cyan-500 selection:text-white">
       {/* SECTION 1: HERO (ODD - #00042A) */}
-      <section className="relative min-h-screen pt-40 pb-20 px-6 bg-[#03042a] text-white flex items-center overflow-hidden">
+      <section className="relative min-h-screen sm:pt-40 pt-30 sm:pb-20 pb-10 sm:px-6 px-4 bg-[#03042a] text-white flex items-center overflow-hidden">
         {/* BACKGROUND GLOW */}
         <div className="absolute top-[-20%] left-[-10%] w-150 h-150 bg-blue-500/20 blur-[140px]" />
         <div className="absolute bottom-[-20%] right-[-10%] w-150 h-150 bg-purple-600/20 blur-[140px]" />
 
         <div className="max-w-7xl mx-auto w-full grid md:grid-cols-2 gap-16 items-center relative z-10">
           {/* ================= LEFT CONTENT ================= */}
-          <div className="space-y-8">
+          <div className="sm:space-y-8 space-y-4">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
               className="flex items-center gap-4"
             >
-              <span className="w-16 h-0.5 bg-cyan-400" />
-              <p className="uppercase tracking-[0.4em] text-cyan-400 text-xs font-bold">
+              <span className="sm:w-16 w-6 h-0.5 bg-cyan-400" />
+              <p className="uppercase tracking-[0.4em] text-cyan-400 sm:text-xs text-[11px]  font-bold">
                 Case Studies
               </p>
             </motion.div>
@@ -63,15 +63,15 @@ const CaseStudies = () => {
             <motion.h1
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
-              className="text-5xl md:text-7xl lg:text-8xl font-black leading-[0.8]"
+              className="text-2xl sm:text-5xl md:text-7xl lg:text-8xl font-black leading-[0.8]"
             >
-              DIGITAL <br />
+              DIGITAL{" "}
               <span className="text-transparent bg-clip-text bg-linear-to-r from-cyan-400 to-blue-500">
                 IMPACT
               </span>
             </motion.h1>
 
-            <p className="text-zinc-400 text-lg max-w-md leading-relaxed">
+            <p className="text-zinc-400 sm:text-lg text-sm max-w-md leading-relaxed">
               We engineer scalable platforms, AI systems, and cloud
               architectures that power modern digital ecosystems.
             </p>
@@ -91,7 +91,7 @@ const CaseStudies = () => {
               <img
                 src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=2070&auto=format&fit=crop"
                 alt="Hero Visual"
-                className="w-full h-125 object-cover scale-105 group-hover:scale-110 transition duration-700"
+                className="w-full h-110 object-cover scale-105 group-hover:scale-110 transition duration-700"
               />
 
               {/* overlay */}
@@ -140,12 +140,12 @@ const CaseStudies = () => {
         </div>
       </section>
       {/* SECTION 3: GRID (ODD - #00042A) */}
-      <section className="bg-[#00042A] text-white pb-28 pt-16">
+      <section className="bg-[#00042A] text-white sm:pt-16 pt-8 sm:pb-24 pb-14 sm:px-6 px-4">
         {/* Sticky Filter */}
         <div className="border-b border-white/10">
-          <div className="max-w-7xl mx-auto px-6 py-6 flex flex-col justify-between gap-10">
+          <div className="max-w-7xl mx-auto sm:py-6 py-4 flex flex-col justify-between gap-10">
             <div className="flex items-center gap-3 text-white">
-              <span className="text-4xl uppercase font-bold tracking-widest">
+              <span className="sm:text-4xl text-xl uppercase font-bold tracking-widest">
                 Engineering
               </span>
             </div>
@@ -167,10 +167,10 @@ const CaseStudies = () => {
           </div>
         </div>
 
-        <div className="max-w-7xl mx-auto px-6 pt-24">
+        <div className="max-w-7xl mx-auto sm:pt-24 pt-10">
           <motion.div
             layout
-            className="grid md:grid-cols-2 xl:grid-cols-3 gap-10"
+            className="grid md:grid-cols-2 xl:grid-cols-3 gap-20"
           >
             <AnimatePresence mode="popLayout">
               {filteredProjects.map((project, idx) => (
@@ -183,7 +183,7 @@ const CaseStudies = () => {
                   transition={{ delay: idx * 0.1 }}
                   className="group"
                 >
-                  <div className="relative aspect-4/5 overflow-hidden mb-8 bg-zinc-900 border border-white/5">
+                  <div className="relative aspect-4/5 overflow-hidden sm:mb-8 mb-4 bg-zinc-900 border border-white/5">
                     <img
                       src={project.heroImage}
                       alt={project.title}
@@ -210,11 +210,11 @@ const CaseStudies = () => {
                     </Link>
                   </div>
 
-                  <div className="space-y-4">
+                  <div className="sm:space-y-4 space-y-2">
                     <h3 className="text-2xl font-bold leading-tight tracking-tight group-hover:text-cyan-400 transition-colors">
                       {project.sectionTitle}
                     </h3>
-                    <p className="text-zinc-400 text-sm leading-relaxed font-light line-clamp-2">
+                    <p className="text-zinc-400 sm:text-lg text-sm leading-relaxed font-light line-clamp-2">
                       {project.sectionDesc}
                     </p>
                   </div>
@@ -227,11 +227,11 @@ const CaseStudies = () => {
       {/* SECTION 4: CTA (EVEN - FIXED BG) */}
       <section
         style={fixedBgStyle}
-        className="relative py-48 px-6 text-center overflow-hidden"
+        className="relative sm:py-24 py-10 sm:px-6 px-4 text-center overflow-hidden"
       >
         <div className="absolute inset-0 bg-black/60" />{" "}
         {/* Dark Overlay for high impact */}
-        <div className="max-w-4xl mx-auto space-y-12 relative z-10 text-white">
+        <div className="max-w-4xl mx-auto sm:space-y-8 space-y-4 relative z-10 text-white">
           <motion.div
             whileInView={{ scale: [0.8, 1.1, 1], opacity: [0, 1] }}
             className="inline-flex items-center justify-center w-20 h-20 rounded-full border border-cyan-500/30 bg-cyan-500/10 mb-8"
@@ -239,19 +239,19 @@ const CaseStudies = () => {
             <Zap className="text-cyan-400" size={32} />
           </motion.div>
 
-          <h2 className="text-6xl md:text-9xl font-black tracking-tighter uppercase leading-[0.85]">
+          <h2 className="sm:text-5xl text-3xl md:text-9xl font-black tracking-tighter uppercase leading-[0.85]">
             Ready to <br />{" "}
             <span className="text-transparent stroke-text-white italic">
               Innovate?
             </span>
           </h2>
 
-          <p className="text-zinc-300 text-lg font-light max-w-lg mx-auto">
+          <p className="text-zinc-300 sm:text-lg text-sm font-light max-w-lg mx-auto">
             Currently accepting high-impact projects for 2024. Let’s build
             something that moves the needle.
           </p>
 
-          <div className="flex flex-col sm:flex-row justify-center items-center pt-6">
+          <div className="flex flex-col sm:flex-row justify-center items-center pt-4">
             <GlowButton name="Start Project" to="/contact" />
           </div>
         </div>

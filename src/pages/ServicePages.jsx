@@ -53,7 +53,7 @@ const ProjectSlider = ({ projects, parentSlug }) => {
     setIndex((p) => (p - 1 + projects.length) % projects.length);
 
   return (
-    <div className="relative w-full rounded-4xl overflow-hidden border border-white/10 shadow-2xl bg-black/40 backdrop-blur-xl">
+    <div className="relative w-full rounded-2xl overflow-hidden border border-white/10 shadow-2xl bg-black/40 backdrop-blur-xl">
       <div className="grid lg:grid-cols-2">
         <div className="h-75 lg:h-125 overflow-hidden">
           <AnimatePresence mode="wait">
@@ -69,7 +69,7 @@ const ProjectSlider = ({ projects, parentSlug }) => {
           </AnimatePresence>
         </div>
 
-        <div className="p-12 flex flex-col justify-center space-y-6">
+        <div className="sm:p-8 p-4 flex flex-col justify-center space-y-6">
           <AnimatePresence mode="wait">
             <motion.div
               key={index}
@@ -78,10 +78,10 @@ const ProjectSlider = ({ projects, parentSlug }) => {
               exit={{ opacity: 0, x: -20 }}
               className="space-y-4"
             >
-              <h3 className="sm:text-4xl text-2xl font-black uppercase tracking-tighter text-white">
+              <h3 className="sm:text-4xl text-xl font-black uppercase tracking-tighter text-white">
                 {projects[index].title}
               </h3>
-              <p className="text-zinc-400 sm:text-lg text-xs leading-relaxed italic">
+              <p className="text-zinc-400 sm:text-lg text-sm leading-relaxed italic">
                 "{projects[index].desc}"
               </p>
               <div className="flex flex-wrap gap-2 pt-4">
@@ -126,13 +126,13 @@ const ProjectSlider = ({ projects, parentSlug }) => {
 // Roadmap Component
 const RoadmapSection = ({ roadmap }) => {
   return (
-    <section className="py-10 pb-32 px-6 bg-[#00042A] overflow-hidden">
+    <section className="py-10 pb-20 px-4 bg-[#00042A] overflow-hidden">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-black mb-4">
+        <div className="text-center sm:mb-16 mb-10">
+          <h2 className="text-xl sm:text-3xl md:text-5xl font-black mb-4">
             {roadmap?.title || "Our Process Roadmap"}
           </h2>
-          <p className="text-zinc-400 max-w-2xl mx-auto">
+          <p className="text-zinc-400 max-w-2xl mx-auto sm:text-lg text-sm">
             {roadmap?.description ||
               "A structured approach to deliver excellence"}
           </p>
@@ -152,7 +152,7 @@ const RoadmapSection = ({ roadmap }) => {
                 }`}
               >
                 <div className="lg:w-1/2">
-                  <div className="bg-white/5 border border-white/10 p-6 backdrop-blur-sm hover:border-cyan-500/50 transition-all mx-0.5">
+                  <div className="bg-white/5 border border-white/10 sm:p-6 p-4 backdrop-blur-sm hover:border-cyan-500/50 transition-all mx-0.5">
                     <div className="flex items-center gap-4 mb-4">
                       <div className="w-12 h-12 rounded-full bg-cyan-500/20 flex items-center justify-center">
                         {React.createElement(step.icon, {
@@ -182,13 +182,13 @@ const RoadmapSection = ({ roadmap }) => {
 // Next Steps Component
 const NextStepsSection = ({ nextSteps }) => {
   return (
-    <section className="py-20 px-6 bg-[#00042A]">
+    <section className="sm:py-20 py-10 sm:px-6 px-4 bg-[#00042A]">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-black mb-4">
+        <div className="text-center sm:mb-16 mb-10">
+          <h2 className="text-xl sm:text-3xl md:text-5xl font-black mb-4">
             {nextSteps?.title || "Ready to Get Started?"}
           </h2>
-          <p className="text-zinc-400 max-w-2xl mx-auto">
+          <p className="text-zinc-400 max-w-2xl mx-auto sm:text-lg text-sm">
             {nextSteps?.description ||
               "Follow these simple steps to begin your journey with us"}
           </p>
@@ -203,7 +203,7 @@ const NextStepsSection = ({ nextSteps }) => {
               viewport={{ once: true }}
               className="text-center group"
             >
-              <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-linear-to-br from-cyan-500 to-secondery flex items-center justify-center group-hover:scale-110 transition-transform">
+              <div className="sm:w-20 sm:h-20 w-16 h-16 mx-auto mb-6 rounded-full bg-linear-to-br from-cyan-500 to-secondery flex items-center justify-center group-hover:scale-110 transition-transform">
                 <span className="text-2xl font-black">
                   {String(idx + 1).padStart(2, "0")}
                 </span>
@@ -271,7 +271,7 @@ const ServicePages = () => {
       <main>
         {/* SECTION 1: HERO */}
         <section
-          className="relative w-full min-h-[90vh] bg-cover bg-center flex items-center px-6 md:px-12 overflow-hidden"
+          className="relative w-full sm:min-h-[90vh] bg-cover bg-center flex items-center px-4 sm:px-6 md:px-12 sm:py-0 py-12 overflow-hidden"
           style={{
             backgroundImage: `linear-gradient(135deg, rgba(0, 1, 12, 0.95) 0%, rgba(240, 240, 240, 0) 100%), url(${service.heroImage})`,
           }}
@@ -288,10 +288,10 @@ const ServicePages = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <h1 className="font-sans text-white text-4xl md:text-6xl lg:text-7xl font-black leading-tight">
+              <h1 className="font-sans text-white text-2xl md:text-4xl lg:text-6xl font-black leading-tight">
                 {service.heroTitle}
               </h1>
-              <p className="mt-6 text-gray-300 text-base md:text-lg max-w-2xl font-sans">
+              <p className="sm:mt-6 mt-4 text-gray-300 text-sm sm:text-base md:text-lg max-w-2xl font-sans">
                 {service.heroDesc}
               </p>
             </motion.div>
@@ -306,11 +306,11 @@ const ServicePages = () => {
         </section>
 
         {/* SECTION 3: TABS / FEATURES */}
-        <section className="bg-[#00042A] text-white py-32 px-6">
+        <section className="bg-[#00042A] text-white sm:py-20 py-10 sm:px-6 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="flex lg:flex-row flex-col lg:gap-12 mb-16 justify-between">
               <div className="mb-10 lg:mb-0 lg:w-1/2">
-                <h2 className="text-2xl md:text-4xl font-black mb-6">
+                <h2 className="text-xl sm:text-2xl md:text-4xl font-black mb-6">
                   {service.sectionTitle}
                 </h2>
                 <p className="text-zinc-400 max-w-xl">{service.sectionDesc}</p>
@@ -356,19 +356,19 @@ const ServicePages = () => {
                     transition={{ duration: 0.4 }}
                     className="p-4 md:p-8 h-full"
                   >
-                    <h3 className="text-2xl md:text-3xl font-black">
+                    <h3 className="text-xl sm:text-2xl md:text-3xl font-black">
                       {tabs[active]?.content?.heading}
                     </h3>
-                    <p className="text-zinc-400 mb-6">
+                    <p className="text-zinc-400 mb-6 text-sm sm:text-base">
                       {tabs[active]?.content?.desc}
                     </p>
                     <ul className="space-y-3">
                       {tabs[active]?.content?.points?.map((p, i) => (
                         <li
                           key={i}
-                          className="flex items-start gap-3 text-sm text-zinc-300"
+                          className="flex justify-start items-center gap-3 sm:text-sm text-xs text-zinc-300"
                         >
-                          <span className="w-2 h-2 mt-2 bg-cyan-500 rounded-full shrink-0" />
+                          <span className="w-2 h-2 bg-cyan-500 rounded-full shrink-0" />
                           {p}
                         </li>
                       ))}
@@ -382,14 +382,14 @@ const ServicePages = () => {
 
         {/* SECTION 4: CAPABILITIES GRID */}
         <section
-          className="relative py-40 px-6 bg-fixed bg-cover bg-center"
+          className="relative sm:py-20 py-10 sm:px-6 px-4 bg-fixed bg-cover bg-center"
           style={{
             backgroundImage: `url(${service.capabilitiesBg})`,
           }}
         >
           <div className="absolute inset-0 bg-black/70 backdrop-blur-sm" />
           <div className="max-w-7xl mx-auto relative z-10">
-            <div className="text-center space-y-4 mb-24">
+            <div className="text-center space-y-4 sm:mb-20 mb-10">
               <h2 className="text-2xl md:text-6xl font-black tracking-tighter uppercase leading-none text-white">
                 {service.capabilitiesTitle} <br />
                 <span className="text-cyan-500 italic">
@@ -430,19 +430,10 @@ const ServicePages = () => {
         </section>
 
         {/* SECTION 5: PROCESS */}
-        <section className="py-40 px-6 bg-[#00042A]">
+        <section className="sm:py-24 py-16 sm:px-6 px-4 bg-[#00042A]">
           <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-20 lg:items-center text-white">
-            <div className="lg:w-1/2">
-              <div className="relative p-1 bg-linear-to-br from-cyan-500/20 to-purple-500/20 rounded-2xl">
-                <img
-                  src={service.processImage}
-                  className="h-auto w-full object-cover grayscale hover:grayscale-0 transition-all duration-1000 rounded-2xl"
-                  alt={service.title}
-                />
-              </div>
-            </div>
             <div className="lg:w-1/2 space-y-2">
-              <h3 className="text-xl text-cyan-400 font-black">
+              <h3 className="text-sm text-cyan-400 font-black">
                 {service.processSubTitle}
               </h3>
               <h2 className="md:text-5xl sm:text-3xl text-xl font-black italic uppercase tracking-tighter leading-tight mb-8">
@@ -451,7 +442,7 @@ const ServicePages = () => {
                   {service.processHighlight}
                 </span>
               </h2>
-              <p className="text-zinc-400 sm:text-lg text-xs leading-relaxed italic border-l border-white/10 pl-4">
+              <p className="text-zinc-400 sm:text-lg text-sm leading-relaxed italic border-l border-white/10 pl-4">
                 {service.processDesc}
               </p>
               <ul className="mt-6 md:mt-8 pl-2 flex flex-col gap-4 md:gap-6 max-w-full">
@@ -463,15 +454,24 @@ const ServicePages = () => {
                     initial="hidden"
                     whileInView="show"
                     viewport={{ once: true }}
-                    className="flex items-start gap-3 md:gap-4"
+                    className="flex items-center gap-3 md:gap-4"
                   >
-                    <Check size={24} className="text-cyan-400 mt-1 shrink-0" />
-                    <span className="text-base md:text-xl font-bold leading-tight">
+                    <Check size={24} className="text-cyan-400 shrink-0" />
+                    <span className="text-sm sm:text-base md:text-xl font-bold leading-tight">
                       {text}
                     </span>
                   </motion.li>
                 ))}
               </ul>
+            </div>
+            <div className="lg:w-1/2">
+              <div className="relative p-1 bg-linear-to-br from-cyan-500/20 to-purple-500/20 rounded-2xl">
+                <img
+                  src={service.processImage}
+                  className="h-auto w-full object-cover grayscale hover:grayscale-0 transition-all duration-1000 rounded-2xl"
+                  alt={service.title}
+                />
+              </div>
             </div>
           </div>
         </section>
@@ -482,14 +482,14 @@ const ServicePages = () => {
         {/* SECTION 7: PROJECTS SHOWCASE */}
         {projects.length > 0 && (
           <section
-            className="relative py-48 px-6 bg-fixed bg-cover bg-center"
+            className="relative sm:py-20 py-10 sm:px-6 px-4 bg-fixed bg-cover bg-center"
             style={{
               backgroundImage: `url(${service.showcase?.bgImage})`,
             }}
           >
             <div className="absolute inset-0 bg-black/85 backdrop-blur-xl" />
             <div className="max-w-6xl mx-auto relative z-10">
-              <h2 className="sm:text-4xl text-2xl font-black text-center mb-16 tracking-widest uppercase italic text-white">
+              <h2 className="sm:text-4xl text-xl font-black text-center sm:mb-16 mb-10 tracking-widest uppercase italic text-white">
                 {service.showcase?.title}
               </h2>
               {/* FIXED: Pass parentSlug to ProjectSlider */}
@@ -505,7 +505,7 @@ const ServicePages = () => {
 
         {/* SECTION 12: FINAL CTA */}
         <section
-          className="relative py-40 px-6 bg-fixed bg-cover bg-center"
+          className="relative sm:py-20 py-10 sm:px-6 px-4 bg-fixed bg-cover bg-center"
           style={{
             backgroundImage: `url(${service.ctaBg})`,
           }}
@@ -513,10 +513,10 @@ const ServicePages = () => {
           <div className="absolute inset-0 bg-black/60 backdrop-blur-xl" />
           <div className="max-w-7xl mx-auto text-center space-y-12 relative z-10">
             <div className="space-y-8">
-              <div className="flex justify-center items-center bg-white/10 backdrop-blur-xl border border-white/30 w-24 h-24 rounded-full mx-auto mb-4">
-                <Rocket className="text-cyan-500" size={48} />
+              <div className="flex justify-center items-center bg-white/10 backdrop-blur-xl border border-white/30 sm:w-24 sm:h-24 w-20 h-20 rounded-full mx-auto mb-4">
+                <Rocket className="text-cyan-500" size={40} />
               </div>
-              <h3 className="text-2xl sm:text-4xl md:text-6xl font-black tracking-tighter uppercase">
+              <h3 className="text-xl sm:text-4xl md:text-6xl font-black tracking-tighter uppercase">
                 {service.ctaTitle}
               </h3>
               <GlowButton name={service.ctaButton} to={service.ctaLink} />
@@ -572,7 +572,7 @@ const ServicePages = () => {
           <div className="relative w-full max-w-3xl max-h-[90vh] overflow-y-auto rounded-2xl bg-[#0b0b0b] border border-white/10 shadow-2xl">
             <button
               onClick={() => setSelectedPost(null)}
-              className="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/10 text-white hover:bg-white cursor-pointer hover:text-black transition flex items-center justify-center z-10"
+              className="absolute top-4 right-4 w-10 h-10 rounded-full bg-white text-black hover:bg-black border border-black cursor-pointer hover:text-white transition flex items-center justify-center z-10"
             >
               ✕
             </button>

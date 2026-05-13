@@ -11,10 +11,10 @@ const BlogCard = ({
   const words = title.split(" ");
   return (
     <div
-      className={`relative container mx-auto my-20 px-4 sm:px-6 py-10 md:py-14 overflow-hidden ${className}`}
+      className={`relative container mx-auto sm:py-20 py-10 sm:px-6 px-2 overflow-hidden ${className}`}
     >
       {/* ===== HEADER ===== */}
-      <div className="relative z-10 mb-14 md:mb-20 text-center space-y-5">
+      <div className="relative z-10 mb-10 md:mb-20 text-center space-y-5">
         <h2 className="text-xl sm:text-4xl italic font-black uppercase tracking-tighter text-white leading-[0.9]">
           {words.map((word, index) => (
             <React.Fragment key={index}>
