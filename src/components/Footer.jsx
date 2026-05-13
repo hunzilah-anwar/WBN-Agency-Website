@@ -75,7 +75,7 @@ const Footer = () => {
             </h2>
 
             <nav className="space-y-3 sm:space-y-4">
-              {["Home", "Case Studies", "Team"].map((item) => (
+              {["Home", "Case Studies", "Team", "Contact"].map((item) => (
                 <Link
                   key={item}
                   to={
