@@ -17,14 +17,14 @@ const Footer = () => {
       </div>
 
       {/* ================= MARQUEE ================= */}
-      <div className="relative border-y border-white/5 py-4 md:py-6 mb-12 md:mb-20 overflow-hidden">
+      <div className="relative border-y border-white/5 py-4 md:py-6 mb-10 md:mb-20 overflow-hidden">
         <div className="flex whitespace-nowrap animate-marquee">
           {Array(3)
             .fill("Partner with Us to Build Excellence • ")
             .map((text, i) => (
               <span
                 key={i}
-                className="text-[10vw] sm:text-[8vw] md:text-[6vw] lg:text-[5vw] font-black uppercase tracking-tighter text-transparent pr-4"
+                className="text-[8vw] md:text-[6vw] lg:text-[5vw] font-black uppercase tracking-tighter text-transparent pr-4"
                 style={{
                   WebkitTextStroke: "1px rgba(255,255,255,0.15)",
                 }}
@@ -126,7 +126,7 @@ const Footer = () => {
         </div>
 
         {/* ================= BOTTOM ================= */}
-        <div className="mt-16 md:mt-24 pt-6 md:pt-8 border-t border-white/5">
+        <div className="mt-10 md:mt-24 pt-6 md:pt-8 border-t border-white/5">
           <p className="text-center text-xs sm:text-sm text-white">
             &copy; {currentYear}{" "}
             <Link to={"/"} className="text-secondery underline">

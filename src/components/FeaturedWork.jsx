@@ -43,7 +43,7 @@ const FeaturedWork = () => {
   }
 
   return (
-    <section className="relative min-h-screen w-full bg-[#050505] overflow-hidden flex flex-col items-center justify-center py-20 px-6 font-sans">
+    <section className="relative min-h-screen w-full bg-[#050505] overflow-hidden flex flex-col items-center justify-center sm:py-20 py-10 sm:px-6 px-4 font-sans">
       {/* BACKGROUND */}
       <div
         className="absolute inset-0 opacity-40 grayscale bg-fixed"
@@ -88,7 +88,7 @@ const FeaturedWork = () => {
 
         {/* SLIDER WRAPPER */}
         <div
-          className="relative z-10 w-full max-w-5xl overflow-hidden pb-20"
+          className="relative z-10 w-full max-w-5xl overflow-hidden sm:pb-20 pb-10"
           onMouseEnter={() => setIsPaused(true)}
           onMouseLeave={() => setIsPaused(false)}
         >

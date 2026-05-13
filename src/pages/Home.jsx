@@ -119,10 +119,10 @@ const Home = () => {
   return (
     <>
       <section
-        className="relative overflow-hidden w-full min-h-screen bg-cover bg-position-[75%]
+        className="relative overflow-hidden w-full sm:min-h-screen bg-cover sm:bg-position-[75%] bg-position-[78%]
       before:content-[''] before:absolute before:inset-0 
       before:bg-[linear-gradient(90deg,rgba(23,33,46,0.92)_40%,rgba(0,0,0,0)_100%)] 
-      before:pointer-events-none flex items-center px-6 md:px-12 pt-24"
+      before:pointer-events-none flex items-center px-4 sm:px-12 sm:py-24 pt-40 py-20"
         style={{ backgroundImage: `url(${HeroBg})` }}
       >
         <div className="z-50 max-w-2xl w-full">
@@ -196,7 +196,7 @@ const Home = () => {
       </section>
       <section
         style={fixedBgStyle}
-        className="relative py-20 px-6 border-y-2 border-[#03042a]"
+        className="relative sm:py-20 py-10 sm:px-6 px-4 border-y-2 border-[#03042a]"
       >
         {/* Light Overlay for text readability */}
         <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12 relative z-10">
@@ -216,15 +216,15 @@ const Home = () => {
         <div className="absolute inset-0 bg-black/90"></div>
         <AgencyServices />
       </section>
-      <section className="bg-[#00042A] py-28 overflow-hidden">
-        <div className="relative max-w-7xl mx-auto px-6">
+      <section className="bg-[#00042A] sm:py-28 py-10 overflow-hidden">
+        <div className="relative max-w-7xl mx-auto sm:px-6 px-4">
           <div className="">
             <p className="text-[10px] font-black uppercase tracking-[0.4em] text-secondery">
               WBN Agency Performance
             </p>
 
-            <h2 className="text-2xl md:text-4xl font-black text-white leading-[0.95] tracking-tighter uppercase flex flex-col gap-2 mb-6">
-              Trusted Digital Agency With
+            <h2 className="text-2xl md:text-4xl font-black text-white leading-[0.95] tracking-tighter uppercase mb-6">
+              Trusted Digital Agency With{" "}
               <span className="text-secondery">High Success Rates</span>
             </h2>
 
@@ -308,7 +308,7 @@ const Home = () => {
                 <img
                   src={TrophyImage}
                   alt="WBN Agency Success"
-                  className="w-full h-162.5 object-cover"
+                  className="w-full h-120 object-cover"
                 />
 
                 {/* OVERLAY */}

@@ -64,7 +64,7 @@ const brandsRow2 = [
 
 const PartnerSection = () => {
   return (
-    <section className="relative w-full bg-[#00042A] py-32 overflow-hidden">
+    <section className="relative w-full bg-[#00042A] sm:py-20 py-10 sm:px-6 px-4 overflow-hidden">
       {/* BACKGROUND GLOW */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-[-20%] left-[-10%] w-200 h-200 rounded-full bg-[#00042A]/20 blur-[160px] opacity-50" />
@@ -72,7 +72,7 @@ const PartnerSection = () => {
       </div>
 
       {/* HEADER */}
-      <div className="relative z-10 max-w-7xl mx-auto px-6 mb-20 text-center">
+      <div className="relative z-10 max-w-7xl mx-auto sm:px-6 px-4 sm:mb-20 mb-10 text-center">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -112,7 +112,7 @@ const PartnerSection = () => {
       </div>
 
       {/* CTA */}
-      <div className="mt-24 text-center">
+      <div className="sm:mt-24 mt-10 text-center">
         <Link to="/casestudies">
           <button className="relative sm:px-10 px-4 sm:py-5 py-2 bg-white text-black sm:font-bold font-medium uppercase sm:text-sm text-[12px] cursor-pointer tracking-widest overflow-hidden group">
             <span className="relative z-10 tracking-tight">

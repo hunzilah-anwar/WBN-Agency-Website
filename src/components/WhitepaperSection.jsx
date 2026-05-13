@@ -13,7 +13,7 @@ const WhitepaperSection = () => {
   };
 
   return (
-    <section className="relative w-full py-24 px-6 overflow-hidden bg-[#0a021a]">
+    <section className="relative w-full sm:py-24 py-10 sm:px-6 px-4 overflow-hidden bg-[#0a021a]">
       {/* HUMAN DESIGN ELEMENT: The "Silk" Aura Gradient */}
       <div className="absolute inset-0 pointer-events-none">
         {/* Deep Indigo Base */}

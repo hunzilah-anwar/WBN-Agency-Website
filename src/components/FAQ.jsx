@@ -10,11 +10,11 @@ const FAQ = ({ faqs }) => {
   };
 
   return (
-    <section className="w-full py-20 bg-[#00042A]">
-      <div className="max-w-6xl mx-auto px-6">
+    <section className="w-full sm:py-20 py-10 sm:px-6 px-2 bg-[#00042A]">
+      <div className="max-w-6xl mx-auto sm:px-6 px-2">
         
         {/* ===== Heading ===== */}
-        <div className="text-center mb-14">
+        <div className="text-center sm:mb-14 mb-8">
 
           <h2 className="mt-5 text-2xl md:text-4xl font-black text-white">
             Frequently <span className="text-secondery">Asked Questions</span>
