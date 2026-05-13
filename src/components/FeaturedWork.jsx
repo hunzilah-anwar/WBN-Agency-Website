@@ -126,8 +126,8 @@ const FeaturedWork = () => {
 
                     {/* SERVICE PAGE */}
                     <Link to={`/services/${project.slug}`}>
-                      <button className="w-full py-3 border border-white text-white text-[13px] font-bold uppercase tracking-widest hover:bg-white hover:text-black transition ease-in-out duration-300 cursor-pointer">
-                        View {project.serviceTitle}
+                      <button className="w-full py-3 px-2 border border-white text-white text-[13px] font-bold uppercase tracking-widest hover:bg-white hover:text-black transition ease-in-out duration-300 cursor-pointer">
+                        {project.serviceTitle}
                       </button>
                     </Link>
                   </div>
