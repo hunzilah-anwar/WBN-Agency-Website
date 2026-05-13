@@ -16,11 +16,11 @@ const FAQ = ({ faqs }) => {
         {/* ===== Heading ===== */}
         <div className="text-center mb-14">
 
-          <h2 className="mt-5 text-3xl md:text-4xl font-black text-white">
+          <h2 className="mt-5 text-2xl md:text-4xl font-black text-white">
             Frequently <span className="text-secondery">Asked Questions</span>
           </h2>
 
-          <p className="mt-4 text-white/60 max-w-xl mx-auto text-sm md:text-base">
+          <p className="mt-4 text-white/60 max-w-xl mx-auto text-xs sm:text-sm md:text-base">
             Everything you need to know about our services and process.
           </p>
         </div>
@@ -60,7 +60,7 @@ const FAQ = ({ faqs }) => {
                       animate={{ height: "auto", opacity: 1 }}
                       exit={{ height: 0, opacity: 0 }}
                       transition={{ duration: 0.3 }}
-                      className="pb-5 text-white/60 text-sm leading-relaxed"
+                      className="pb-5 text-white/60 text-xs sm:text-sm leading-relaxed"
                     >
                       {faq.answer}
                     </motion.div>

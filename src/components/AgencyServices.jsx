@@ -78,7 +78,7 @@ const services = [
 
 const AgencyServices = () => {
   return (
-    <div className="relative max-w-7xl mx-auto px-6 py-24">
+    <div className="relative max-w-7xl mx-auto px-6 py-24 z-10">
       <div className="grid lg:grid-cols-2 gap-16 items-start">
         {/* LEFT SIDE */}
         <div className="lg:sticky lg:top-32 self-start space-y-8">
@@ -183,7 +183,7 @@ const AgencyServices = () => {
                   </p>
 
                   {/* CTA */}
-                  <button className="flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.2em] text-white/60 group-hover:text-white transition-all">
+                  <button className="flex cursor-pointer items-center gap-2 text-[11px] font-bold uppercase tracking-[0.2em] text-white/60 group-hover:text-white transition-all">
                     Explore Service
                     <ArrowRight
                       size={16}

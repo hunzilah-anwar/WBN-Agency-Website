@@ -43,11 +43,11 @@ const WhitepaperSection = () => {
                   className="space-y-10"
                 >
                   <div className="space-y-4">
-                    <h2 className="text-3xl font-black text-white uppercase">
+                    <h2 className="sm:text-3xl text-xl font-black text-white uppercase">
                       STAY AHEAD IN 2026
                     </h2>
 
-                    <p className="text-md text-zinc-300 font-light max-w-md leading-relaxed">
+                    <p className="sm:text-md text-sm text-zinc-300 font-light max-w-md leading-relaxed">
                       Download the{" "}
                       <span className="text-white font-medium italic underline decoration-secondery underline-offset-4">
                         Top Digital Trends
@@ -77,7 +77,7 @@ const WhitepaperSection = () => {
                         type="submit"
                         className="absolute right-0 top-1/2 -translate-y-1/2 flex items-center gap-2 bg-white text-zinc-950 px-6 py-2.5 font-black uppercase text-[10px] tracking-widest hover:bg-secondery hover:text-white transition-all duration-300 cursor-pointer"
                       >
-                        Download <Download size={14} />
+                        Submit <Download size={14} />
                       </button>
                     </div>
                   </form>

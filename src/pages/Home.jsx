@@ -15,10 +15,8 @@ import FAQ from "../components/FAQ";
 import BlogCard from "../components/BlogCard";
 import FeaturedProjectImg from "../assets/featured-project.webp";
 import BlogBg from "../assets/blog-bg.jpg";
-import Counter from '../components/Counter'
+import Counter from "../components/Counter";
 const Home = () => {
-  
-
   // const projects = [
   //   {
   //     title: "Andersen Global",
@@ -117,18 +115,18 @@ const Home = () => {
     backgroundSize: "cover",
     backgroundPosition: "center",
   };
-  
+
   return (
     <>
       <section
-        className="relative w-full min-h-screen bg-cover bg-position-[75%]
+        className="relative overflow-hidden w-full min-h-screen bg-cover bg-position-[75%]
       before:content-[''] before:absolute before:inset-0 
       before:bg-[linear-gradient(90deg,rgba(23,33,46,0.92)_40%,rgba(0,0,0,0)_100%)] 
       before:pointer-events-none flex items-center px-6 md:px-12 pt-24"
         style={{ backgroundImage: `url(${HeroBg})` }}
       >
         <div className="z-50 max-w-2xl w-full">
-          <h1 className="font-sans text-white text-3xl md:text-5xl font-black leading-tight flex flex-col justify-start">
+          <h1 className="font-sans text-white text-2xl md:text-5xl font-black leading-tight flex flex-col justify-start">
             Where Creativity Meets{" "}
             <span className="text-secondery">Computational Power</span>
           </h1>
@@ -196,114 +194,145 @@ const Home = () => {
           </form>
         </div>
       </section>
-      <section style={fixedBgStyle} className="relative py-20 px-6 border-y-2 border-[#03042a]">
+      <section
+        style={fixedBgStyle}
+        className="relative py-20 px-6 border-y-2 border-[#03042a]"
+      >
         {/* Light Overlay for text readability */}
-        <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-12 relative z-10">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12 relative z-10">
           <Counter value="120+" label="Systems Architected" light={false} />
           <Counter value="98%" label="Success Rate" light={false} />
           <Counter value="50+" label="Global Partners" light={false} />
           <Counter value="10M" label="Active Users" light={false} />
         </div>
-      </section>   
+      </section>
       <section
-        className="relative py-28 overflow-hidden bg-cover bg-center"
+        className=" bg-cover bg-center relative"
         style={{
           backgroundImage: `url(${FeaturedProjectImg})`,
         }}
       >
         {/* Overlay */}
-        <div className="absolute inset-0 bg-black/70"></div>
+        <div className="absolute inset-0 bg-black/90"></div>
+        <AgencyServices />
+      </section>
+      <section className="bg-[#00042A] py-28 overflow-hidden">
+        <div className="relative max-w-7xl mx-auto px-6">
+          <div className="">
+            <p className="text-[10px] font-black uppercase tracking-[0.4em] text-secondery">
+              WBN Agency Performance
+            </p>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-6">
+            <h2 className="text-2xl md:text-4xl font-black text-white leading-[0.95] tracking-tighter uppercase flex flex-col gap-2 mb-6">
+              Trusted Digital Agency With
+              <span className="text-secondery">High Success Rates</span>
+            </h2>
+
+            <p className="text-gray-300 text-sm leading-relaxed mb-12">
+              WBN Agency is a results-driven digital agency dedicated to helping
+              businesses build a strong online presence through innovative
+              technology, creative strategies, and high-performance digital
+              solutions. We specialize in web development, e-commerce solutions,
+              AI & machine learning, digital marketing, custom tool development,
+              graphic design, video editing, and professional WordPress websites
+              tailored to modern business needs. Our team focuses on delivering
+              visually engaging, scalable, and conversion-focused solutions that
+              not only enhance brand identity but also improve customer
+              experience, generate leads, and drive long-term business growth.
+              From startups to established companies, WBN Agency combines
+              creativity, strategy, and advanced technologies to transform ideas
+              into impactful digital experiences with measurable success and
+              outstanding client satisfaction.
+            </p>
+          </div>
           <div className="grid lg:grid-cols-2 gap-20 items-center">
             {/* LEFT CONTENT */}
-            <div>
-              <p className="text-[10px] font-black uppercase tracking-[0.4em] text-secondery">
-                Why Choose Us
-              </p>
-
-              <h2 className="text-2xl md:text-4xl font-black text-white leading-[0.95] tracking-tighter uppercase flex flex-col gap-2 mb-6">
-                We Follow a Proven
-                <span className="text-secondery">Creative Process</span>
-              </h2>
-
-              <p className="text-gray-300 text-sm leading-relaxed mb-12 max-w-xl">
-                Our workflow is designed to deliver high-quality digital
-                solutions with creativity, strategy, and performance at every
-                stage of the project lifecycle.
-              </p>
-
-              {/* POINTS */}
-              <div className="space-y-8">
-                {[
-                  {
-                    title: "Strategic Blueprinting",
-                    desc: "We craft data-driven strategies and detailed project blueprints that align business objectives with innovative digital solutions.",
-                  },
-                  {
-                    title: "Conceptual Modeling",
-                    desc: "Our creative team transforms ideas into modern, intuitive, and visually compelling user experiences with smart UI/UX architecture.",
-                  },
-                  {
-                    title: "Precision Production",
-                    desc: "Using advanced technologies and clean development practices, we build scalable, high-performance digital products with precision.",
-                  },
-                  {
-                    title: "Quality Validation",
-                    desc: "Every project undergoes rigorous testing, optimization, and quality assurance to ensure flawless functionality and launch readiness.",
-                  },
-                ].map((item, i) => (
-                  <div key={i} className="flex items-start gap-5 group">
-                    {/* Number */}
-                    <div className="min-w-[50px] h-[50px] bg-gradient-to-br from-secondery to-blue-500 flex items-center justify-center text-white font-bold text-xl">
-                      0{i + 1}
-                    </div>
-
-                    {/* Content */}
-                    <div>
-                      <h3 className="sm:text-xl text-md font-semibold text-white mb-1 group-hover:text-secondery transition-all duration-300">
-                        {item.title}
-                      </h3>
-
-                      <p className="text-gray-300 leading-relaxed text-sm">
-                        {item.desc}
-                      </p>
-                    </div>
+            <div className="space-y-8">
+              {[
+                {
+                  title: "Web Development",
+                  desc: "Building fast, scalable, and responsive websites with modern technologies for outstanding business performance.",
+                },
+                {
+                  title: "E-Commerce",
+                  desc: "Creating high-converting online stores optimized for sales growth, customer experience, and secure transactions.",
+                },
+                {
+                  title: "Digital Marketing",
+                  desc: "Driving traffic, leads, and brand awareness through SEO, social media, and targeted advertising campaigns.",
+                },
+                {
+                  title: "Tool Development",
+                  desc: "Developing custom tools and automation systems that improve workflow efficiency and business productivity.",
+                },
+                {
+                  title: "AI & Machine Learning",
+                  desc: "Delivering smart AI-powered solutions, automation, and intelligent systems for modern digital businesses.",
+                },
+                {
+                  title: "Graphic Design",
+                  desc: "Designing professional branding, social media creatives, and visual identities that leave lasting impressions.",
+                },
+                {
+                  title: "Video Editing",
+                  desc: "Producing engaging and high-quality video content optimized for marketing, YouTube, and social platforms.",
+                },
+                {
+                  title: "WordPress Website",
+                  desc: "Creating secure, SEO-friendly, and fully customized WordPress websites tailored to business goals.",
+                },
+              ].map((item, i) => (
+                <div key={i} className="flex items-start gap-5 group">
+                  {/* NUMBER */}
+                  <div className="min-w-[55px] h-[55px] bg-gradient-to-br from-secondery to-blue-500 flex items-center justify-center text-white font-bold text-lg">
+                    0{i + 1}
                   </div>
-                ))}
-              </div>
-            </div>
 
+                  {/* CONTENT */}
+                  <div>
+                    <h3 className="sm:text-xl text-md font-semibold text-white mb-1 group-hover:text-secondery transition-all duration-300">
+                      {item.title}
+                    </h3>
+
+                    <p className="text-gray-300 leading-relaxed text-sm">
+                      {item.desc}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
             {/* RIGHT IMAGE */}
             <div className="relative">
-              {/* Main Image */}
+              {/* MAIN IMAGE */}
               <div className="relative overflow-hidden border border-white/10">
                 <img
                   src={TrophyImage}
-                  alt="Team Work"
-                  className="w-full h-[500px] object-cover"
+                  alt="WBN Agency Success"
+                  className="w-full h-162.5 object-cover"
                 />
 
-                {/* Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-[#020817] via-transparent to-transparent"></div>
+                {/* OVERLAY */}
+                <div className="absolute inset-0 bg-linear-to-t from-[#020817] via-transparent to-transparent"></div>
               </div>
 
-              {/* Floating Stats */}
-              <div className="absolute top-0 left-0 bg-white/10 backdrop-blur-xl border border-white/10 px-6 py-4">
-                <h3 className="text-2xl font-bold text-secondery">99%</h3>
-                <p className="text-white text-sm">Project Success</p>
+              {/* FLOATING STATS */}
+              <div className="absolute top-5 left-5 bg-white/10 backdrop-blur-xl border border-white/10 px-6 py-4">
+                <h3 className="text-3xl font-bold text-secondery">99%</h3>
+                <p className="text-white text-sm">Client Satisfaction</p>
               </div>
 
-              <div className="absolute bottom-0 right-0 bg-white/10 backdrop-blur-xl border border-white/10 px-6 py-4">
-                <h3 className="text-2xl font-bold text-secondery">250+</h3>
-                <p className="text-white text-sm">Completed Projects</p>
+              <div className="absolute bottom-5 right-5 bg-white/10 backdrop-blur-xl border border-white/10 px-6 py-4">
+                <h3 className="text-3xl font-bold text-secondery">500+</h3>
+                <p className="text-white text-sm">Projects Delivered</p>
+              </div>
+
+              <div className="absolute bottom-36 left-5 bg-white/10 backdrop-blur-xl border border-white/10 px-6 py-4">
+                <h3 className="text-3xl font-bold text-secondery">95%</h3>
+                <p className="text-white text-sm">Returning Clients</p>
               </div>
             </div>
           </div>
         </div>
-      </section>
-      <section className="bg-[#00042A]">
-        <AgencyServices />
       </section>
       <FeaturedWork />
       <PartnerSection />

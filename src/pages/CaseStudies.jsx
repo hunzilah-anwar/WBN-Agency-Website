@@ -183,7 +183,7 @@ const CaseStudies = () => {
                   transition={{ delay: idx * 0.1 }}
                   className="group"
                 >
-                  <div className="relative aspect-[4/5] overflow-hidden mb-8 bg-zinc-900 border border-white/5">
+                  <div className="relative aspect-4/5 overflow-hidden mb-8 bg-zinc-900 border border-white/5">
                     <img
                       src={project.heroImage}
                       alt={project.title}

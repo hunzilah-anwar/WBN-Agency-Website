@@ -119,15 +119,15 @@ const FeaturedWork = () => {
                   </div>
 
                   {/* STAND */}
-                  <div className="absolute -bottom-34 left-1/2 -translate-x-1/2 flex flex-col items-center">
+                  <div className="absolute sm:-bottom-34 -bottom-14 left-1/2 -translate-x-1/2 flex flex-col items-center">
                     <div
-                      className="relative sm:w-44 w-25 h-32 border-x border-black/10 shadow-lg"
+                      className="relative sm:w-44 w-20 sm:h-32 h-12 border-x border-black/10 shadow-lg"
                       style={{
                         background:
                           "linear-gradient(to right, #9ca3af 0%, #f3f4f6 50%, #9ca3af 100%)",
                       }}
                     >
-                      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-14 h-7 bg-[#0a0a0a] rounded-b-full shadow-inner" />
+                      <div className="absolute top-0 left-1/2 -translate-x-1/2 sm:w-14 w-10 sm:h-7 h-4 bg-[#0a0a0a] rounded-b-full shadow-inner" />
                     </div>
                     <div className="w-[150%] h-4 bg-black/40 blur-xl -mt-2 rounded-[100%]" />
                   </div>

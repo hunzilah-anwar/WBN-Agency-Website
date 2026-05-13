@@ -159,7 +159,7 @@ const CircularTestimonials = ({
           Real feedback from people who trusted us — and loved the results.
         </p>
       </div>
-      <div className="grid md:grid-cols-2 gap-12 lg:gap-20 items-center">
+      <div className="grid md:grid-cols-2 gap-12 lg:gap-20 items-center p-4">
         {/* IMAGES */}
         <div className="relative h-75 md:h-100 lg:h-112.5 w-full perspective-1000">
           {testimonials.map((t, i) => (
@@ -193,7 +193,7 @@ const CircularTestimonials = ({
                 exit={{ opacity: 0, x: -10 }}
                 className="space-y-1"
               >
-                <h3 className="text-3xl md:text-4xl font-black uppercase tracking-tighter text-white">
+                <h3 className="text-2xl md:text-4xl font-black uppercase tracking-tighter text-white">
                   {activeTestimonial.name}
                 </h3>
                 <p className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mt-2">
@@ -213,7 +213,7 @@ const CircularTestimonials = ({
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -5 }}
-                className="text-lg md:text-xl leading-relaxed italic font-light text-zinc-200"
+                className="text-sm md:text-xl leading-relaxed italic font-light text-zinc-200"
               >
                 {activeTestimonial.quote}
               </motion.p>
