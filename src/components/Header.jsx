@@ -21,17 +21,17 @@ const Header = () => {
   const location = useLocation();
 
   const services = servicesData
-  .filter((s) => s.slug) // ❗ only valid services
-  .map((service) => ({
-    title: service.title,
-    to: `/services/${service.slug}`,
-    desc: service.desc,
-    icon: service.icon,
-    slug: service.slug,
-  }));
+    .filter((s) => s.slug) // ❗ only valid services
+    .map((service) => ({
+      title: service.title,
+      to: `/services/${service.slug}`,
+      desc: service.desc,
+      icon: service.icon,
+      slug: service.slug,
+    }));
 
-  const navLinks = [
-    { name: "Home", to: "/" },
+  const navLinksFirst = [{ name: "Home", to: "/" }];
+  const navLinksSec = [
     { name: "Case Studies", to: "/casestudies" },
     { name: "Team", to: "/team" },
   ];
@@ -69,7 +69,7 @@ const Header = () => {
 
         {/* DESKTOP NAVIGATION */}
         <nav className="hidden lg:flex items-center gap-2">
-          {navLinks.map((link) => {
+          {navLinksFirst.map((link) => {
             const isActive = location.pathname === link.to;
             return (
               <Link
@@ -138,6 +138,28 @@ const Header = () => {
               </div>
             </div>
           </div>
+          {navLinksSec.map((link) => {
+            const isActive = location.pathname === link.to;
+            return (
+              <Link
+                key={link.to}
+                to={link.to}
+                className={`relative px-4 py-2 text-[13px] font-bold uppercase tracking-wider transition-colors duration-300 ${
+                  isActive
+                    ? "text-secondery"
+                    : "text-gray-700 hover:text-secondery"
+                }`}
+              >
+                {link.name}
+                {isActive && (
+                  <motion.div
+                    layoutId="navUnderline"
+                    className="absolute bottom-0 left-0 w-full h-0.5 bg-secondery"
+                  />
+                )}
+              </Link>
+            );
+          })}
         </nav>
 
         {/* RIGHT ACTIONS */}
@@ -165,7 +187,7 @@ const Header = () => {
             className="absolute top-full left-0 w-full bg-[#0a0a0a] border-t border-white/10 overflow-hidden lg:hidden shadow-2xl"
           >
             <div className="px-8 py-10 flex flex-col gap-2 overflow-y-auto max-h-[80vh]">
-              {navLinks.map((link) => {
+              {navLinksFirst.map((link) => {
                 const isActive = location.pathname === link.to;
                 return (
                   <motion.div key={link.to} variants={itemVariants}>
@@ -221,7 +243,22 @@ const Header = () => {
                   )}
                 </AnimatePresence>
               </motion.div>
-
+              {navLinksSec.map((link) => {
+                const isActive = location.pathname === link.to;
+                return (
+                  <motion.div key={link.to} variants={itemVariants}>
+                    <Link
+                      to={link.to}
+                      onClick={() => setIsOpen(false)}
+                      className={`block py-4 text-xl font-bold uppercase tracking-tighter border-b border-white/10 mt-2 ${
+                        isActive ? "text-secondery" : "text-white"
+                      }`}
+                    >
+                      {link.name}
+                    </Link>
+                  </motion.div>
+                );
+              })}
               <motion.div
                 variants={itemVariants}
                 className="pt-6 flex justify-center items-center"

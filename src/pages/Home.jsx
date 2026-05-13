@@ -284,7 +284,7 @@ const Home = () => {
               ].map((item, i) => (
                 <div key={i} className="flex items-start gap-5 group">
                   {/* NUMBER */}
-                  <div className="min-w-[55px] h-[55px] bg-gradient-to-br from-secondery to-blue-500 flex items-center justify-center text-white font-bold text-lg">
+                  <div className="min-w-13.75 h-13.75 bg-linear-to-br from-secondery to-blue-500 flex items-center justify-center text-white font-bold text-lg">
                     0{i + 1}
                   </div>
 

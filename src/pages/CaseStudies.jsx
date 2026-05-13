@@ -77,7 +77,7 @@ const CaseStudies = () => {
             </p>
 
             <div className="pt-4">
-              <GlowButton name="Explore More" href="#projects" />
+              <GlowButton name="Explore More" to="/contact" />
             </div>
           </div>
 

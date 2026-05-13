@@ -1,7 +1,8 @@
-// ================= ServicePages.jsx (Enhanced) =================
+// ================= ServicePages.jsx (Fixed) =================
 
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useParams, Link } from "react-router-dom"; // Add Link import
 import GlowButton from "../components/GlowButton";
 import {
   Cloud,
@@ -40,12 +41,11 @@ import { LineChart, Microscope, Bot, DatabaseZap, Network } from "lucide-react";
 import CircularTestimonials from "../components/CircularTestimonials";
 import FAQ from "../components/FAQ";
 import BlogCard from "../components/BlogCard";
-import { useParams } from "react-router-dom";
 import { servicesData } from "../data/serviceData";
 import BlogBg from "../assets/blog-bg.jpg";
 
-// Enhanced Project Slider
-const ProjectSlider = ({ projects }) => {
+// Enhanced Project Slider - FIXED navigation
+const ProjectSlider = ({ projects, parentSlug }) => {
   const [index, setIndex] = useState(0);
 
   const next = () => setIndex((p) => (p + 1) % projects.length);
@@ -94,6 +94,7 @@ const ProjectSlider = ({ projects }) => {
                   </span>
                 ))}
               </div>
+              <GlowButton to={`/services/${parentSlug}/${projects[index].slug}`} name="View Detail" />
             </motion.div>
           </AnimatePresence>
 
@@ -132,7 +133,7 @@ const RoadmapSection = ({ roadmap }) => {
           </p>
         </div>
         <div className="relative">
-          <div className="absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-gradient-to-b from-cyan-500 to-purple-500 hidden lg:block" />
+          <div className="absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-linear-to-b from-cyan-500 to-purple-500 hidden lg:block" />
           <div className="space-y-12">
             {roadmap?.steps?.map((step, idx) => (
               <motion.div
@@ -197,7 +198,7 @@ const NextStepsSection = ({ nextSteps }) => {
               viewport={{ once: true }}
               className="text-center group"
             >
-              <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-gradient-to-br from-cyan-500 to-secondery flex items-center justify-center group-hover:scale-110 transition-transform">
+              <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-linear-to-br from-cyan-500 to-secondery flex items-center justify-center group-hover:scale-110 transition-transform">
                 <span className="text-2xl font-black">
                   {String(idx + 1).padStart(2, "0")}
                 </span>
@@ -228,7 +229,7 @@ const ServicePages = () => {
 
   if (!service) {
     return (
-      <div className="min-h-screen bg-black text-white flex items-center justify-center">
+      <div className="min-h-screen bg-[#00042A] text-white flex items-center justify-center">
         Service Not Found
       </div>
     );
@@ -328,7 +329,7 @@ const ServicePages = () => {
                     className={`text-left px-6 py-5 cursor-pointer border transition-all duration-300
                     ${
                       active === i
-                        ? "bg-gradient-to-r from-cyan-500 to-purple-500 text-black border-cyan-500"
+                        ? "bg-linear-to-r from-cyan-500 to-purple-500 text-black border-cyan-500"
                         : "bg-white/5 border-white/10 hover:border-cyan-500"
                     }
                     `}
@@ -427,7 +428,7 @@ const ServicePages = () => {
         <section className="py-40 px-6 bg-[#00042A]">
           <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-20 lg:items-center text-white">
             <div className="lg:w-1/2">
-              <div className="relative p-1 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-2xl">
+              <div className="relative p-1 bg-linear-to-br from-cyan-500/20 to-purple-500/20 rounded-2xl">
                 <img
                   src={service.processImage}
                   className="h-auto w-full object-cover grayscale hover:grayscale-0 transition-all duration-1000 rounded-2xl"
@@ -486,7 +487,8 @@ const ServicePages = () => {
               <h2 className="sm:text-4xl text-2xl font-black text-center mb-16 tracking-widest uppercase italic text-white">
                 {service.showcase?.title}
               </h2>
-              <ProjectSlider projects={projects} />
+              {/* FIXED: Pass parentSlug to ProjectSlider */}
+              <ProjectSlider projects={projects} parentSlug={service.slug} />
             </div>
           </section>
         )}
@@ -561,7 +563,7 @@ const ServicePages = () => {
 
       {/* Blog Modal */}
       {selectedPost && (
-        <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/90 backdrop-blur-md p-4">
+        <div className="fixed inset-0 z-1999 flex items-center justify-center bg-black/90 backdrop-blur-md p-4">
           <div className="relative w-full max-w-3xl max-h-[90vh] overflow-y-auto rounded-2xl bg-[#0b0b0b] border border-white/10 shadow-2xl">
             <button
               onClick={() => setSelectedPost(null)}

@@ -1,4 +1,4 @@
-// ================= servicesData.js (Expanded with 8 Services) =================
+// ================= servicesData.js (8 Services with Projects inside showcase.projects) =================
 
 import {
   Laptop,
@@ -146,18 +146,84 @@ export const servicesData = [
         "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070",
       projects: [
         {
-          title: "Corporate Website",
-          desc: "Modern enterprise website with premium UI/UX.",
+          slug: "admin-dashboard",
+          title: "Admin Dashboard",
+          desc: "Comprehensive admin dashboard with analytics, user management, and real-time data visualization.",
           image:
-            "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015",
-          tech: ["React", "Next.js", "Tailwind", "Node.js"],
+            "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070",
+          tech: ["React", "Chart.js", "Tailwind CSS", "Redux", "Firebase"],
+          features: [
+            "Real-time Analytics",
+            "User Management",
+            "Data Export",
+            "Custom Widgets",
+            "Role-based Access",
+          ],
+          overview:
+            "A powerful admin dashboard that provides complete control over your platform with insightful analytics and user management tools.",
+          results: [
+            "40% Faster Decisions",
+            "Better Data Visibility",
+            "Improved User Management",
+          ],
         },
         {
-          title: "Portfolio Platform",
-          desc: "Interactive portfolio website for creative agencies.",
+          slug: "api-development",
+          title: "API Development",
+          desc: "Secure, scalable RESTful and GraphQL APIs for your applications.",
           image:
-            "https://images.unsplash.com/photo-1496171367470-9ed9a91ea931?q=80&w=2070",
-          tech: ["React", "GSAP", "Tailwind"],
+            "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=2070",
+          tech: ["Node.js", "Express", "MongoDB", "JWT", "Swagger"],
+          features: [
+            "RESTful APIs",
+            "GraphQL",
+            "Authentication",
+            "Rate Limiting",
+            "Documentation",
+          ],
+          overview:
+            "We build robust APIs that power your web and mobile applications with security and scalability.",
+          results: ["99.9% Uptime", "50ms Response Time", "Easy Integration"],
+        },
+        {
+          slug: "landing-page",
+          title: "Landing Page Design",
+          desc: "High-converting landing pages designed for maximum conversions.",
+          image:
+            "https://images.unsplash.com/photo-1472851294608-062f824d29cc?q=80&w=2070",
+          tech: ["HTML5", "CSS3", "JavaScript", "Tailwind CSS"],
+          features: [
+            "Conversion Focused",
+            "A/B Testing Ready",
+            "Fast Loading",
+            "Mobile Responsive",
+            "Analytics Integration",
+          ],
+          overview:
+            "Create stunning landing pages that convert visitors into customers with our expert design and development.",
+          results: ["50% Higher Conversion", "Lower Bounce Rate", "Better ROI"],
+        },
+        {
+          slug: "full-stack-app",
+          title: "Full Stack Application",
+          desc: "Complete full-stack web applications with frontend and backend integration.",
+          image:
+            "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=2070",
+          tech: ["MongoDB", "Express.js", "React", "Node.js", "Tailwind"],
+          features: [
+            "MERN Stack",
+            "Authentication",
+            "Database Design",
+            "State Management",
+            "Deployment",
+          ],
+          overview:
+            "End-to-end full stack development services for complex web applications.",
+          results: [
+            "Scalable Architecture",
+            "Secure Systems",
+            "Fast Performance",
+          ],
         },
       ],
     },
@@ -381,18 +447,66 @@ export const servicesData = [
         "https://images.unsplash.com/photo-1556740749-887f6717d7e4?q=80&w=2070",
       projects: [
         {
-          title: "Fashion Store",
-          desc: "Modern online clothing store with premium UI.",
+          slug: "shopify-store",
+          title: "Shopify Store Development",
+          desc: "Complete Shopify store setup with custom themes and apps.",
           image:
-            "https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=2070",
-          tech: ["Shopify", "Stripe", "Liquid"],
+            "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=2070",
+          tech: ["Shopify", "Liquid", "Shopify Apps", "Stripe"],
+          features: [
+            "Custom Theme",
+            "Payment Gateway",
+            "Product Management",
+            "SEO Optimization",
+            "Mobile Responsive",
+          ],
+          overview:
+            "Launch a professional Shopify store that drives sales and provides seamless shopping experience.",
+          results: [
+            "Faster Launch",
+            "Higher Conversions",
+            "Better User Experience",
+          ],
         },
         {
-          title: "Electronics Hub",
-          desc: "High-performance electronics store with fast checkout.",
+          slug: "woocommerce-store",
+          title: "WooCommerce Store",
+          desc: "Custom WordPress-based e-commerce stores with WooCommerce.",
           image:
-            "https://images.unsplash.com/photo-1556742031-c6961e8560b0?q=80&w=2070",
-          tech: ["WooCommerce", "PayPal", "React"],
+            "https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=1999",
+          tech: ["WordPress", "WooCommerce", "PHP", "MySQL"],
+          features: [
+            "Product Catalogs",
+            "Secure Checkout",
+            "Inventory Management",
+            "Shipping Options",
+            "Coupon System",
+          ],
+          overview:
+            "Build a flexible and scalable WooCommerce store that grows with your business.",
+          results: ["Full Control", "Cost Effective", "Easy Management"],
+        },
+        {
+          slug: "ecommerce-dashboard",
+          title: "E-Commerce Analytics Dashboard",
+          desc: "Real-time sales and inventory tracking dashboard for online stores.",
+          image:
+            "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070",
+          tech: ["React", "Node.js", "Chart.js", "MongoDB"],
+          features: [
+            "Sales Analytics",
+            "Inventory Tracking",
+            "Customer Insights",
+            "Order Management",
+            "Revenue Reports",
+          ],
+          overview:
+            "Get complete visibility of your e-commerce operations with our custom analytics dashboard.",
+          results: [
+            "Better Decisions",
+            "Real-time Insights",
+            "Increased Efficiency",
+          ],
         },
       ],
     },
@@ -483,7 +597,7 @@ export const servicesData = [
       "https://images.unsplash.com/photo-1556740749-887f6717d7e4?q=80&w=2070",
   },
 
-  // 3. Digital Marketing (SEO, Meta Ads, Google Ads)
+  // 3. Digital Marketing
   {
     slug: "digital-marketing",
     title: "Digital Marketing",
@@ -598,11 +712,62 @@ export const servicesData = [
         "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070",
       projects: [
         {
-          title: "SEO Growth Campaign",
-          desc: "Increased organic traffic by 300% in 6 months.",
+          slug: "seo-services",
+          title: "SEO Services",
+          desc: "Complete SEO packages to rank higher on search engines.",
           image:
-            "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070",
-          tech: ["SEO", "Google Analytics", "Ahrefs"],
+            "https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?q=80&w=2070",
+          tech: ["Ahrefs", "SEMrush", "Google Search Console", "Yoast SEO"],
+          features: [
+            "Keyword Research",
+            "On-page SEO",
+            "Technical SEO",
+            "Link Building",
+            "Local SEO",
+          ],
+          overview:
+            "Rank higher, drive more traffic, and grow your business with our comprehensive SEO services.",
+          results: ["Higher Rankings", "More Organic Traffic", "Better ROI"],
+        },
+        {
+          slug: "meta-ads",
+          title: "Meta Ads",
+          desc: "Targeted advertising campaigns on Facebook and Instagram.",
+          image:
+            "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?q=80&w=2074",
+          tech: ["Meta Ads Manager", "Pixel Setup", "Custom Audiences"],
+          features: [
+            "Audience Targeting",
+            "Retargeting",
+            "Lead Generation",
+            "Conversion Campaigns",
+            "A/B Testing",
+          ],
+          overview:
+            "Reach your ideal customers with precision-targeted Meta advertising campaigns.",
+          results: [
+            "Lower Cost Per Lead",
+            "Higher Conversion Rates",
+            "Brand Awareness",
+          ],
+        },
+        {
+          slug: "google-ads",
+          title: "Google Ads Management",
+          desc: "Professional Google Ads campaign management for maximum ROI.",
+          image:
+            "https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=2070",
+          tech: ["Google Ads", "Google Analytics", "Keyword Planner"],
+          features: [
+            "Search Ads",
+            "Display Ads",
+            "Shopping Ads",
+            "YouTube Ads",
+            "Remarketing",
+          ],
+          overview:
+            "Get found by customers actively searching for your products or services with Google Ads.",
+          results: ["Immediate Traffic", "High Intent Leads", "Measurable ROI"],
         },
       ],
     },
@@ -656,7 +821,7 @@ export const servicesData = [
         },
         {
           title: "Campaign Execution",
-          descripon: "Launch and manage campaigns.",
+          description: "Launch and manage campaigns.",
           icon: Rocket,
         },
         {
@@ -792,11 +957,66 @@ export const servicesData = [
         "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070",
       projects: [
         {
-          title: "Inventory Management System",
-          desc: "Real-time inventory tracking and management tool.",
+          slug: "automation-tools",
+          title: "Automation Tools",
+          desc: "Custom automation solutions to streamline your business processes.",
           image:
-            "https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?q=80&w=2070",
-          tech: ["React", "Node.js", "MongoDB"],
+            "https://images.unsplash.com/photo-1551033406-611cf9a28f67?q=80&w=2070",
+          tech: ["Python", "Node.js", "Zapier", "Make.com"],
+          features: [
+            "Workflow Automation",
+            "Data Processing",
+            "Report Generation",
+            "Task Scheduling",
+            "Email Automation",
+          ],
+          overview:
+            "Save time and reduce errors with custom automation tools built for your specific needs.",
+          results: [
+            "80% Time Savings",
+            "Reduced Errors",
+            "Improved Efficiency",
+          ],
+        },
+        {
+          slug: "custom-crm",
+          title: "Custom CRM System",
+          desc: "Tailored CRM software for your business needs.",
+          image:
+            "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070",
+          tech: ["React", "Node.js", "MongoDB", "Express"],
+          features: [
+            "Contact Management",
+            "Lead Tracking",
+            "Sales Pipeline",
+            "Email Integration",
+            "Reporting",
+          ],
+          overview:
+            "Manage your customers and leads effectively with a custom-built CRM system.",
+          results: [
+            "Better Customer Relationships",
+            "Increased Sales",
+            "Organized Data",
+          ],
+        },
+        {
+          slug: "data-visualization",
+          title: "Data Visualization Dashboard",
+          desc: "Interactive dashboards for data analysis and reporting.",
+          image:
+            "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070",
+          tech: ["D3.js", "Chart.js", "React", "Python"],
+          features: [
+            "Real-time Charts",
+            "Data Filters",
+            "Export Options",
+            "Custom Metrics",
+            "Drill-down Reports",
+          ],
+          overview:
+            "Transform your raw data into actionable insights with beautiful, interactive dashboards.",
+          results: ["Better Insights", "Faster Decisions", "Data Clarity"],
         },
       ],
     },
@@ -887,7 +1107,7 @@ export const servicesData = [
       "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070",
   },
 
-  // 5. Python, Machine Learning & AI
+  // 5. AI & Machine Learning
   {
     slug: "python-ml-ai",
     title: "AI & Machine Learning",
@@ -994,11 +1214,66 @@ export const servicesData = [
         "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?q=80&w=2070",
       projects: [
         {
-          title: "Predictive Analytics Platform",
-          desc: "AI-powered sales forecasting system.",
+          slug: "predictive-analytics",
+          title: "Predictive Analytics",
+          desc: "Forecast trends and make data-driven decisions with ML models.",
           image:
             "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070",
-          tech: ["Python", "TensorFlow", "React"],
+          tech: ["Python", "Scikit-learn", "TensorFlow", "Pandas"],
+          features: [
+            "Sales Forecasting",
+            "Demand Prediction",
+            "Risk Assessment",
+            "Customer Churn Prediction",
+            "Trend Analysis",
+          ],
+          overview:
+            "Use historical data to predict future outcomes and stay ahead of the competition.",
+          results: ["Better Planning", "Reduced Risk", "Competitive Advantage"],
+        },
+        {
+          slug: "chatbot-development",
+          title: "AI Chatbot Development",
+          desc: "Intelligent chatbots for customer support and engagement.",
+          image:
+            "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?q=80&w=2070",
+          tech: ["Python", "Rasa", "Dialogflow", "OpenAI", "LangChain"],
+          features: [
+            "Natural Language Processing",
+            "24/7 Support",
+            "Multi-language",
+            "Lead Generation",
+            "FAQ Automation",
+          ],
+          overview:
+            "Provide instant customer support and engagement with AI-powered chatbots.",
+          results: [
+            "Faster Response Times",
+            "Lower Support Costs",
+            "Higher Satisfaction",
+          ],
+        },
+        {
+          slug: "image-recognition",
+          title: "Image Recognition Systems",
+          desc: "Computer vision solutions for image analysis and processing.",
+          image:
+            "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?q=80&w=2070",
+          tech: ["Python", "TensorFlow", "PyTorch", "OpenCV", "YOLO"],
+          features: [
+            "Object Detection",
+            "Face Recognition",
+            "Image Classification",
+            "OCR",
+            "Visual Search",
+          ],
+          overview:
+            "Automate visual tasks with cutting-edge computer vision technology.",
+          results: [
+            "Automated Processing",
+            "High Accuracy",
+            "Scalable Solutions",
+          ],
         },
       ],
     },
@@ -1181,11 +1456,70 @@ export const servicesData = [
         "https://images.unsplash.com/photo-1561070791-2526d30994b5?q=80&w=2064",
       projects: [
         {
-          title: "Brand Identity Package",
-          desc: "Complete branding for a luxury brand.",
+          slug: "logo-design",
+          title: "Logo Design",
+          desc: "Unique, memorable logo designs that represent your brand identity.",
           image:
             "https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?q=80&w=2070",
-          tech: ["Illustrator", "Photoshop", "Figma"],
+          tech: ["Adobe Illustrator", "Photoshop", "Figma"],
+          features: [
+            "Custom Concepts",
+            "Vector Files",
+            "Brand Colors",
+            "Multiple Revisions",
+            "Logo Guidelines",
+          ],
+          overview:
+            "Get a professional logo that captures your brand's essence and makes a lasting impression.",
+          results: [
+            "Brand Recognition",
+            "Professional Image",
+            "Versatile Usage",
+          ],
+        },
+        {
+          slug: "social-media-graphics",
+          title: "Social Media Graphics",
+          desc: "Engaging graphics for all social media platforms.",
+          image:
+            "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?q=80&w=2074",
+          tech: ["Photoshop", "Canva", "Illustrator"],
+          features: [
+            "Instagram Posts",
+            "Facebook Covers",
+            "LinkedIn Banners",
+            "Twitter Headers",
+            "Story Templates",
+          ],
+          overview:
+            "Stand out on social media with professionally designed graphics that drive engagement.",
+          results: [
+            "Higher Engagement",
+            "Consistent Branding",
+            "More Followers",
+          ],
+        },
+        {
+          slug: "brand-identity",
+          title: "Complete Brand Identity",
+          desc: "Full brand identity package including logos, colors, typography, and guidelines.",
+          image:
+            "https://images.unsplash.com/photo-1561070791-2526d30994b5?q=80&w=2064",
+          tech: ["Illustrator", "Photoshop", "InDesign"],
+          features: [
+            "Logo Suite",
+            "Color Palette",
+            "Typography",
+            "Brand Guidelines",
+            "Stationery Design",
+          ],
+          overview:
+            "Build a cohesive brand identity that communicates your values and attracts your target audience.",
+          results: [
+            "Brand Consistency",
+            "Professional Image",
+            "Market Differentiation",
+          ],
         },
       ],
     },
@@ -1375,11 +1709,62 @@ export const servicesData = [
         "https://images.unsplash.com/photo-1536240474400-b6c8e6b1c6e5?q=80&w=2070",
       projects: [
         {
-          title: "Brand Promo Video",
-          desc: "Engaging promotional video for a tech brand.",
+          slug: "youtube-editing",
+          title: "YouTube Video Editing",
+          desc: "Professional editing for YouTube content creators.",
           image:
-            "https://images.unsplash.com/photo-1574717024453-3540568c7ec1?q=80&w=2070",
-          tech: ["Premiere Pro", "After Effects", "DaVinci"],
+            "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?q=80&w=2070",
+          tech: ["Premiere Pro", "After Effects", "DaVinci Resolve"],
+          features: [
+            "Custom Intros/Outros",
+            "B-Roll Integration",
+            "Background Music",
+            "Captions",
+            "End Screens",
+          ],
+          overview:
+            "Keep your audience engaged with professionally edited YouTube videos that stand out.",
+          results: ["Higher Retention", "More Subscribers", "Increased Views"],
+        },
+        {
+          slug: "social-media-videos",
+          title: "Social Media Video Editing",
+          desc: "Short-form video editing for TikTok, Reels, and Shorts.",
+          image:
+            "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?q=80&w=2074",
+          tech: ["Premiere Pro", "CapCut", "After Effects"],
+          features: [
+            "Trendy Effects",
+            "Captions",
+            "Fast Pacing",
+            "Music Sync",
+            "Vertical Format",
+          ],
+          overview:
+            "Create viral-worthy short-form content optimized for social media algorithms.",
+          results: ["Viral Potential", "Higher Engagement", "Brand Growth"],
+        },
+        {
+          slug: "corporate-video",
+          title: "Corporate Video Editing",
+          desc: "Professional editing for corporate and business videos.",
+          image:
+            "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?q=80&w=2070",
+          tech: ["Premiere Pro", "After Effects", "Audition"],
+          features: [
+            "Business Style",
+            "Lower Thirds",
+            "Company Graphics",
+            "Clean Cuts",
+            "Professional Polish",
+          ],
+          overview:
+            "Present your business professionally with polished corporate video content.",
+          results: [
+            "Professional Image",
+            "Better Communication",
+            "Increased Trust",
+          ],
         },
       ],
     },
@@ -1572,11 +1957,62 @@ export const servicesData = [
         "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=2072",
       projects: [
         {
-          title: "Business Website",
-          desc: "Professional WordPress site for a service business.",
+          slug: "custom-wordpress-theme",
+          title: "Custom WordPress Theme",
+          desc: "Unique, custom-designed WordPress themes tailored to your brand.",
           image:
             "https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?q=80&w=2070",
-          tech: ["WordPress", "Elementor", "WooCommerce"],
+          tech: ["PHP", "WordPress", "CSS3", "JavaScript", "ACF"],
+          features: [
+            "Custom Design",
+            "Responsive Layout",
+            "Optimized Code",
+            "SEO Ready",
+            "Fast Loading",
+          ],
+          overview:
+            "Get a completely custom WordPress theme that perfectly represents your brand and meets your needs.",
+          results: [
+            "Unique Brand Identity",
+            "Better Performance",
+            "Easy Management",
+          ],
+        },
+        {
+          slug: "wordpress-maintenance",
+          title: "WordPress Maintenance",
+          desc: "Ongoing maintenance, security, and support for WordPress sites.",
+          image:
+            "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070",
+          tech: ["WordPress", "Security Plugins", "Backup Solutions"],
+          features: [
+            "Security Monitoring",
+            "Regular Backups",
+            "Plugin Updates",
+            "Performance Optimization",
+            "24/7 Support",
+          ],
+          overview:
+            "Keep your WordPress site secure, fast, and up-to-date with our maintenance services.",
+          results: ["Peace of Mind", "Reduced Downtime", "Enhanced Security"],
+        },
+        {
+          slug: "elementor-design",
+          title: "Elementor Website Design",
+          desc: "Professional website design using Elementor page builder.",
+          image:
+            "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=2072",
+          tech: ["WordPress", "Elementor", "Elementor Pro", "CSS"],
+          features: [
+            "Drag & Drop",
+            "Custom Widgets",
+            "Dynamic Content",
+            "Popups",
+            "Forms",
+          ],
+          overview:
+            "Get a professional WordPress site built with Elementor for easy management and stunning design.",
+          results: ["Beautiful Design", "Easy Updates", "Fast Delivery"],
         },
       ],
     },

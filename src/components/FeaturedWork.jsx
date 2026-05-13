@@ -2,26 +2,43 @@ import React, { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import GlowButton from "./GlowButton";
 import { Link } from "react-router-dom";
-import { projects } from "../data/projects";
+import { servicesData } from "../data/serviceData";
+
 const FeaturedWork = () => {
+  // Extract first project from each service's showcase.projects
+  const featuredProjects = servicesData
+    .filter(service => service.showcase?.projects?.length > 0)
+    .map(service => ({
+      slug: service.slug,
+      projectSlug: service.showcase.projects[0].slug,
+      title: service.showcase.projects[0].title,
+      desc: service.showcase.projects[0].desc,
+      desktopImg: service.showcase.projects[0].image,
+      serviceTitle: service.title,
+    }));
+
   const [current, setCurrent] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
 
   useEffect(() => {
-    if (isPaused) return;
+    if (isPaused || featuredProjects.length === 0) return;
 
     const interval = setInterval(() => {
-      setCurrent((prev) => (prev === projects.length - 1 ? 0 : prev + 1));
+      setCurrent((prev) => (prev === featuredProjects.length - 1 ? 0 : prev + 1));
     }, 4000);
 
     return () => clearInterval(interval);
-  }, [isPaused, current]);
+  }, [isPaused, current, featuredProjects.length]);
 
   const next = () =>
-    setCurrent((prev) => (prev === projects.length - 1 ? 0 : prev + 1));
+    setCurrent((prev) => (prev === featuredProjects.length - 1 ? 0 : prev + 1));
 
   const prev = () =>
-    setCurrent((prev) => (prev === 0 ? projects.length - 1 : prev - 1));
+    setCurrent((prev) => (prev === 0 ? featuredProjects.length - 1 : prev - 1));
+
+  if (featuredProjects.length === 0) {
+    return null;
+  }
 
   return (
     <section className="relative min-h-screen w-full bg-[#050505] overflow-hidden flex flex-col items-center justify-center py-20 px-6 font-sans">
@@ -42,7 +59,10 @@ const FeaturedWork = () => {
           Featured Work
         </h2>
         <p className="max-w-md text-white text-center text-sm leading-relaxed font-medium">
-          We are dedicated to delivering innovative, responsive, and high-performance digital solutions. By merging visually compelling design with feature-rich functionality, we craft strategic web experiences and marketing campaigns that accelerate business growth.
+          We are dedicated to delivering innovative, responsive, and
+          high-performance digital solutions. By merging visually compelling
+          design with feature-rich functionality, we craft strategic web
+          experiences and marketing campaigns that accelerate business growth.
         </p>
       </div>
 
@@ -63,6 +83,7 @@ const FeaturedWork = () => {
             <ChevronRight size={30} />
           </button>
         </div>
+
         {/* SLIDER WRAPPER */}
         <div
           className="relative z-10 w-full max-w-5xl overflow-hidden pb-20"
@@ -76,13 +97,17 @@ const FeaturedWork = () => {
               transform: `translateX(-${current * 100}%)`,
             }}
           >
-            {projects.map((project, i) => (
+            {featuredProjects.map((project, i) => (
               <div
                 key={i}
                 className="w-full shrink-0 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center"
               >
                 {/* LEFT SIDE */}
                 <div className="lg:col-span-4 flex flex-col items-start gap-6">
+                  {/* Service tag */}
+                  <span className="text-cyan-400 text-xs uppercase tracking-wider font-semibold">
+                    {project.serviceTitle}
+                  </span>
                   <h3 className="sm:text-3xl text-xl font-semibold text-white uppercase tracking-wider leading-none">
                     {project.title}
                   </h3>
@@ -91,18 +116,18 @@ const FeaturedWork = () => {
                   </p>
 
                   <div className="flex flex-col gap-3">
-                    {/* WEBSITE DETAIL PAGE */}
-                    <Link to={`/project/${project.slug}`}>
+                    {/* PROJECT DETAIL PAGE - Now routes to /services/:slug/:projectSlug */}
+                    <Link to={`/services/${project.slug}/${project.projectSlug}`}>
                       <GlowButton
-                        name="View Website"
+                        name="View Project"
                         className="w-full bg-secondery cursor-pointer"
                       />
                     </Link>
 
-                    {/* CASE STUDY PAGE */}
-                    <Link to={`/casestudies`}>
+                    {/* SERVICE PAGE */}
+                    <Link to={`/services/${project.slug}`}>
                       <button className="w-full py-3 border border-white text-white text-[13px] font-bold uppercase tracking-widest hover:bg-white hover:text-black transition ease-in-out duration-300 cursor-pointer">
-                        View Case Study
+                        View {project.serviceTitle}
                       </button>
                     </Link>
                   </div>
@@ -113,7 +138,7 @@ const FeaturedWork = () => {
                   <div className="relative w-full max-w-4xl border-12 border-[#1a1a1a] bg-black shadow-2xl overflow-hidden aspect-video">
                     <img
                       src={project.desktopImg}
-                      alt=""
+                      alt={project.title}
                       className="w-full h-full object-cover"
                     />
                   </div>
@@ -140,7 +165,7 @@ const FeaturedWork = () => {
 
       {/* DOTS */}
       <div className="relative z-10 mt-20 flex gap-3">
-        {projects.map((_, i) => (
+        {featuredProjects.map((_, i) => (
           <button
             key={i}
             onClick={() => setCurrent(i)}
