@@ -215,7 +215,7 @@ const Team = () => {
         </div>
       </section>
       {/* stroke style */}
-      <style jsx>{`
+      <style>{`
         .stroke-text {
           -webkit-text-stroke: 1.5px #06b6d4;
           color: transparent;

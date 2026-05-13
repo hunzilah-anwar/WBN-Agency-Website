@@ -7,8 +7,8 @@ import { servicesData } from "../data/serviceData";
 const FeaturedWork = () => {
   // Extract first project from each service's showcase.projects
   const featuredProjects = servicesData
-    .filter(service => service.showcase?.projects?.length > 0)
-    .map(service => ({
+    .filter((service) => service.showcase?.projects?.length > 0)
+    .map((service) => ({
       slug: service.slug,
       projectSlug: service.showcase.projects[0].slug,
       title: service.showcase.projects[0].title,
@@ -24,7 +24,9 @@ const FeaturedWork = () => {
     if (isPaused || featuredProjects.length === 0) return;
 
     const interval = setInterval(() => {
-      setCurrent((prev) => (prev === featuredProjects.length - 1 ? 0 : prev + 1));
+      setCurrent((prev) =>
+        prev === featuredProjects.length - 1 ? 0 : prev + 1,
+      );
     }, 4000);
 
     return () => clearInterval(interval);
@@ -117,12 +119,10 @@ const FeaturedWork = () => {
 
                   <div className="flex flex-col gap-3">
                     {/* PROJECT DETAIL PAGE - Now routes to /services/:slug/:projectSlug */}
-                    <Link to={`/services/${project.slug}/${project.projectSlug}`}>
-                      <GlowButton
-                        name="View Project"
-                        className="w-full bg-secondery cursor-pointer"
-                      />
-                    </Link>
+                    <GlowButton
+                      to={`/services/${project.slug}/${project.projectSlug}`}
+                      name="View Project"
+                    />
 
                     {/* SERVICE PAGE */}
                     <Link to={`/services/${project.slug}`}>

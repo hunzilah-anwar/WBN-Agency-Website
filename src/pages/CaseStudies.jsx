@@ -41,7 +41,7 @@ const CaseStudies = () => {
   return (
     <main className="selection:bg-cyan-500 selection:text-white">
       {/* SECTION 1: HERO (ODD - #00042A) */}
-      <section className="relative min-h-screen pt-40 pb-20 px-6 bg-[#03042a] text-white flex items-center overflow-hidden">
+      <section className="relative min-h-screen pt-20 pb-20 px-6 bg-[#03042a] text-white flex items-center overflow-hidden">
         {/* BACKGROUND GLOW */}
         <div className="absolute top-[-20%] left-[-10%] w-150 h-150 bg-blue-500/20 blur-[140px]" />
         <div className="absolute bottom-[-20%] right-[-10%] w-150 h-150 bg-purple-600/20 blur-[140px]" />
@@ -85,7 +85,7 @@ const CaseStudies = () => {
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
-            className="relative"
+            className="relative pt-20"
           >
             <div className="relative group rounded-2xl overflow-hidden border border-white/10">
               <img
@@ -252,12 +252,12 @@ const CaseStudies = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row justify-center items-center pt-6">
-            <GlowButton name="Start Project" href="/contact" />
+            <GlowButton name="Start Project" to="/contact" />
           </div>
         </div>
       </section>
 
-      <style jsx>{`
+      <style>{`
         .stroke-text {
           -webkit-text-stroke: 1.5px white;
         }

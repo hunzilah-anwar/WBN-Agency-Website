@@ -94,7 +94,12 @@ const ProjectSlider = ({ projects, parentSlug }) => {
                   </span>
                 ))}
               </div>
-              <GlowButton to={`/services/${parentSlug}/${projects[index].slug}`} name="View Detail" />
+              <div className="pt-6">
+                <GlowButton
+                  to={`/services/${parentSlug}/${projects[index].slug}`}
+                  name="View Detail"
+                />
+              </div>
             </motion.div>
           </AnimatePresence>
 
@@ -211,7 +216,7 @@ const NextStepsSection = ({ nextSteps }) => {
         <div className="text-center mt-12">
           <GlowButton
             name={nextSteps?.buttonText || "Start Your Project"}
-            href={nextSteps?.buttonLink || "/contact"}
+            to={nextSteps?.buttonLink || "/contact"}
           />
         </div>
       </div>
@@ -514,7 +519,7 @@ const ServicePages = () => {
               <h3 className="text-2xl sm:text-4xl md:text-6xl font-black tracking-tighter uppercase">
                 {service.ctaTitle}
               </h3>
-              <GlowButton name={service.ctaButton} href={service.ctaLink} />
+              <GlowButton name={service.ctaButton} to={service.ctaLink} />
             </div>
           </div>
           <div className="absolute inset-0 pointer-events-none opacity-10 bg-[linear-gradient(rgba(18,16,16,0)_50%,rgba(0,0,0,0.25)_50%),linear-gradient(90deg,rgba(255,0,0,0.06),rgba(0,255,0,0.02),rgba(0,0,255,0.06))] bg-size-[100%_2px,3px_100%]" />
@@ -599,7 +604,7 @@ const ServicePages = () => {
         </div>
       )}
 
-      <style jsx>{`
+      <style>{`
         @keyframes shine-wave {
           0% {
             left: -100%;

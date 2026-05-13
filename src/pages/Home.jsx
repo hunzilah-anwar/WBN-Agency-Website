@@ -316,19 +316,14 @@ const Home = () => {
               </div>
 
               {/* FLOATING STATS */}
-              <div className="absolute top-5 left-5 bg-white/10 backdrop-blur-xl border border-white/10 px-6 py-4">
-                <h3 className="text-3xl font-bold text-secondery">99%</h3>
-                <p className="text-white text-sm">Client Satisfaction</p>
+              <div className="absolute top-0 left-0 bg-white/10 backdrop-blur-xl border border-white/10 px-4 py-2">
+                <h3 className="text-2xl font-bold text-secondery">99%</h3>
+                <p className="text-white text-xs">Client Satisfaction</p>
               </div>
 
-              <div className="absolute bottom-5 right-5 bg-white/10 backdrop-blur-xl border border-white/10 px-6 py-4">
-                <h3 className="text-3xl font-bold text-secondery">500+</h3>
-                <p className="text-white text-sm">Projects Delivered</p>
-              </div>
-
-              <div className="absolute bottom-36 left-5 bg-white/10 backdrop-blur-xl border border-white/10 px-6 py-4">
-                <h3 className="text-3xl font-bold text-secondery">95%</h3>
-                <p className="text-white text-sm">Returning Clients</p>
+              <div className="absolute bottom-0 right-0 bg-white/10 backdrop-blur-xl border border-white/10 px-4 py-2">
+                <h3 className="text-2xl font-bold text-secondery">500+</h3>
+                <p className="text-white text-xs">Projects Delivered</p>
               </div>
             </div>
           </div>
