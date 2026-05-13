@@ -260,7 +260,7 @@ const ServicePages = () => {
   return (
     <div className="bg-[#00042A] text-white selection:bg-cyan-500 selection:text-black min-h-screen">
       {/* NAVBAR SPACER */}
-      <div className="h-20 md:h-24" />
+      <div className="h-20" />
 
       <main>
         {/* SECTION 1: HERO */}
@@ -282,12 +282,6 @@ const ServicePages = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-6">
-                <Sparkles size={14} className="text-cyan-400" />
-                <span className="text-xs font-medium uppercase tracking-wider">
-                  Premium Service
-                </span>
-              </div>
               <h1 className="font-sans text-white text-4xl md:text-6xl lg:text-7xl font-black leading-tight">
                 {service.heroTitle}
               </h1>
