@@ -16,7 +16,12 @@ const BlogCard = ({
       {/* ===== HEADER ===== */}
       <div className="relative z-10 mb-14 md:mb-20 text-center space-y-5">
         <h2 className="text-xl sm:text-4xl italic font-black uppercase tracking-tighter text-white leading-[0.9]">
-          {words[0]} <span className="text-secondery">{words[1]}</span>
+          {words.map((word, index) => (
+            <React.Fragment key={index}>
+              {index > 0 && ' '}
+              <span className={index % 2 === 0 ? '' : 'text-secondery'}>{word}</span>
+            </React.Fragment>
+          ))}
         </h2>
 
         <p className="mx-auto max-w-2xl text-zinc-300 text-sm sm:text-base font-medium leading-relaxed">
