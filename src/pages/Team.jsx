@@ -2,20 +2,21 @@ import React from "react";
 import { motion } from "framer-motion";
 import { ArrowUpRight, Cpu, Zap, Globe } from "lucide-react";
 import GlowButton from "../components/GlowButton";
-import {
-  FaFacebook,
-  FaInstagram,
-  FaTwitter,
-  FaLinkedinIn,
-} from "react-icons/fa";
-import CEOImage from "../assets/CEO.jpeg";
+import CEOImage from "../assets/Mudussir.png";
+import HamzaImg from "../assets/hamza-team.jpeg"
+import RahulImg from "../assets/rahul-team.jpeg"
+import MaryamImg from "../assets/maryam-team.jpeg"
+import SaifImg from "../assets/saif-team.jpeg"
+import WaqasImg from "../assets/waqas-team.png"
+import AhadImg from "../assets/ahad-team.jpeg"
+
 /* ================= TEAM DATA ================= */
 const coreTeam = [
   {
     id: 1,
     name: "Mr. Abdul Ahad",
     role: "Web Development Head",
-    image: CEOImage,
+    image: AhadImg,
   },
   {
     id: 2,
@@ -25,39 +26,39 @@ const coreTeam = [
   },
   {
     id: 3,
-    name: "?",
+    name: "Saif-ur-Rehman",
     role: "Video Editing",
-    image: CEOImage,
+    image: SaifImg,
   },
   {
     id: 4,
     name: "Ruhul Hasnain",
     role: "Python, Machine learning and AI head",
-    image: CEOImage,
+    image: RahulImg,
   },
   {
     id: 5,
     name: "Waqas Khan",
     role: "Tool development Head",
-    image: CEOImage,
+    image: WaqasImg,
   },
   {
     id: 6,
     name: "Mariyum",
     role: "Graphics Design Head",
-    image: CEOImage,
+    image: MaryamImg,
   },
   {
     id: 7,
     name: "Waqas Khan",
     role: "Wordpress",
-    image: CEOImage,
+    image: WaqasImg,
   },
   {
     id: 8,
     name: "Hamza",
     role: "Digital marketing Head",
-    image: CEOImage,
+    image: HamzaImg,
   },
 ];
 
@@ -68,7 +69,7 @@ const TeamCard = ({ member }) => (
       <img
         src={member.image || member.img}
         alt={member.name}
-        className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-1000"
+        className="w-full h-full object-cover group-hover:scale-110 transition-all duration-1000"
       />
       <div className="absolute inset-0 bg-linear-to-t from-[#00042A] via-transparent to-transparent opacity-60" />
     </div>
@@ -124,7 +125,7 @@ const Team = () => {
               <div className="absolute -inset-4 bg-cyan-500/20 blur-3xl rounded-full opacity-30 group-hover:opacity-60 transition duration-1000" />
               <img
                 src={CEOImage}
-                className="relative rounded-full w-full aspect-square object-cover border-8 border-white/10 shadow-2xl sm:grayscale sm:hover:grayscale-0 transition-all duration-700"
+                className="relative rounded-full w-full aspect-square object-cover border-8 border-white/10 shadow-2xl transition-all duration-700"
                 alt="CEO"
               />
             </div>
@@ -142,16 +143,6 @@ const Team = () => {
                 "Consistently producing localized systems while saving time and
                 energy for our global partners is our prime protocol."
               </p>
-              <div className="flex gap-6">
-                {[FaFacebook, FaInstagram, FaTwitter].map((Icon, i) => (
-                  <button
-                    key={i}
-                    className="w-12 h-12 cursor-pointer rounded-full border border-white/10 flex items-center justify-center hover:bg-cyan-500 hover:text-black transition-all"
-                  >
-                    <Icon size={20} />
-                  </button>
-                ))}
-              </div>
             </div>
           </div>
         </div>

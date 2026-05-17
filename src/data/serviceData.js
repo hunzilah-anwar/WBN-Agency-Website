@@ -29,6 +29,11 @@ import {
 } from "lucide-react";
 import React from "react";
 import { BsPalette2 } from "react-icons/bs";
+import WebProject1 from "../assets/web-project-1.png"
+import WebClient1 from "../assets/web-clint-1.webp"
+import WebClient2 from "../assets/web-clint-2.png"
+import WebClient3 from "../assets/web-clint-3.webp"
+
 
 export const servicesData = [
   // 1. Web Development
@@ -146,25 +151,33 @@ export const servicesData = [
         "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070",
       projects: [
         {
-          slug: "admin-dashboard",
-          title: "Admin Dashboard",
-          desc: "Comprehensive admin dashboard with analytics, user management, and real-time data visualization.",
+          slug: "fundbox",
+          title: "Fundbox – Capital Products for Small Businesses",
+          desc: "Fundbox offers fast, easy access to business financing — including lines of credit and term loans up to $250,000 — to help small businesses manage cash flow and grow.",
           image:
-            "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070",
-          tech: ["React", "Chart.js", "Tailwind CSS", "Redux", "Firebase"],
+            WebProject1,
+          tech: [
+            "Line of Credit",
+            "Term Loans",
+            "Stripe",
+            "Intuit",
+            "FreshBooks",
+            "Zoho",
+            "Wave",
+          ],
           features: [
-            "Real-time Analytics",
-            "User Management",
-            "Data Export",
-            "Custom Widgets",
-            "Role-based Access",
+            "Up to $250,000 in Funding",
+            "Apply in 3 Minutes or Less",
+            "Fast Access to Funds",
+            "Flexible Repayment Terms",
+            "No Early Repayment Fees",
           ],
           overview:
-            "A powerful admin dashboard that provides complete control over your platform with insightful analytics and user management tools.",
+            "Fundbox is a small business financing platform founded in 2013 that has connected 500,000+ businesses to over $6 billion in capital. It offers lines of credit and term loans with a simple 3-minute application, fast funding, and flexible repayment — integrated into everyday business tools like Stripe, Intuit, FreshBooks, and more.",
           results: [
-            "40% Faster Decisions",
-            "Better Data Visibility",
-            "Improved User Management",
+            "500k+ Businesses Connected",
+            "$6B+ Capital Unlocked",
+            "4.8 Trustpilot Score",
           ],
         },
         {
@@ -259,14 +272,21 @@ export const servicesData = [
           "Their web development team delivered a fast and modern website that exceeded our expectations.",
         name: "Ali Raza",
         designation: "CEO @ TechBrand",
-        src: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1374",
+        src: WebClient1,
       },
       {
         quote:
           "Our website speed and conversions improved dramatically after working with them.",
         name: "Ahmed Khan",
         designation: "Founder @ StartupX",
-        src: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1374",
+        src: WebClient2,
+      },
+      {
+        quote:
+          "Our website speed and conversions improved dramatically after working with them.",
+        name: "Ahmed Khan",
+        designation: "Founder @ StartupX",
+        src: WebClient3,
       },
     ],
     faqs: [
