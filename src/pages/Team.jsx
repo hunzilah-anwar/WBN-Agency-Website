@@ -64,12 +64,12 @@ const coreTeam = [
 
 /* ================= SUB-COMPONENTS ================= */
 const TeamCard = ({ member }) => (
-  <motion.div className="relative group">
+  <motion.div className="relative">
     <div className="relative aspect-3/4 overflow-hidden rounded-2xl border border-white/10">
       <img
         src={member.image || member.img}
         alt={member.name}
-        className="w-full h-full object-cover group-hover:scale-110 transition-all duration-1000"
+        className="w-full h-full object-cover transition-all duration-1000"
       />
       <div className="absolute inset-0 bg-linear-to-t from-[#00042A] via-transparent to-transparent opacity-60" />
     </div>
@@ -90,14 +90,14 @@ const Team = () => {
   return (
     <main className="bg-[#00042A] text-white selection:bg-cyan-500 selection:text-black pt-20">
       {/* SECTION 1 (ODD): HERO - #00042A */}
-      <section className="relative sm:min-h-[80vh] sm:py-0 py-10 flex items-center sm:px-6 px-4 overflow-hidden">
+      <section className="relative sm:min-h-[60vh] sm:py-0 py-10 flex items-center sm:px-6 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,#ffffff05_1px,transparent_1px)] bg-size-[40px_40px]" />
         <div className="max-w-7xl mx-auto w-full relative z-10 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
           >
-            <h1 className="text-2xl sm:text-4xl md:text-[10rem] font-black italic leading-[0.8] tracking-tighter uppercase sm:mb-10 mb-4">
+            <h1 className="text-2xl sm:text-4xl md:text-[8rem] font-black italic leading-[0.8] tracking-tighter uppercase sm:mb-10 mb-4">
               OUR{" "}
               <span className="text-transparent stroke-text italic font-serif">
                 TEAM.

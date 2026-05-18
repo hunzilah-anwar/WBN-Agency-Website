@@ -29,11 +29,10 @@ import {
 } from "lucide-react";
 import React from "react";
 import { BsPalette2 } from "react-icons/bs";
-import WebProject1 from "../assets/web-project-1.png"
-import WebClient1 from "../assets/web-clint-1.webp"
-import WebClient2 from "../assets/web-clint-2.png"
-import WebClient3 from "../assets/web-clint-3.webp"
-
+import WebProject1 from "../assets/web-project-1.png";
+import WebClient1 from "../assets/web-clint-1.webp";
+import WebClient2 from "../assets/web-clint-2.png";
+import WebClient3 from "../assets/web-clint-3.webp";
 
 export const servicesData = [
   // 1. Web Development
@@ -154,8 +153,7 @@ export const servicesData = [
           slug: "fundbox",
           title: "Fundbox – Capital Products for Small Businesses",
           desc: "Fundbox offers fast, easy access to business financing — including lines of credit and term loans up to $250,000 — to help small businesses manage cash flow and grow.",
-          image:
-            WebProject1,
+          image: WebProject1,
           tech: [
             "Line of Credit",
             "Term Loans",
@@ -548,10 +546,24 @@ export const servicesData = [
     testimonials: [
       {
         quote:
-          "Our online sales doubled after the new store launch. Highly recommended!",
-        name: "Usman Ali",
-        designation: "Founder @ StyleHub",
-        src: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1374",
+          "They launched our TikTok Shop USA storefront and automated our entire product sourcing pipeline. Our outdoor gear brand scaled faster than we imagined.",
+        name: "Ryan Greenfield",
+        designation: "Founder & CEO, Aspen Trail Gear",
+        src: WebClient1,
+      },
+      {
+        quote:
+          "They re-architected our Shopify SEO and rewrote 150+ product listings. Our organic search visibility jumped 40% and traffic to trending inventory became fully automated.",
+        name: "Amanda Ross",
+        designation: "Co-Founder, Sol Vibe Activewear",
+        src: WebClient2,
+      },
+      {
+        quote:
+          "Their custom Laravel email dashboard with AI-powered abandoned cart sequences recovered 18% of our lost checkouts. Game changer for our coffee subscription brand.",
+        name: "Tyler Vance",
+        designation: "Brand Director, Midnight Roast Co.",
+        src: WebClient3,
       },
     ],
     faqs: [
@@ -812,7 +824,21 @@ export const servicesData = [
           "Our leads increased massively after running Google Ads with them.",
         name: "Bilal Ahmed",
         designation: "CEO @ Growthify",
-        src: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1374",
+        src: WebClient1,
+      },
+      {
+        quote:
+          "They managed our Meta funnels and built a behavioral email system that dramatically grew our subscription sign-ups.",
+        name: "Marcus Hayes",
+        designation: "E-Commerce Director, Alpha Grind Coffee Co.",
+        src: WebClient2,
+      },
+      {
+        quote:
+          "Their hyper-targeted Google Search ads captured high-intent buyers perfectly. Our CRO improved significantly within the first month.",
+        name: "Natalie Reyes",
+        designation: "Head of Operations, SafeHaven Smart Home",
+        src: WebClient3,
       },
     ],
     faqs: [
@@ -1058,10 +1084,24 @@ export const servicesData = [
     testimonials: [
       {
         quote:
-          "Their custom tool saved us countless hours of manual work each week.",
-        name: "Imran Ali",
-        designation: "Operations Director",
-        src: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1374",
+          "They built a custom TikTok Creator Outreach Tool that auto-scans micro-influencers, sends DMs, and tracks affiliate revenue. Our influencer program now runs on autopilot.",
+        name: "Derek Vance",
+        designation: "Founder & Marketing Director, AeroFit Apparel",
+        src: WebClient1,
+      },
+      {
+        quote:
+          "Their AI-powered SEO optimizer rewrites thousands of product titles and pushes updates to Shopify and Amazon in one click. Months of work done in minutes.",
+        name: "Chloe Sterling",
+        designation: "Chief Growth Officer, PureGlow Organics",
+        src: WebClient2,
+      },
+      {
+        quote:
+          "They eliminated our expensive SaaS subscriptions by building a proprietary Laravel marketing dashboard with behavioral email sequences tied directly to our Meta ad pixel.",
+        name: "Marcus Hayes",
+        designation: "E-Commerce Director, Alpha Grind Coffee Co.",
+        src: WebClient3,
       },
     ],
     faqs: [
@@ -1314,10 +1354,25 @@ export const servicesData = [
     ],
     testimonials: [
       {
-        quote: "Their AI solution gave us insights we never thought possible.",
-        name: "Dr. Sara Ahmed",
-        designation: "CTO @ DataTech",
-        src: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1374",
+        quote:
+          "Their ML forecasting engine analyzes trends and weather patterns to predict our inventory 60 days ahead. We cut storage overhead costs by 32% in the first quarter.",
+        name: "Derek Sterling",
+        designation: "CTO, Apex Apparel Group",
+        src: WebClient1,
+      },
+      {
+        quote:
+          "Their NLP symptom extraction system transformed our supplement store into a personalized wellness platform. Conversion rates jumped 45% almost immediately after launch.",
+        name: "Dr. Elena Rostova",
+        designation: "Founder, Vitality Bio-Nutrient Co.",
+        src: WebClient2,
+      },
+      {
+        quote:
+          "Their AI intent classification system now auto-resolves 70% of our support tickets. Response time dropped from 14 hours to under 45 seconds.",
+        name: "Sophia Chen",
+        designation: "Operations Director, LuxeDecor Direct",
+        src: WebClient3,
       },
     ],
     faqs: [
@@ -1559,10 +1614,25 @@ export const servicesData = [
     ],
     testimonials: [
       {
-        quote: "Their design work elevated our brand to a whole new level.",
-        name: "Fatima Khan",
-        designation: "Creative Director",
-        src: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1374",
+        quote:
+          "They designed 50+ scroll-stopping ad creatives for our Meta and TikTok campaigns. Our CTR recovered completely and the brand kit gave us a totally fresh identity.",
+        name: "Austin Vance",
+        designation: "Marketing Director, AeroFit Gear",
+        src: WebClient1,
+      },
+      {
+        quote:
+          "The brand identity overhaul was stunning — the minimalist logo, earthy palette, and 3D packaging mockups turned us into a premium DTC skincare brand overnight.",
+        name: "Chloe Bennett",
+        designation: "Founder, Sol & Seed Botanicals",
+        src: WebClient2,
+      },
+      {
+        quote:
+          "Their Amazon A+ Content modules and seasonal lookbooks dramatically boosted our marketplace conversions. The designs were clean, premium, and exactly on-brand.",
+        name: "Natalie Reyes",
+        designation: "Brand Manager, Home & Hearth Co.",
+        src: WebClient3,
       },
     ],
     faqs: [
@@ -1805,10 +1875,24 @@ export const servicesData = [
     testimonials: [
       {
         quote:
-          "Their video editing transformed our raw footage into professional content.",
-        name: "Omar Hussain",
-        designation: "Marketing Manager",
-        src: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1374",
+          "They turned hours of raw supplier footage into viral TikTok Shop videos with 3-second hooks and kinetic cuts. Our in-app sales jumped immediately after the first batch.",
+        name: "Ryan Greenfield",
+        designation: "Founder & CEO, Aspen Trail Gear",
+        src: WebClient1,
+      },
+      {
+        quote:
+          "They transformed our raw UGC try-on clips into polished Meta ad creatives with split-test hooks. Our CAC dropped significantly within the first two weeks.",
+        name: "Amanda Ross",
+        designation: "Co-Founder, Sol Vibe Activewear",
+        src: WebClient2,
+      },
+      {
+        quote:
+          "The cinematic brand videos and ASMR sound design they produced made our coffee subscription feel premium and irresistible. Retargeting performance improved across all platforms.",
+        name: "Tyler Vance",
+        designation: "Brand Director, Midnight Roast Co.",
+        src: WebClient3,
       },
     ],
     faqs: [
@@ -2055,7 +2139,21 @@ export const servicesData = [
         quote: "Our new WordPress site is fast, beautiful, and easy to manage.",
         name: "Hassan Raza",
         designation: "Business Owner",
-        src: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1374",
+        src: WebClient1,
+      },
+      {
+        quote:
+          "They redesigned our WordPress store from scratch. The speed improvement and clean design completely changed how customers interact with us.",
+        name: "Marcus Hayes",
+        designation: "Operations Lead, Grindhouse Coffee Roasters",
+        src: WebClient2,
+      },
+      {
+        quote:
+          "Professional, fast, and easy to update. Our team manages the site with zero technical knowledge thanks to their Elementor build.",
+        name: "Natalie Reyes",
+        designation: "Brand Manager, Home & Hearth Co.",
+        src: WebClient3,
       },
     ],
     faqs: [
