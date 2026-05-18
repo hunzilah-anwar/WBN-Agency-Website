@@ -3,12 +3,12 @@ import { motion } from "framer-motion";
 import { ArrowUpRight, Cpu, Zap, Globe } from "lucide-react";
 import GlowButton from "../components/GlowButton";
 import CEOImage from "../assets/Mudassir.png";
-import HamzaImg from "../assets/hamza-team.jpeg"
-import RahulImg from "../assets/rahul-team.jpeg"
-import MaryamImg from "../assets/maryam-team.jpeg"
-import SaifImg from "../assets/saif-team.jpeg"
-import WaqasImg from "../assets/waqas-team.jpeg"
-import AhadImg from "../assets/ahad-team.jpeg"
+import HamzaImg from "../assets/hamza-team.jpeg";
+import RahulImg from "../assets/rahul-team.jpeg";
+import MaryamImg from "../assets/maryam-team.jpeg";
+import SaifImg from "../assets/saif-team.jpeg";
+import WaqasImg from "../assets/waqas-team.jpeg";
+import AhadImg from "../assets/ahad-team.jpeg";
 
 /* ================= TEAM DATA ================= */
 const coreTeam = [
@@ -90,7 +90,7 @@ const Team = () => {
   return (
     <main className="bg-[#00042A] text-white selection:bg-cyan-500 selection:text-black pt-20">
       {/* SECTION 1 (ODD): HERO - #00042A */}
-      <section className="relative sm:min-h-[60vh] sm:py-0 py-10 flex items-center sm:px-6 px-4 overflow-hidden">
+      <section className="relative sm:py-16 py-10 flex items-center sm:px-6 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,#ffffff05_1px,transparent_1px)] bg-size-[40px_40px]" />
         <div className="max-w-7xl mx-auto w-full relative z-10 text-center">
           <motion.div
@@ -113,14 +113,14 @@ const Team = () => {
 
       {/* SECTION 2 (EVEN): CEO - FIXED BG */}
       <section
-        className="relative sm:py-24 py-10 sm:px-6 px-4 bg-fixed bg-cover bg-center"
+        className="relative sm:py-16 py-10 sm:px-6 px-4 bg-fixed bg-cover bg-center"
         style={{
           backgroundImage: `url('https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2069')`,
         }}
       >
         <div className="absolute inset-0 bg-black/60" />
         <div className="max-w-7xl mx-auto relative z-10">
-          <div className="grid lg:grid-cols-2 sm:gap-20 gap-10 items-center">
+          <div className="grid lg:grid-cols-2 grid-cols-1 sm:gap-20 gap-10 items-center">
             <div className="relative group">
               <div className="absolute -inset-4 bg-cyan-500/20 blur-3xl rounded-full opacity-30 group-hover:opacity-60 transition duration-1000" />
               <img
@@ -149,9 +149,9 @@ const Team = () => {
       </section>
 
       {/* SECTION 3 (ODD): CORE TEAM GRID - #00042A */}
-      <section className="sm:py-20 py-10 sm:px-6 px-4 bg-[#00042A]">
+      <section className="sm:py-16 py-10 sm:px-6 px-4 bg-[#00042A]">
         <div className="max-w-7xl mx-auto">
-          <div className="sm:mb-20 mb-10">
+          <div className="sm:mb-16 mb-10">
             <h2 className="text-2xl sm:text-4xl md:text-6xl font-black tracking-tighter uppercase">
               Team <span className="text-secondery">Members</span>
             </h2>
@@ -166,7 +166,7 @@ const Team = () => {
 
       {/* SECTION 5 (ODD): JOIN THE PIPELINE */}
       <section
-        className="relative sm:py-24 py-10 px-4 bg-fixed bg-cover bg-center sm:text-center overflow-hidden"
+        className="relative sm:py-16 py-10 px-4 bg-fixed bg-cover bg-center sm:text-center overflow-hidden"
         style={{
           backgroundImage: `url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070')`,
         }}
@@ -186,7 +186,7 @@ const Team = () => {
             whileInView={{ scale: [0.9, 1], opacity: [0, 1] }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-3xl sm:text-6xl md:text-[10rem] font-black tracking-tighter uppercase leading-[0.8]">
+            <h2 className="text-3xl sm:text-6xl md:text-8xl font-black tracking-tighter uppercase leading-[0.8]">
               BUILD THE <br />
               <span className="text-transparent stroke-text">FUTURE.</span>
             </h2>
@@ -200,7 +200,7 @@ const Team = () => {
           </p>
 
           {/* actions */}
-          <div className="flex flex-col md:flex-row items-center justify-center gap-8 pt-8">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-8">
             <GlowButton name="Let's Connect" to="/contact" />
           </div>
         </div>

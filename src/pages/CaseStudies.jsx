@@ -41,7 +41,7 @@ const CaseStudies = () => {
   return (
     <main className="selection:bg-cyan-500 selection:text-white">
       {/* SECTION 1: HERO (ODD - #00042A) */}
-      <section className="relative min-h-screen sm:pt-40 pt-30 sm:pb-20 pb-10 sm:px-6 px-4 bg-[#03042a] text-white flex items-center overflow-hidden">
+      <section className="relative sm:pt-40 pt-30 sm:pb-20 pb-10 sm:px-6 px-4 bg-[#03042a] text-white flex items-center overflow-hidden">
         {/* BACKGROUND GLOW */}
         <div className="absolute top-[-20%] left-[-10%] w-150 h-150 bg-blue-500/20 blur-[140px]" />
         <div className="absolute bottom-[-20%] right-[-10%] w-150 h-150 bg-purple-600/20 blur-[140px]" />
@@ -110,7 +110,7 @@ const CaseStudies = () => {
           </motion.div>
         </div>
       </section>
-      {/* SECTION 2 SERVICE CARDS */}
+      {/* SECTION 2 SLIDER */}
       <section className="py-8 relative bg-secondery overflow-hidden">
         {/* The Wrapper with Faded Edges */}
         <div className="flex overflow-hidden">
@@ -140,11 +140,11 @@ const CaseStudies = () => {
           </motion.div>
         </div>
       </section>
-      {/* SECTION 3: GRID (ODD - #00042A) */}
+      {/* SECTION 3: SERVICE CARDS (ODD - #00042A) */}
       <section className="bg-[#00042A] text-white sm:pt-16 pt-8 sm:pb-24 pb-14 sm:px-6 px-4">
         {/* Sticky Filter */}
         <div className="border-b border-white/10">
-          <div className="max-w-7xl mx-auto sm:py-6 py-4 flex flex-col justify-between gap-10">
+          <div className="max-w-7xl mx-auto sm:py-6 py-4 flex flex-col justify-between md:gap-10 gap-6">
             <div className="flex items-center gap-3 text-white">
               <span className="sm:text-4xl text-xl uppercase font-bold tracking-widest">
                 Engineering
@@ -228,7 +228,7 @@ const CaseStudies = () => {
       {/* SECTION 4: CTA (EVEN - FIXED BG) */}
       <section
         style={fixedBgStyle}
-        className="relative sm:py-24 py-10 sm:px-6 px-4 text-center overflow-hidden"
+        className="relative sm:py-16 py-10 sm:px-6 px-4 text-center overflow-hidden"
       >
         <div className="absolute inset-0 bg-black/60" />{" "}
         {/* Dark Overlay for high impact */}
@@ -240,8 +240,8 @@ const CaseStudies = () => {
             <Zap className="text-cyan-400" size={32} />
           </motion.div>
 
-          <h2 className="sm:text-5xl text-3xl md:text-9xl font-black tracking-tighter uppercase leading-[0.85]">
-            Ready to <br />{" "}
+          <h2 className="sm:text-4xl text-3xl md:text-6xl font-black tracking-tighter uppercase leading-[0.85]">
+            Ready to {" "}
             <span className="text-transparent stroke-text-white italic">
               Innovate?
             </span>

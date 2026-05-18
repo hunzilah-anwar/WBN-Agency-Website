@@ -151,8 +151,8 @@ const RoadmapSection = ({ roadmap }) => {
                   idx % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
                 }`}
               >
-                <div className="lg:w-1/2">
-                  <div className="bg-white/5 border border-white/10 sm:p-6 p-4 backdrop-blur-sm hover:border-cyan-500/50 transition-all mx-0.5">
+                <div className="lg:w-1/2 w-full">
+                  <div className="bg-white/5 w-full border border-white/10 sm:p-6 p-4 backdrop-blur-sm hover:border-cyan-500/50 transition-all mx-px">
                     <div className="flex items-center gap-4 mb-4">
                       <div className="w-12 h-12 rounded-full bg-cyan-500/20 flex items-center justify-center">
                         {React.createElement(step.icon, {
@@ -182,7 +182,7 @@ const RoadmapSection = ({ roadmap }) => {
 // Next Steps Component
 const NextStepsSection = ({ nextSteps }) => {
   return (
-    <section className="sm:py-20 py-10 sm:px-6 px-4 bg-[#00042A]">
+    <section className="sm:py-16 py-10 sm:px-6 px-4 bg-[#00042A]">
       <div className="max-w-7xl mx-auto">
         <div className="text-center sm:mb-16 mb-10">
           <h2 className="text-xl sm:text-3xl md:text-5xl font-black mb-4">
@@ -264,14 +264,14 @@ const ServicePages = () => {
   };
 
   return (
-    <div className="bg-[#00042A] text-white selection:bg-cyan-500 selection:text-black min-h-screen">
+    <div className="bg-[#00042A] text-white selection:bg-cyan-500 selection:text-black">
       {/* NAVBAR SPACER */}
       <div className="h-20" />
 
       <main>
         {/* SECTION 1: HERO */}
         <section
-          className="relative w-full sm:min-h-[90vh] bg-cover bg-center flex items-center px-4 sm:px-6 md:px-12 sm:py-0 py-12 overflow-hidden"
+          className="relative w-full bg-cover bg-center flex items-center px-4 sm:px-6 md:px-12 sm:py-20 py-16 overflow-hidden"
           style={{
             backgroundImage: `linear-gradient(135deg, rgba(0, 1, 12, 0.95) 0%, rgba(240, 240, 240, 0) 100%), url(${service.heroImage})`,
           }}
@@ -279,7 +279,7 @@ const ServicePages = () => {
           {/* Animated Background Elements */}
           <div className="absolute inset-0 overflow-hidden">
             <div className="absolute top-20 left-10 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl animate-pulse" />
-            <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000" />
+            <div className="absolute bottom-20 right-10 w-96 h-96 bg-black/10 rounded-full blur-3xl animate-pulse delay-1000" />
           </div>
 
           <div className="z-10 max-w-4xl w-full">
@@ -291,7 +291,7 @@ const ServicePages = () => {
               <h1 className="font-sans text-white text-2xl md:text-4xl lg:text-6xl font-black leading-tight">
                 {service.heroTitle}
               </h1>
-              <p className="sm:mt-6 mt-4 text-gray-300 text-sm sm:text-base md:text-lg max-w-2xl font-sans">
+              <p className="sm:mt-6 mt-4 text-gray-200 text-sm sm:text-base md:text-lg max-w-2xl font-sans">
                 {service.heroDesc}
               </p>
             </motion.div>
@@ -305,8 +305,8 @@ const ServicePages = () => {
           </div>
         </section>
 
-        {/* SECTION 3: TABS / FEATURES */}
-        <section className="bg-[#00042A] text-white sm:py-20 py-10 sm:px-6 px-4">
+        {/* SECTION 2: TABS / FEATURES */}
+        <section className="bg-[#00042A] text-white sm:py-16 py-10 sm:px-6 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="flex lg:flex-row flex-col lg:gap-12 mb-16 justify-between">
               <div className="mb-10 lg:mb-0 lg:w-1/2">
@@ -380,9 +380,9 @@ const ServicePages = () => {
           </div>
         </section>
 
-        {/* SECTION 4: CAPABILITIES GRID */}
+        {/* SECTION 3: CAPABILITIES GRID */}
         <section
-          className="relative sm:py-20 py-10 sm:px-6 px-4 bg-fixed bg-cover bg-center"
+          className="relative sm:py-16 py-10 sm:px-6 px-4 bg-fixed bg-cover bg-center"
           style={{
             backgroundImage: `url(${service.capabilitiesBg})`,
           }}
@@ -397,7 +397,7 @@ const ServicePages = () => {
                 </span>
               </h2>
             </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8">
               {capabilities.map((s, i) => (
                 <motion.div
                   key={i}
@@ -429,8 +429,8 @@ const ServicePages = () => {
           </div>
         </section>
 
-        {/* SECTION 5: PROCESS */}
-        <section className="sm:py-24 py-16 sm:px-6 px-4 bg-[#00042A]">
+        {/* SECTION 4: PROCESS */}
+        <section className="sm:py-16 py-10 sm:px-6 px-4 bg-[#00042A]">
           <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-20 lg:items-center text-white">
             <div className="lg:w-1/2 space-y-2">
               <h3 className="text-sm text-cyan-400 font-black">
@@ -476,13 +476,13 @@ const ServicePages = () => {
           </div>
         </section>
 
-        {/* SECTION 6: ROADMAP */}
+        {/* SECTION 5: ROADMAP */}
         <RoadmapSection roadmap={roadmap} />
 
-        {/* SECTION 7: PROJECTS SHOWCASE */}
+        {/* SECTION 6: PROJECTS SHOWCASE */}
         {projects.length > 0 && (
           <section
-            className="relative sm:py-20 py-10 sm:px-6 px-4 bg-fixed bg-cover bg-center"
+            className="relative sm:py-16 py-10 sm:px-6 px-4 bg-fixed bg-cover bg-center"
             style={{
               backgroundImage: `url(${service.showcase?.bgImage})`,
             }}
@@ -498,14 +498,14 @@ const ServicePages = () => {
           </section>
         )}
 
-        {/* SECTION 11: NEXT STEPS */}
+        {/* SECTION 7: NEXT STEPS */}
         {nextSteps?.steps?.length > 0 && (
           <NextStepsSection nextSteps={nextSteps} />
         )}
 
-        {/* SECTION 12: FINAL CTA */}
+        {/* SECTION 8: FINAL CTA */}
         <section
-          className="relative sm:py-20 py-10 sm:px-6 px-4 bg-fixed bg-cover bg-center"
+          className="relative sm:py-16 py-10 sm:px-6 px-4 bg-fixed bg-cover bg-center"
           style={{
             backgroundImage: `url(${service.ctaBg})`,
           }}
@@ -516,7 +516,7 @@ const ServicePages = () => {
               <div className="flex justify-center items-center bg-white/10 backdrop-blur-xl border border-white/30 sm:w-24 sm:h-24 w-20 h-20 rounded-full mx-auto mb-4">
                 <Rocket className="text-cyan-500" size={40} />
               </div>
-              <h3 className="text-xl sm:text-4xl md:text-6xl font-black tracking-tighter uppercase">
+              <h3 className="text-lg sm:text-3xl md:text-5xl font-black sm:tracking-tighter uppercase">
                 {service.ctaTitle}
               </h3>
               <GlowButton name={service.ctaButton} to={service.ctaLink} />
@@ -539,15 +539,15 @@ const ServicePages = () => {
           </section>
         )}
 
-        {/* SECTION 8: BLOG */}
+        {/* SECTION 10: BLOG */}
         {blogPosts.length > 0 && (
           <section
-            className="relative p-6 bg-fixed bg-cover bg-center"
+            className="relative bg-fixed bg-cover bg-center"
             style={{
               backgroundImage: `url(${BlogBg})`,
             }}
           >
-            <div className="absolute inset-0 bg-black/80" />
+            <div className="absolute inset-0 bg-black/80 w-full h-full" />
             <div className="max-w-7xl mx-auto relative z-10">
               <BlogCard
                 title={service.blogTitle || "Latest Insights"}
@@ -562,11 +562,11 @@ const ServicePages = () => {
           </section>
         )}
 
-        {/* SECTION 10: FAQ */}
+        {/* SECTION 11: FAQ */}
         {faqs.length > 0 && <FAQ faqs={faqs} />}
       </main>
 
-      {/* Blog Modal */}
+      {/* Blog Modal Popup */}
       {selectedPost && (
         <div className="fixed inset-0 z-1999 flex items-center justify-center bg-black/90 backdrop-blur-md p-4">
           <div className="relative w-full max-w-3xl max-h-[90vh] overflow-y-auto rounded-2xl bg-[#0b0b0b] border border-white/10 shadow-2xl">
