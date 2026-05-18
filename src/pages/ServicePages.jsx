@@ -53,7 +53,7 @@ const ProjectSlider = ({ projects, parentSlug }) => {
     setIndex((p) => (p - 1 + projects.length) % projects.length);
 
   return (
-    <div className="relative w-full rounded-2xl overflow-hidden border border-white/10 shadow-2xl bg-black/40 backdrop-blur-xl">
+    <div className="relative w-full h-full rounded-2xl overflow-hidden border border-white/10 shadow-2xl bg-black/40 backdrop-blur-xl">
       <div className="grid lg:grid-cols-2">
         <div className="h-full overflow-hidden">
           <AnimatePresence mode="wait">

@@ -1,4 +1,5 @@
-// ================= servicesData.js =================
+// ================= servicesData.js (8 Services with Projects inside showcase.projects) =================
+
 import {
   Laptop,
   ShoppingCart,
@@ -29,28 +30,21 @@ import {
 import React from "react";
 import { BsPalette2 } from "react-icons/bs";
 
-// ─── REAL TESTIMONIAL PORTRAIT PHOTOS (Unsplash) ────────────────────────────
-const T1 =
-  "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=400"; // professional male 1
-const T2 =
-  "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=400"; // professional female 1
-const T3 =
-  "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=400"; // professional male 2
-const T4 =
-  "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=400"; // professional female 2
-const T5 =
-  "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=400"; // professional male 3
-const T6 =
-  "https://images.unsplash.com/photo-1598550874175-4d0ef436c909?q=80&w=400"; // professional female 3
-const T7 =
-  "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=400"; // professional male 4
-const T8 =
-  "https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?q=80&w=400"; // professional female 4
+import WebProject1 from "../assets/web-project-1.png";
+import WebProject2 from "../assets/web-project-2.png";
+import WebProject3 from "../assets/web-project-3.png";
+import WebProject4 from "../assets/web-project-4.png";
+import WebClient1 from "../assets/web-clint-1.webp";
+import WebClient2 from "../assets/web-clint-2.png";
+import WebClient3 from "../assets/web-clint-3.webp";
+import WebClient4 from "../assets/web-clint-4.avif";
+import ToolProject1 from "../assets/tool-project-1.png";
+import ToolProject2 from "../assets/tool-project-2.png";
+import ToolClient1 from "../assets/tool-clint-1.png";
+import ToolClient2 from "../assets/tool-clint-2.webp";
 
 export const servicesData = [
-  // ═══════════════════════════════════════════════════════════════
-  // 1. WEB DEVELOPMENT
-  // ═══════════════════════════════════════════════════════════════
+  // 1. Web Development
   {
     slug: "web-development",
     title: "Web Development",
@@ -145,12 +139,12 @@ export const servicesData = [
     capabilitiesTitle: "Web Development",
     capabilitiesHighlight: "Capabilities",
     capabilitiesBg:
-      "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=2070",
+      "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=2070",
     processSubTitle: "Our Development Process",
     processTitle: "From Concept to Launch",
     processHighlight: "Excellence",
     processImage:
-      "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070",
+      "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=2070",
     processDesc:
       "We follow a systematic approach to deliver high-quality web solutions that exceed expectations.",
     processFeatures: [
@@ -162,14 +156,13 @@ export const servicesData = [
     showcase: {
       title: "Web Development Projects",
       bgImage:
-        "https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=2070",
+        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070",
       projects: [
         {
           slug: "fundbox",
-          title: "Fundbox – Business Credit Platform",
-          desc: "Fundbox offers fast, easy access to business financing — lines of credit and term loans up to $250,000 — helping 500,000+ small businesses manage cash flow.",
-          image:
-            "https://images.unsplash.com/photo-1553729459-efe14ef6055d?q=80&w=2070",
+          title: "Fundbox – Capital Products for Small Businesses",
+          desc: "Fundbox offers fast, easy access to business financing — including lines of credit and term loans up to $250,000 — to help small businesses manage cash flow and grow.",
+          image: WebProject1,
           tech: [
             "Line of Credit",
             "Term Loans",
@@ -196,10 +189,9 @@ export const servicesData = [
         },
         {
           slug: "offdeal",
-          title: "OffDeal – AI-Powered M&A for Small Business",
-          desc: "AI-powered investment bank that helps small businesses ($5M–$100M revenue) sell faster and for 30% more — with zero upfront fees.",
-          image:
-            "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2070",
+          title: "OffDeal – The Investment Bank for Small Businesses",
+          desc: "AI-powered M&A platform to sell your business faster and for more.",
+          image: WebProject2,
           tech: [
             "AI Buyer Matching",
             "M&A Advisory",
@@ -215,7 +207,7 @@ export const servicesData = [
             "Dedicated M&A Advisor End-to-End",
           ],
           overview:
-            "OffDeal is a modern AI-powered investment bank built for small businesses with $5M–$100M in revenue. OffDeal uses AI to match sellers with 1,000+ strategic buyers on average, runs competitive auctions to drive up offers by 30%, and delivers initial offers in under 45 days. Featured in CNBC, Financial Times, Forbes, and TechCrunch.",
+            "OffDeal is a modern AI-powered investment bank built for small businesses with $5M–$100M in revenue. Unlike traditional M&A firms, OffDeal uses AI to match sellers with 1,000+ strategic buyers on average, runs competitive auctions to drive up offers by 30%, and delivers initial offers in under 45 days — compared to 4 months the traditional way. Featured in CNBC, Financial Times, Forbes, and TechCrunch, OffDeal charges zero upfront fees and only succeeds when you do. They serve industries including Home Services, Business Services, Healthcare, Industrials, and Consumer brands.",
           results: [
             "1,000+ Buyer Matches on Average",
             "30% Higher Sale Price",
@@ -224,10 +216,10 @@ export const servicesData = [
         },
         {
           slug: "human-interest",
-          title: "Human Interest – 401(k) for Small Businesses",
-          desc: "Affordable, full-service 401(k) and 403(b) retirement plans trusted by 40,000+ businesses and covering 1,000,000+ employees.",
-          image:
-            "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?q=80&w=2070",
+          title:
+            "Human Interest – Full-Service 401(k) Provider for Small Businesses",
+          desc: "Affordable, easy-to-manage 401(k) and 403(b) retirement plans for businesses of all sizes.",
+          image: WebProject3,
           tech: [
             "401(k) Plans",
             "403(b) Plans",
@@ -244,7 +236,7 @@ export const servicesData = [
             "Customizable Matching & Vesting at No Extra Cost",
           ],
           overview:
-            "Human Interest is an affordable, full-service 401(k) and 403(b) provider founded in 2015 in San Francisco. Trusted by 40,000+ businesses covering 1,000,000+ employees, the platform handles payroll sync, contribution processing, compliance testing, and IRS filings automatically.",
+            "Human Interest is an affordable, full-service 401(k) and 403(b) provider founded in 2015 in San Francisco, on a mission to give employees in all lines of work access to retirement benefits. Trusted by 40,000+ businesses and covering 1,000,000+ employees, the platform handles everything — payroll sync, contribution processing, compliance testing, and IRS filings — so employers can focus on running their business. Human Interest offers Traditional and Roth 401(k)s, 403(b)s, Safe Harbor plans, Profit-Sharing plans, and IRAs. Their flagship (k)ickstart® program is the first 401(k) to offer 3% cash back on contributions for employees earning $60,000 or less, paired with a free 10-part financial education course.",
           results: [
             "40,000+ Businesses Trust Human Interest",
             "1,000,000+ Employees Covered",
@@ -253,15 +245,16 @@ export const servicesData = [
         },
         {
           slug: "weave",
-          title: "Weave – All-in-One Practice Communication Platform",
-          desc: "AI-powered phone, texting, payments, and scheduling platform helping healthcare practices attract, engage, and retain patients.",
-          image:
-            "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=2070",
+          title:
+            "Weave – All-in-One Communication Platform for Healthcare & Small Business",
+          desc: "AI-powered phone, texting, payments, and scheduling platform that helps practices attract, engage, and retain patients.",
+          image: WebProject4,
           tech: [
             "AI Receptionist",
             "VoIP Phone System",
             "Two-Way Texting",
             "Text-to-Pay",
+            "Call Intelligence",
             "Digital Forms",
             "Online Scheduling",
           ],
@@ -273,7 +266,7 @@ export const servicesData = [
             "AI Call Intelligence – Sentiment Analysis & Revenue Opportunity Detection",
           ],
           overview:
-            "Weave is an all-in-one communication and patient experience platform built for healthcare practices — dental, veterinary, optometry, and medical offices. It combines VoIP phone, AI texting, scheduling, payments, reviews, digital forms, and call intelligence into one unified platform. Weave's AI Receptionist answers calls, books appointments, and takes payments 24/7.",
+            "Weave is an all-in-one communication and patient experience platform built for small businesses and healthcare practices — including dental, veterinary, optometry, and medical offices. It combines a world-class VoIP phone system with AI-powered texting, scheduling, payments, reviews, digital forms, email marketing, and call intelligence into a single unified platform. Weave's AI Receptionist answers calls, books appointments, takes payments, and responds to texts 24/7 — even when staff are unavailable. With over a decade of patient interaction data powering its AI models, Weave helps practices fill their schedules, reduce no-shows, get paid faster, and grow their online reputation — all from one dashboard.",
           results: [
             "3x Faster Task Completion with Built-in AI",
             "125+ New Patients/Month for Top Practices",
@@ -286,24 +279,24 @@ export const servicesData = [
     blogDescription: "Latest trends and best practices in web development",
     blogPosts: [
       {
-        title: "Why Next.js is the Future of React Development",
+        title: "Why Next.js is the Future of React",
         category: "React",
         readTime: 5,
         imageUrl:
           "https://images.unsplash.com/photo-1633356122544-f134324a6cee?q=80&w=2070",
         description:
-          "Discover why Next.js is becoming the go-to framework for modern web applications in 2025.",
+          "Discover why Next.js is becoming the go-to framework for modern web applications.",
         views: "2.5k",
         author: "Ali Raza",
       },
       {
-        title: "Web Performance Optimization: The Complete 2025 Guide",
+        title: "Web Performance Optimization Guide",
         category: "Performance",
         readTime: 8,
         imageUrl:
           "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070",
         description:
-          "Learn how to optimize your website for lightning-fast Core Web Vitals and better conversions.",
+          "Learn how to optimize your website for lightning-fast performance.",
         views: "1.8k",
         author: "Sarah Khan",
       },
@@ -313,29 +306,29 @@ export const servicesData = [
         quote:
           "They built our web platform from scratch — fast, clean, and exactly what a growing startup needs. The attention to performance and scalability gave us a real edge from day one.",
         name: "Prashant Kumar",
-        designation: "Founder & CEO, Fundbox",
-        src: T1,
+        designation: "Founder & CEO @ Fundbox",
+        src: WebClient1,
       },
       {
         quote:
           "Working with this team was a game changer. They delivered a sleek, high-performing web solution that perfectly matched the speed and precision we demand at OffDeal.",
         name: "Ori Eldarov",
-        designation: "Co-Founder & CEO, OffDeal",
-        src: T2,
+        designation: "Co-Founder & CEO @ OffDeal",
+        src: WebClient2,
       },
       {
         quote:
-          "The team delivered a product that truly elevated our customer experience. Polished, reliable, and built with the kind of quality that reflects our brand values.",
+          "The team delivered a product that truly elevated our customer experience. Polished, reliable, and built with the kind of quality that reflects our brand values at Weave.",
         name: "Brett White",
-        designation: "CEO & Board Director, Weave",
-        src: T3,
+        designation: "CEO & Board Director @ Getweave",
+        src: WebClient3,
       },
       {
         quote:
           "They understood our mission to make complex systems simple. The platform they built is intuitive, scalable, and has helped us serve our customers at Human Interest even better.",
         name: "Jeff Schneble",
-        designation: "CEO, Human Interest",
-        src: T4,
+        designation: "CEO @ Human Interest",
+        src: WebClient4,
       },
     ],
     faqs: [
@@ -420,16 +413,14 @@ export const servicesData = [
       "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2072",
   },
 
-  // ═══════════════════════════════════════════════════════════════
-  // 2. E-COMMERCE SOLUTIONS
-  // ═══════════════════════════════════════════════════════════════
+  // 2. E-Commerce Solutions
   {
     slug: "ecommerce-solutions",
     title: "E-Commerce",
     desc: "Scalable online stores with modern shopping experiences.",
     icon: ShoppingCart,
     heroImage:
-      "https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?q=80&w=2070",
+      "https://images.unsplash.com/photo-1556740749-887f6717d7e4?q=80&w=2070",
     heroTitle: "High-Converting E-Commerce Stores",
     heroDesc:
       "Launch powerful online stores that drive sales and deliver exceptional shopping experiences. From Shopify to WooCommerce, we build e-commerce solutions that scale with your business.",
@@ -437,7 +428,7 @@ export const servicesData = [
     sectionDesc:
       "We create high-converting Shopify and WooCommerce stores with seamless payment integration, mobile-first design, and built-in marketing tools — everything you need to sell more online.",
     sectionImage:
-      "https://images.unsplash.com/photo-1563013544-824ae1b704d3?q=80&w=2070",
+      "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=2070",
     tabs: [
       {
         title: "Store Setup",
@@ -517,12 +508,12 @@ export const servicesData = [
     capabilitiesTitle: "E-Commerce",
     capabilitiesHighlight: "Solutions",
     capabilitiesBg:
-      "https://images.unsplash.com/photo-1472851294608-062f824d29cc?q=80&w=2070",
+      "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=2070",
     processSubTitle: "Our E-Commerce Process",
     processTitle: "Build Your Online Empire",
     processHighlight: "Today",
     processImage:
-      "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=2070",
+      "https://images.unsplash.com/photo-1522199755839-a2bacb67c546?q=80&w=2070",
     processDesc:
       "We create scalable online shopping experiences designed to maximize sales and conversions from day one.",
     processFeatures: [
@@ -534,160 +525,131 @@ export const servicesData = [
     showcase: {
       title: "E-Commerce Projects",
       bgImage:
-        "https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?q=80&w=2070",
+        "https://images.unsplash.com/photo-1556740749-887f6717d7e4?q=80&w=2070",
       projects: [
         {
-          // ─ REAL: Healf (UK Wellness Marketplace on Shopify)
-          // Founders: Max Clarke & Lestat McCree | Founded: 2020
-          // Results: 3x revenue in 2024, on track £100M in 2025, 5,000+ products, 400+ brands
-          // Source: shopify.com/uk/case-studies/healf, techround.co.uk
-          slug: "healf-shopify-store",
-          title: "Healf – £100M Wellness Marketplace on Shopify",
-          desc: "How brothers Max Clarke & Lestat McCree built one of the UK's fastest-growing health brands — from 40 brands to 5,000+ vetted products — entirely on Shopify.",
+          slug: "shopify-store",
+          title: "Shopify Store Development",
+          desc: "Complete Shopify store setup with custom themes, apps, and payment integrations built to drive sales.",
           image:
-            "https://images.unsplash.com/photo-1505576399279-565b52d4ac71?q=80&w=2070",
-          tech: [
-            "Shopify Plus",
-            "Klaviyo",
-            "Shopify Collabs",
-            "Snowball",
-            "Bloggle",
-            "Headless CMS",
-          ],
+            "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=2070",
+          tech: ["Shopify", "Liquid", "Shopify Apps", "Stripe", "Meta Pixel"],
           features: [
-            "Custom Shopify Plus Storefront with Personalised Recommendations",
-            "Subscription & Loyalty System via Shopify",
-            "Affiliate Marketing Program via Shopify Collabs",
-            "AI-Driven Product Discovery & Curation Engine",
-            "Healf Source – Headless Educational Content Platform",
+            "Custom Theme Design",
+            "Payment Gateway Setup",
+            "Product & Inventory Management",
+            "SEO Optimization",
+            "Mobile-First Responsive Design",
           ],
           overview:
-            "Brothers Max Clarke and Lestat McCree founded Healf in 2020 after struggling with fragmented, untrustworthy wellness advice. They chose Shopify for its simplicity and scalability, launching with just 40 brands. Using Shopify's full ecosystem — from automated tagging and custom collection pages to Klaviyo email and Shopify Collabs affiliate programs — Healf scaled to 5,000+ vetted products across 400+ brands. They tripled revenue in 2024 alone and are on track to hit £100 million in annual sales in 2025, growing their team from 7 to 100+ employees in the process.",
+            "Launch a professional Shopify store that drives sales and provides a seamless shopping experience. We handle everything from theme customization and app integration to payment setup and launch — so you can focus on growing your business.",
           results: [
-            "Revenue 3x in 2024 — On Track for £100M in 2025",
-            "Product Catalog Grew 20x Since Launch",
-            "Team Scaled: 7 → 100+ Employees",
+            "3x Faster Launch vs DIY",
+            "Higher Conversion Rates",
+            "Better User Experience",
           ],
         },
         {
-          // ─ REAL: Beardbrand (Men's Grooming DTC on WooCommerce)
-          // Founder: Eric Bandholz | Founded: 2012, Austin TX
-          // Results: $30 → 7-figure bootstrapped business, 2M+ YouTube subscribers, in Target stores
-          // Source: practicalecommerce.com, starterstory.com, failory.com
-          slug: "beardbrand-woocommerce",
-          title: "Beardbrand – 7-Figure Men's Grooming DTC on WooCommerce",
-          desc: "Eric Bandholz bootstrapped Beardbrand from a $30 investment and a Tumblr blog to a multi-million dollar men's grooming brand on WooCommerce — with zero outside investors.",
+          slug: "woocommerce-store",
+          title: "WooCommerce Store",
+          desc: "Custom WordPress-based e-commerce stores with WooCommerce — powerful, flexible, and fully yours.",
           image:
-            "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?q=80&w=2070",
-          tech: [
-            "WordPress",
-            "WooCommerce",
-            "PHP",
-            "MySQL",
-            "Klaviyo",
-            "Affiliate System",
-          ],
+            "https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=1999",
+          tech: ["WordPress", "WooCommerce", "PHP", "MySQL", "Elementor"],
           features: [
-            "Full Custom DTC Product Catalog (Beard, Hair & Body Care)",
-            "Secure Multi-gateway Checkout with No Transaction Fees",
-            "Subscription & Wholesale Management System",
-            "YouTube + Blog Content Integration for Organic Growth",
-            "Retail & Affiliate Partner Management",
+            "Custom Product Catalogs",
+            "Secure Multi-gateway Checkout",
+            "Inventory & Order Management",
+            "Flexible Shipping Options",
+            "Coupon & Discount System",
           ],
           overview:
-            "Eric Bandholz quit his corporate finance job in 2012, grew a beard, and discovered an underserved community. He started Beardbrand as a $30 Tumblr blog and YouTube channel, then built a full WooCommerce DTC store selling premium beard and grooming products. Bootstrapped from day one with no outside investors, Beardbrand scaled to a 7-figure business with over 2 million YouTube subscribers. The brand now stocks in Target nationwide and has been featured in Forbes, GQ, The New York Times, and Wall Street Journal — proving that owning your platform beats renting space on Amazon.",
+            "Build a flexible and fully customizable WooCommerce store that grows with your business. Unlike hosted platforms, WooCommerce gives you complete control over your store's data, design, and functionality — with no transaction fees.",
           results: [
-            "$30 Investment → Multi-Million Dollar Bootstrapped Business",
-            "2M+ YouTube Subscribers Driving Organic Sales",
-            "Stocked in All Target Stores Nationwide",
+            "Full Ownership & Control",
+            "Cost-Effective Long Term",
+            "Easy Self-Management",
           ],
         },
         {
-          // ─ REAL: Bombay Shaving Company (Shopify Analytics + Migration)
-          // Founder: Shantanu Deshpande (Co-Founder & CEO) | Founded: 2016
-          // Results: 150% conversion uplift, 20x revenue, 50,000+ orders in 2 days, 7 brands
-          // Source: shopify.com/in/case-studies/bombay-shaving-company
-          slug: "bombay-shaving-analytics",
-          title: "Bombay Shaving Company – 150% Conversion Uplift on Shopify",
-          desc: "How Shantanu Deshpande's Bombay Shaving Company achieved 150% conversion rate uplift and 20x online revenue after migrating to Shopify Plus and building real-time analytics.",
+          slug: "ecommerce-dashboard",
+          title: "E-Commerce Analytics Dashboard",
+          desc: "Real-time sales, inventory, and customer analytics dashboard built specifically for online stores.",
           image:
-            "https://images.unsplash.com/photo-1585232350576-d4523cb5b3f2?q=80&w=2070",
-          tech: [
-            "Shopify Plus",
-            "Google Analytics 4",
-            "Custom Dashboards",
-            "Expansion Stores",
-            "Shopify Flow",
-          ],
+            "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070",
+          tech: ["React", "Node.js", "Chart.js", "MongoDB", "REST API"],
           features: [
-            "Real-time Sales & Inventory Analytics Dashboard",
-            "20x Traffic Spike Handling (10,000+ Concurrent Users)",
-            "7-Brand Unified Backend via Shopify Expansion Stores",
-            "50,000+ Orders Processed in 2 Days During Mega-Sales",
-            "Drop-off Tracking & Conversion Rate Benchmarking",
+            "Real-time Sales Analytics",
+            "Inventory Level Tracking",
+            "Customer Behavior Insights",
+            "Order Management Overview",
+            "Revenue & Profit Reports",
           ],
           overview:
-            "Shantanu Deshpande co-founded Bombay Shaving Company in 2016 with a single premium shaving kit. As the brand expanded to 300+ SKUs, their Magento-based platform became a bottleneck — product pages took weeks to launch, and every update needed technical staff. After migrating to Shopify Plus in 2021 and building real-time analytics infrastructure, the company achieved a 150% conversion rate uplift. Today they process 50,000+ orders in just two days during monthly mega-sale events and operate 7 independent D2C brands (including Bombae) on a unified Shopify backend — making them India's 2nd largest shaving brand.",
+            "Get complete, real-time visibility of your entire e-commerce operation in one centralized dashboard. Track sales trends, monitor inventory, analyze customer behavior, and make faster, smarter business decisions — all without switching between multiple tools.",
           results: [
-            "150% Conversion Rate Uplift vs Pre-Shopify Platform",
-            "20x Revenue Increase on D2C Channel",
-            "50,000+ Orders Processed in 2 Days Without Disruption",
+            "Smarter Business Decisions",
+            "Real-time Operational Insights",
+            "30% Increase in Efficiency",
           ],
         },
       ],
     },
     blogTitle: "E-Commerce Insights",
     blogDescription:
-      "Real case studies and strategies for online store success",
+      "Tips, strategies, and case studies for online store success",
     blogPosts: [
       {
-        title:
-          "How Healf Tripled Revenue in 2024 Using Shopify's Full Ecosystem",
-        category: "Shopify",
+        title: "7 Ways to Increase Your E-Commerce Conversion Rate",
+        category: "Conversion",
         readTime: 6,
         imageUrl:
-          "https://images.unsplash.com/photo-1505576399279-565b52d4ac71?q=80&w=2070",
+          "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=2070",
         description:
-          "Max Clarke and Lestat McCree's playbook: personalised recommendations, Shopify Collabs, and curated content that scaled Healf to a £100M wellness brand.",
-        views: "4.1k",
+          "Learn proven, data-backed strategies to boost your e-commerce conversion rates without increasing ad spend.",
+        views: "3.2k",
         author: "Usman Ali",
       },
       {
-        title: "Shopify vs WooCommerce: Real Data from Brands That Scaled",
+        title: "Shopify vs WooCommerce: Which Is Right for You?",
         category: "Platforms",
         readTime: 8,
         imageUrl:
-          "https://images.unsplash.com/photo-1563013544-824ae1b704d3?q=80&w=2070",
+          "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=2070",
         description:
-          "We analyzed Healf (Shopify), Beardbrand (WooCommerce), and Bombay Shaving (Shopify Plus) — here's what the real numbers say about platform choice in 2025.",
-        views: "6.2k",
+          "A comprehensive comparison to help you choose the best platform for your online store in 2024.",
+        views: "5.4k",
         author: "Sara Malik",
       },
     ],
     testimonials: [
       {
-        // Lestat McCree, Co-Founder & CEO of Healf (real quote from Shopify case study)
         quote:
-          "Data is a huge part of our business. Shopify makes it easy to get all the data we need in any format and visualise it so we can make the right decisions for our customers. In 2024 alone, we tripled our revenue.",
-        name: "Lestat McCree",
-        designation: "Co-Founder & CEO, Healf (UK Wellness Marketplace)",
-        src: T5,
+          "They launched and automated our TikTok Shop USA operations with synchronized supplier inventory and high-converting SEO product listings. Our outdoor gear brand scaled faster than we imagined.",
+        name: "Ryan Greenfield",
+        designation: "Founder & CEO, Aspen Trail Gear",
+        src: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1200&auto=format&fit=crop",
       },
       {
-        // Eric Bandholz, Founder & CEO of Beardbrand (real quote from practicalecommerce.com)
         quote:
-          "Build a brand and a vision that is bigger than the products themselves. Once you figure that out, the customers will follow — and you'll never need to rely on Amazon or anyone else.",
-        name: "Eric Bandholz",
-        designation: "Founder & CEO, Beardbrand (Austin, TX)",
-        src: T7,
+          "Their Shopify SEO restructuring completely transformed our organic traffic. They optimized over 150 product pages and helped our activewear collections rank across multiple search channels.",
+        name: "Amanda Ross",
+        designation: "Co-Founder, Sol Vibe Activewear",
+        src: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1200&auto=format&fit=crop",
       },
       {
-        // Shantanu Deshpande, Co-Founder & CEO of Bombay Shaving Company (real quote from Shopify)
         quote:
-          "We wanted to focus on growth, not wrestle with our tech stack. After migrating to Shopify, we achieved a 150% conversion uplift and now process 50,000+ orders in just two days during our mega-sales.",
-        name: "Shantanu Deshpande",
-        designation: "Co-Founder & CEO, Bombay Shaving Company",
-        src: T3,
+          "The custom Laravel retention dashboard and AI-powered email sequences recovered abandoned carts automatically and significantly improved our subscription retention rates.",
+        name: "Tyler Vance",
+        designation: "Brand Director, Midnight Roast Co.",
+        src: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1200&auto=format&fit=crop",
+      },
+      {
+        quote:
+          "They built a blazing-fast storefront and deployed an AI customer support assistant that recommends skincare routines in real-time. It completely upgraded our customer experience.",
+        name: "Jessica Miller",
+        designation: "Managing Director, Opal & Oak Skincare",
+        src: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=1200&auto=format&fit=crop",
       },
     ],
     faqs: [
@@ -772,12 +734,10 @@ export const servicesData = [
     ctaButton: "Get a Free Quote",
     ctaLink: "/contact",
     ctaBg:
-      "https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?q=80&w=2070",
+      "https://images.unsplash.com/photo-1556740749-887f6717d7e4?q=80&w=2070",
   },
 
-  // ═══════════════════════════════════════════════════════════════
-  // 3. DIGITAL MARKETING
-  // ═══════════════════════════════════════════════════════════════
+  // 3. Digital Marketing
   {
     slug: "digital-marketing",
     title: "Digital Marketing",
@@ -889,14 +849,12 @@ export const servicesData = [
     showcase: {
       title: "Marketing Campaigns",
       bgImage:
-        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015",
+        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070",
       projects: [
         {
-          // ─ REAL: OneLittleWeb – SEO Traffic from 10.5M to 18.5M monthly visits (76% YoY growth)
-          // Source: hashmeta.com/blog/seo-success-stories-real-traffic-growth-examples-that-prove-seo-works
-          slug: "seo-traffic-growth",
-          title: "SEO Case Study – 76% Traffic Growth in 12 Months",
-          desc: "A comprehensive SEO program that grew monthly organic visits from 10.5M to 18.5M in one year — and boosted LLM/AI chatbot referral traffic by 1,900%.",
+          slug: "seo-services",
+          title: "SEO Services",
+          desc: "Comprehensive SEO packages designed to rank your website higher and drive sustainable organic traffic.",
           image:
             "https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?q=80&w=2070",
           tech: [
@@ -905,31 +863,53 @@ export const servicesData = [
             "Google Search Console",
             "Yoast SEO",
             "Screaming Frog",
-            "GEO Optimization",
           ],
           features: [
-            "Full-Site Technical SEO Audit & Fix Implementation",
-            "Generative Engine Optimization (GEO) for AI Search",
-            "Keyword Cluster Strategy & Content Architecture",
-            "Authority Link Building & Digital PR",
-            "Core Web Vitals & Page Speed Optimization",
+            "In-depth Keyword Research",
+            "On-Page Optimization",
+            "Technical SEO Audit & Fixes",
+            "Authority Link Building",
+            "Local SEO & Google Business Profile",
           ],
           overview:
-            "This large-scale content platform saw organic search accounting for nearly 80% of traffic — but growth had plateaued at 10.5M monthly visits. After partnering with an SEO agency for a comprehensive program including a full-site audit, technical fixes, and optimization for Generative Engine Optimization (GEO), monthly SEO traffic grew to 18.5M visits — a 76% year-over-year increase. Even more impressively, LLM and AI chatbot referral visits skyrocketed from 2K to 40K monthly sessions (1,900% increase), reflecting the shift toward AI-first search.",
+            "Our SEO service goes beyond keywords — we build a complete organic growth engine. We audit your site's technical health, optimize every page, build high-authority backlinks, and publish SEO-driven content. Most clients see significant ranking improvements within 90 days.",
           results: [
-            "76% YoY Organic Traffic Increase (10.5M → 18.5M/month)",
-            "1,900% Growth in AI/LLM Chatbot Referral Traffic",
-            "367.9M Total Visits Generated Over 24 Months",
+            "First-Page Google Rankings",
+            "3x More Organic Traffic",
+            "Lower Customer Acquisition Cost",
           ],
         },
         {
-          // ─ REAL: KT Tape – Integrated Google Ads + SEO campaign
-          // Results: 100M impressions, 18% ROAS increase, 7.5M retail store visits
-          // Source: thebrandamp.com (The Brand Amp case study)
-          slug: "kt-tape-google-ads",
-          title:
-            "KT Tape – Google Ads + SEO: 100M Impressions & 18% ROAS Uplift",
-          desc: "An integrated paid + organic marketing campaign for KT Tape that delivered 100 million impressions, 18% higher ROAS, and 7.5 million retail store visits.",
+          slug: "meta-ads",
+          title: "Meta Ads Management",
+          desc: "Precision-targeted Facebook and Instagram advertising campaigns built for leads, sales, and brand awareness.",
+          image:
+            "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?q=80&w=2074",
+          tech: [
+            "Meta Ads Manager",
+            "Facebook Pixel",
+            "Custom Audiences",
+            "Advantage+",
+          ],
+          features: [
+            "Audience Research & Targeting",
+            "Retargeting & Lookalike Campaigns",
+            "Lead Generation Ads",
+            "Conversion-Optimized Campaigns",
+            "Multi-Variant A/B Testing",
+          ],
+          overview:
+            "We manage Meta ad campaigns from strategy through to optimization. Every campaign is built on deep audience research, compelling creatives, and continuous data-driven testing. We track every dollar and optimize for the lowest possible cost per result.",
+          results: [
+            "Lower Cost Per Lead",
+            "Higher Conversion Rates",
+            "Scalable Brand Awareness",
+          ],
+        },
+        {
+          slug: "google-ads",
+          title: "Google Ads Management",
+          desc: "Professional Google Ads campaign management that puts your business in front of high-intent buyers.",
           image:
             "https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=2070",
           tech: [
@@ -937,82 +917,47 @@ export const servicesData = [
             "Google Analytics 4",
             "Keyword Planner",
             "Tag Manager",
-            "SEO",
-            "CRO",
-            "PR",
           ],
           features: [
-            "High-Intent Keyword Targeting for Kinesiology Tape Category",
-            "Retargeting Campaigns for Site Visitors",
-            "SEO + Paid Media Integration for Full-Funnel Coverage",
-            "Conversion Rate Optimization on Landing Pages",
-            "PR-Driven Brand Authority Building",
+            "Search & Display Ads",
+            "Google Shopping Campaigns",
+            "YouTube Pre-Roll Ads",
+            "Smart Remarketing Campaigns",
+            "Negative Keyword Filtering",
           ],
           overview:
-            "KT Tape, a leading kinesiology tape brand, wanted to boost e-commerce sales and brand awareness simultaneously. The Brand Amp ran an integrated campaign combining SEO, paid media (Google Ads), conversion rate optimization, and PR. The campaign delivered 100 million impressions, increased ROAS by 18%, and drove 7.5 million retail store visits — all without increasing the overall ad budget. By focusing on profitability metrics and aligning paid search with organic content, every dollar worked harder.",
+            "Get in front of customers who are actively searching for your product or service. Our Google Ads specialists build tightly structured campaigns with highly relevant ad copy, proper bid strategies, and continuous negative keyword refinement to minimize waste and maximize ROI.",
           results: [
-            "100 Million Campaign Impressions",
-            "18% Increase in Return on Ad Spend (ROAS)",
-            "7.5 Million Retail Store Visits Attributed",
-          ],
-        },
-        {
-          // ─ REAL: KEH Camera – Google Ads Performance Max
-          // Results: 76.3% boost in sales, 44% rise in transactions, 10x ROAS
-          // Source: growthwayadvertising.com
-          slug: "keh-camera-google-ads",
-          title: "KEH Camera – 10x ROAS with Google Performance Max Ads",
-          desc: "KEH Camera achieved a 76.3% sales boost, 44% more transactions, and a 10x return on ad spend by restructuring their Google Ads campaigns with Performance Max.",
-          image:
-            "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?q=80&w=2074",
-          tech: [
-            "Google Ads",
-            "Performance Max",
-            "Google Shopping",
-            "Data Feed Optimization",
-            "Smart Bidding",
-          ],
-          features: [
-            "Performance Max Campaign Restructure",
-            "Unified Data Feed with Google's Machine Learning",
-            "Short-Term Promotional Campaign Strategy",
-            "Audience Signal Optimization",
-            "Cross-Network Ad Placement (Search, Display, YouTube, Shopping)",
-          ],
-          overview:
-            "KEH Camera, a leading camera equipment retailer, aimed to raise revenue and transaction value through Google Ads. By migrating to Performance Max campaigns and unifying their product data feeds with Google's machine learning engine, KEH achieved optimal ad placements and targeting across every Google surface — Search, Display, YouTube, Gmail, and Shopping. The results were transformative: a 76.3% boost in sales, 44% rise in transactions, and a 10x return on ad spend (ROAS) during targeted promotional periods.",
-          results: [
-            "76.3% Boost in Sales Revenue",
-            "44% Rise in Total Transactions",
-            "10x Return on Ad Spend (ROAS)",
+            "Immediate Targeted Traffic",
+            "High-Intent Qualified Leads",
+            "Measurable & Transparent ROI",
           ],
         },
       ],
     },
     blogTitle: "Marketing Insights",
     blogDescription:
-      "Real digital marketing case studies, strategies, and trends",
+      "Latest digital marketing trends, strategies, and case studies",
     blogPosts: [
       {
-        title:
-          "How to Get 76% More Organic Traffic in 12 Months (Real SEO Case Study)",
+        title: "SEO Trends to Watch in 2024",
         category: "SEO",
         readTime: 7,
         imageUrl:
           "https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?q=80&w=2070",
         description:
-          "The exact SEO framework that grew a content platform from 10.5M to 18.5M monthly visits — including how they optimized for AI chatbot traffic.",
+          "Stay ahead of the curve with the latest SEO trends, algorithm updates, and ranking strategies for 2024.",
         views: "4.1k",
         author: "Bilal Ahmed",
       },
       {
-        title: "Meta Ads vs Google Ads: Which Delivers Better ROI in 2025?",
+        title: "Meta Ads vs Google Ads: Which Should You Run?",
         category: "Paid Ads",
         readTime: 6,
         imageUrl:
           "https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?q=80&w=2074",
         description:
-          "2025 benchmark data shows Google Search Ads averaging 5.17x ROAS vs Meta's 1.7x — here's how to pick the right channel for your business.",
+          "A clear breakdown to help you decide which paid advertising channel delivers better ROI for your business.",
         views: "3.7k",
         author: "Sara Malik",
       },
@@ -1020,24 +965,24 @@ export const servicesData = [
     testimonials: [
       {
         quote:
-          "After the SEO program, our organic traffic grew from 10.5M to 18.5M monthly visits in just one year. Even more impressive was the 1,900% increase in AI chatbot referrals — we didn't expect that.",
-        name: "James Harrington",
-        designation: "Head of Growth, OneLittleWeb",
-        src: T1,
+          "Our leads increased massively after running Google Ads with them.",
+        name: "Bilal Ahmed",
+        designation: "CEO @ Growthify",
+        src: WebClient1,
       },
       {
         quote:
-          "The integrated Google Ads + SEO campaign delivered 100 million impressions and drove 7.5 million people to our retail stores — all without increasing our ad budget.",
-        name: "Rachel Torres",
-        designation: "VP Marketing, KT Tape",
-        src: T6,
+          "They managed our Meta funnels and built a behavioral email system that dramatically grew our subscription sign-ups.",
+        name: "Marcus Hayes",
+        designation: "E-Commerce Director, Alpha Grind Coffee Co.",
+        src: WebClient2,
       },
       {
         quote:
-          "Performance Max restructure gave us a 10x return on ad spend and a 76% jump in sales. We didn't think those numbers were possible until we saw them in our dashboard.",
-        name: "David Kim",
-        designation: "E-Commerce Director, KEH Camera",
-        src: T5,
+          "Their hyper-targeted Google Search ads captured high-intent buyers perfectly. Our CRO improved significantly within the first month.",
+        name: "Natalie Reyes",
+        designation: "Head of Operations, SafeHaven Smart Home",
+        src: WebClient3,
       },
     ],
     faqs: [
@@ -1122,9 +1067,7 @@ export const servicesData = [
       "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015",
   },
 
-  // ═══════════════════════════════════════════════════════════════
-  // 4. TOOL DEVELOPMENT
-  // ═══════════════════════════════════════════════════════════════
+  // 4. Tool Development
   {
     slug: "tool-development",
     title: "Tool Development",
@@ -1139,7 +1082,7 @@ export const servicesData = [
     sectionDesc:
       "We build tailored software tools — from automation scripts and internal dashboards to full CRM systems and API integrations. If your team does it repeatedly, we can automate it.",
     sectionImage:
-      "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2070",
+      "https://images.unsplash.com/photo-1551033406-611cf9a28f67?q=80&w=2070",
     tabs: [
       {
         title: "Automation",
@@ -1219,12 +1162,12 @@ export const servicesData = [
     capabilitiesTitle: "Tool Development",
     capabilitiesHighlight: "Capabilities",
     capabilitiesBg:
-      "https://images.unsplash.com/photo-1537432376769-00f5c2f4c8d2?q=80&w=2070",
+      "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2070",
     processSubTitle: "Our Development Process",
     processTitle: "Build Powerful Tools",
     processHighlight: "That Work",
     processImage:
-      "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2070",
+      "https://images.unsplash.com/photo-1551033406-611cf9a28f67?q=80&w=2070",
     processDesc:
       "We don't build generic software — we build exactly the tool your business needs. Every project starts with deeply understanding your workflow, then engineering the most efficient solution.",
     processFeatures: [
@@ -1239,92 +1182,51 @@ export const servicesData = [
         "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2070",
       projects: [
         {
-          slug: "workflow-automation",
-          title: "Enterprise Workflow Automation Suite",
-          desc: "A custom multi-step automation platform that eliminated 80% of manual data entry and report generation for a 200-person operations team.",
-          image:
-            "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2070",
+          slug: "firmware-security-platform",
+          title: "Firmware & Supply Chain Security Platform",
+          desc: "Advanced enterprise-grade firmware security platform designed to detect vulnerabilities, monitor device integrity, and protect hardware supply chains.",
+          image: ToolProject1,
           tech: [
+            "React",
             "Python",
-            "Node.js",
-            "Make.com",
-            "Playwright",
-            "Redis",
-            "PostgreSQL",
+            "AI Detection",
+            "Cloud Infrastructure",
+            "REST API",
           ],
           features: [
-            "Multi-step Workflow Automation with Error Handling",
-            "Automated Data Collection, Cleaning & Processing",
-            "Scheduled Report Generation & Email Distribution",
-            "Real-time Slack & Email Notifications",
-            "Full Audit Log & Retry Logic",
+            "Firmware Vulnerability Detection",
+            "Real-time Device Monitoring",
+            "Supply Chain Risk Analysis",
+            "Threat Intelligence Dashboard",
+            "Automated Security Reporting",
           ],
           overview:
-            "A 200-person logistics company was spending 35+ hours per week on manual data entry, report generation, and cross-system copy-paste workflows. We built a custom automation suite using Python, Node.js, and Make.com that handles their entire data pipeline — from pulling records out of legacy systems and processing them, to generating formatted reports and distributing them to the right stakeholders automatically. The result was an 80% reduction in manual work and near-zero error rate across all automated processes.",
+            "We developed a powerful firmware and hardware security platform inspired by modern enterprise cybersecurity ecosystems. The system continuously scans connected devices, identifies hidden firmware vulnerabilities, monitors hardware integrity, and provides real-time threat intelligence dashboards for enterprise IT teams.",
           results: [
-            "80% Reduction in Manual Operational Work",
-            "35+ Hours Saved Per Week Across the Team",
-            "Near-Zero Error Rate on All Automated Processes",
+            "Improved Infrastructure Security",
+            "Faster Threat Detection",
+            "Enterprise-grade Compliance Visibility",
           ],
         },
         {
-          slug: "custom-crm",
-          title: "Custom Sales CRM Built Around Your Pipeline",
-          desc: "A fully tailored CRM system built around the exact sales workflow of a B2B SaaS company — replacing $2,400/year in Salesforce licensing fees.",
-          image:
-            "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070",
-          tech: [
-            "React",
-            "Node.js",
-            "MongoDB",
-            "Express",
-            "REST API",
-            "Twilio",
-            "SendGrid",
-          ],
+          slug: "ai-finance-audit-platform",
+          title: "AI Finance Audit & Spend Management Platform",
+          desc: "AI-powered financial auditing and spend management software that automates invoice reviews, fraud detection, and expense compliance.",
+          image: ToolProject2,
+          tech: ["Electron.js", "Python", "AI Models", "Node.js", "MongoDB"],
           features: [
-            "Custom Contact & Lead Management with Smart Tagging",
-            "Visual Sales Pipeline with Drag-and-Drop Stages",
-            "Integrated Email & SMS Follow-up Sequences",
-            "Automated Task & Follow-up Reminders",
-            "Custom Reports, Dashboards & Revenue Forecasting",
+            "Automated Invoice Auditing",
+            "AI Fraud Detection Engine",
+            "Expense Policy Compliance",
+            "Real-time Financial Insights",
+            "ERP & Accounting Integrations",
           ],
           overview:
-            "A B2B SaaS company was paying $2,400/year for a Salesforce plan they'd customized so heavily it barely worked. We built their CRM from scratch — the exact pipeline stages they use, the custom fields their team needs, and the reports their managers actually read. No bloat, no unnecessary features, no monthly fees after launch. Within 90 days, their lead-to-customer conversion rate improved by 22% simply because no follow-up ever fell through the cracks again.",
+            "This intelligent finance operations platform automates manual accounting workflows using AI. The software reviews invoices, flags suspicious transactions, validates policy compliance, and provides finance teams with real-time visibility into spending behavior across multiple departments and vendors.",
           results: [
-            "22% Improvement in Lead-to-Customer Conversion",
-            "Zero Missed Follow-ups Since Launch",
-            "$2,400/Year in SaaS Licensing Costs Eliminated",
-          ],
-        },
-        {
-          slug: "data-visualization",
-          title: "Real-Time Business Intelligence Dashboard",
-          desc: "An interactive, multi-source BI dashboard that replaced 5 separate reporting tools and gave the executive team live visibility across all KPIs.",
-          image:
-            "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070",
-          tech: [
-            "D3.js",
-            "Chart.js",
-            "React",
-            "Python",
-            "PostgreSQL",
-            "REST API",
-            "WebSockets",
-          ],
-          features: [
-            "Real-time Interactive Charts with Live WebSocket Updates",
-            "Multi-source Data Integration (Shopify, Stripe, GA4, Ads)",
-            "Custom Date Ranges, Filters & Drill-down Views",
-            "CSV & PDF Export for Stakeholder Reporting",
-            "Role-based Access Control for Team Members",
-          ],
-          overview:
-            "An e-commerce brand's leadership team was spending 4+ hours every Monday pulling numbers from Shopify, Stripe, Google Analytics, and three ad platforms into a spreadsheet. We built a centralized BI dashboard that connects all five data sources, updates in real time via WebSockets, and surfaces every KPI they track on one screen. The exec team now has live visibility into revenue, ad ROAS, inventory, and customer metrics 24/7 — Monday morning reporting went from 4 hours to 0.",
-          results: [
-            "4 Hours of Weekly Reporting Eliminated Completely",
-            "5 Separate Tools Replaced by One Dashboard",
-            "Real-Time Visibility Across All Business KPIs",
+            "Reduced Manual Audit Work",
+            "Faster Financial Operations",
+            "Improved Expense Accuracy",
           ],
         },
       ],
@@ -1334,24 +1236,24 @@ export const servicesData = [
       "Automation strategies and custom software development tips",
     blogPosts: [
       {
-        title: "How Automation Saved This Team 35 Hours Per Week",
+        title: "How Automation Can Save Your Business 20+ Hours Per Week",
         category: "Automation",
         readTime: 5,
         imageUrl:
           "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2070",
         description:
-          "A real look at how a 200-person logistics team eliminated 80% of their manual work with custom Python + Make.com automation.",
+          "Discover which business processes are easiest to automate and how much time and money you can realistically save.",
         views: "1.5k",
         author: "Imran Ali",
       },
       {
-        title: "Why Your Business Needs a Custom CRM (Not Salesforce)",
+        title: "Why Your Business Needs a Custom CRM (Not a Generic One)",
         category: "CRM",
         readTime: 6,
         imageUrl:
           "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070",
         description:
-          "How one B2B SaaS company replaced $2,400/year in Salesforce fees with a custom CRM and improved their conversion rate by 22%.",
+          "Generic CRMs bloat your workflow with features you never use. Here's why a custom CRM pays for itself.",
         views: "2.1k",
         author: "Hassan Raza",
       },
@@ -1359,24 +1261,31 @@ export const servicesData = [
     testimonials: [
       {
         quote:
-          "The automation suite eliminated 35+ hours of manual work per week for our team. What used to take us an entire Friday now runs overnight without anyone touching it.",
-        name: "Michael Chen",
-        designation: "COO, Apex Logistics Group",
-        src: T3,
+          "They built a custom TikTok Creator Outreach Tool that auto-scans micro-influencers, sends DMs, and tracks affiliate revenue. Our influencer program now runs on autopilot.",
+        name: "Derek Vance",
+        designation: "Founder & Marketing Director, AeroFit Apparel",
+        src: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1200&auto=format&fit=crop",
       },
       {
         quote:
-          "We replaced our bloated Salesforce setup with a custom CRM built exactly for how we sell. Conversion rate went up 22% within 90 days because nothing falls through the cracks anymore.",
-        name: "Sarah O'Brien",
-        designation: "VP Sales, CloudStack SaaS",
-        src: T2,
+          "Their AI-powered SEO optimizer rewrites thousands of product titles and pushes updates to Shopify and Amazon in one click. Months of work done in minutes.",
+        name: "Chloe Sterling",
+        designation: "Chief Growth Officer, PureGlow Organics",
+        src: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1200&auto=format&fit=crop",
       },
       {
         quote:
-          "Monday morning reporting used to take 4 hours. Now I open one dashboard and everything I need is right there — live, real-time, from all five platforms at once.",
-        name: "Reza Ahmadi",
-        designation: "CEO, Meridian Commerce Group",
-        src: T5,
+          "They eliminated our expensive SaaS subscriptions by building a proprietary Laravel marketing dashboard with behavioral email sequences tied directly to our Meta ad pixel.",
+        name: "Marcus Hayes",
+        designation: "E-Commerce Director, Alpha Grind Coffee Co.",
+        src: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1200&auto=format&fit=crop",
+      },
+      {
+        quote:
+          "Their NLP lead qualification chatbot helped us filter high-value prospects instantly and route enterprise leads directly to our sales team while improving Google Ads ROI.",
+        name: "Natalie Reyes",
+        designation: "Head of Operations, SafeHaven Smart Home",
+        src: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=1200&auto=format&fit=crop",
       },
     ],
     faqs: [
@@ -1463,9 +1372,7 @@ export const servicesData = [
       "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2070",
   },
 
-  // ═══════════════════════════════════════════════════════════════
-  // 5. AI & MACHINE LEARNING
-  // ═══════════════════════════════════════════════════════════════
+  // 5. AI & Machine Learning
   {
     slug: "python-ml-ai",
     title: "AI & Machine Learning",
@@ -1565,7 +1472,7 @@ export const servicesData = [
     processTitle: "Intelligence That",
     processHighlight: "Transforms",
     processImage:
-      "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=2070",
+      "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=2070",
     processDesc:
       "We follow a structured, research-backed process to build AI systems that are accurate, reliable, explainable, and production-ready.",
     processFeatures: [
@@ -1580,91 +1487,69 @@ export const servicesData = [
         "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=2070",
       projects: [
         {
-          slug: "ai-support-chatbot",
-          title: "AI Support Chatbot – 70% Tickets Auto-Resolved",
-          desc: "An LLM-powered customer support chatbot that auto-resolves 70% of support tickets and cut average response time from 14 hours to under 45 seconds.",
-          image:
-            "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?q=80&w=2070",
-          tech: [
-            "Python",
-            "LangChain",
-            "OpenAI GPT-4",
-            "Pinecone",
-            "FastAPI",
-            "Twilio",
-          ],
-          features: [
-            "Natural Language Understanding of Complex Support Queries",
-            "RAG (Retrieval-Augmented Generation) from Product Knowledge Base",
-            "24/7 Automated Multi-channel Support (Web, SMS, Email)",
-            "Intelligent Escalation to Human Agents with Full Context",
-            "Auto-Learning from Resolved Tickets to Improve Over Time",
-          ],
-          overview:
-            "An e-commerce brand with 50,000+ monthly support tickets was spending $18,000/month on a 12-person support team — and still averaging 14-hour response times. We built an LLM-powered chatbot using GPT-4 and Retrieval-Augmented Generation (RAG) against their product knowledge base, order history, and policy documents. The bot handles returns, order status, product questions, and complaint routing autonomously. Within 90 days of deployment, 70% of tickets were fully auto-resolved, average response time dropped to 45 seconds, and monthly support costs decreased significantly.",
-          results: [
-            "70% of Support Tickets Auto-Resolved",
-            "Response Time: 14 Hours → 45 Seconds",
-            "Significant Monthly Support Cost Reduction",
-          ],
-        },
-        {
-          slug: "computer-vision-quality",
-          title:
-            "Computer Vision Quality Control – 95%+ Defect Detection Accuracy",
-          desc: "A real-time computer vision system that automatically detects manufacturing defects on a production line — replacing manual visual inspection with 95%+ accuracy.",
-          image:
-            "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=2070",
-          tech: [
-            "Python",
-            "PyTorch",
-            "YOLO v8",
-            "OpenCV",
-            "NVIDIA CUDA",
-            "REST API",
-          ],
-          features: [
-            "Real-time Object Detection at 60 Frames Per Second",
-            "Multi-class Defect Classification (Cracks, Scratches, Misalignment)",
-            "Automated Reject Line Trigger Integration",
-            "Defect Heatmap & Statistical QC Reporting",
-            "Continuous Model Retraining on New Defect Samples",
-          ],
-          overview:
-            "A precision manufacturing facility was relying on human inspectors to catch product defects at end-of-line — an expensive, error-prone process with a 12% miss rate. We deployed a YOLO v8-based computer vision system mounted on their production line that processes every unit at 60 frames per second, classifies 8 categories of defects, and automatically triggers the reject line when a defect is detected. The system achieved 95.4% detection accuracy in testing and 96.1% in production, reducing customer returns by 67% and cutting inspection labor costs by 55%.",
-          results: [
-            "95%+ Defect Detection Accuracy in Production",
-            "67% Reduction in Customer Returns",
-            "55% Cut in Inspection Labor Costs",
-          ],
-        },
-        {
-          slug: "demand-forecasting-ml",
-          title: "ML Demand Forecasting Engine – 32% Inventory Cost Reduction",
-          desc: "A custom machine learning model that predicts inventory demand 60 days ahead — reducing overstock costs by 32% in the first quarter of deployment.",
+          slug: "predictive-analytics",
+          title: "Predictive Analytics Engine",
+          desc: "Machine learning models that forecast business trends, demand, and outcomes with high accuracy.",
           image:
             "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070",
-          tech: [
-            "Python",
-            "Scikit-learn",
-            "TensorFlow",
-            "Pandas",
-            "Plotly",
-            "FastAPI",
-          ],
+          tech: ["Python", "Scikit-learn", "TensorFlow", "Pandas", "Plotly"],
           features: [
-            "60-Day Demand Forecasting with Seasonal Adjustment",
-            "Multi-SKU Inventory Optimization Across Warehouses",
-            "Real-time Model Retraining on New Sales Data",
-            "Risk Scoring for Stockout & Overstock Events",
-            "Executive Dashboard with Forecast Confidence Intervals",
+            "Sales & Revenue Forecasting",
+            "Inventory Demand Prediction",
+            "Customer Churn Prediction",
+            "Risk Scoring Models",
+            "Trend & Seasonality Analysis",
           ],
           overview:
-            "A fashion & apparel brand was consistently over-ordering seasonal inventory, leading to significant end-of-season markdown losses. We built a custom ML forecasting engine trained on 3 years of historical sales data, weather patterns, and social trend signals. The model predicts demand at the SKU level 60 days ahead with 87% accuracy. In the first quarter after deployment, the brand reduced storage overhead costs by 32% while simultaneously cutting stockout incidents by 41% — the model now auto-generates purchase orders for their buying team every Monday morning.",
+            "Stop making decisions based on gut feeling. Our predictive analytics engines are trained on your historical business data to forecast sales, predict customer churn, optimize inventory, and identify risks before they become problems — giving you a 60-day strategic advantage.",
           results: [
-            "32% Reduction in Inventory Overhead Costs",
-            "41% Fewer Stockout Incidents",
-            "87% Forecast Accuracy at SKU Level",
+            "60-Day Sales Forecasting",
+            "32% Reduction in Inventory Overhead",
+            "Measurable Competitive Advantage",
+          ],
+        },
+        {
+          slug: "chatbot-development",
+          title: "AI Chatbot & Virtual Assistant",
+          desc: "Intelligent, context-aware chatbots that handle customer support, lead qualification, and FAQs automatically.",
+          image:
+            "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?q=80&w=2070",
+          tech: ["Python", "LangChain", "OpenAI GPT-4", "Rasa", "Dialogflow"],
+          features: [
+            "Natural Language Understanding",
+            "24/7 Automated Support",
+            "Multi-language Support",
+            "Lead Capture & Qualification",
+            "Seamless Human Handoff",
+          ],
+          overview:
+            "Our AI chatbots go beyond scripted responses. Powered by large language models, they understand context, handle complex queries, remember conversation history, and escalate to human agents when needed. Most clients resolve 65–75% of support tickets automatically after deployment.",
+          results: [
+            "70% Support Tickets Auto-Resolved",
+            "Response Time: 14 Hours → 45 Seconds",
+            "Significant Support Cost Reduction",
+          ],
+        },
+        {
+          slug: "image-recognition",
+          title: "Computer Vision & Image Recognition",
+          desc: "Custom computer vision systems for object detection, image classification, OCR, and visual search.",
+          image:
+            "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=2070",
+          tech: ["Python", "TensorFlow", "PyTorch", "OpenCV", "YOLO v8"],
+          features: [
+            "Real-time Object Detection",
+            "Face & Identity Recognition",
+            "Multi-class Image Classification",
+            "Optical Character Recognition (OCR)",
+            "Visual Product Search",
+          ],
+          overview:
+            "Automate visual inspection, document processing, product recognition, and quality control with state-of-the-art computer vision. Our models are trained on your specific use case — whether you need to detect defects on a production line, extract text from documents, or identify products from images.",
+          results: [
+            "95%+ Model Accuracy",
+            "Fully Automated Visual Processing",
+            "Scalable to Millions of Images",
           ],
         },
       ],
@@ -1674,24 +1559,24 @@ export const servicesData = [
       "Latest developments in artificial intelligence and machine learning",
     blogPosts: [
       {
-        title: "How AI Demand Forecasting Cuts Inventory Costs by 32%",
-        category: "Machine Learning",
+        title: "How AI is Transforming Small & Medium Businesses",
+        category: "AI",
         readTime: 6,
         imageUrl:
           "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=2070",
         description:
-          "A real ML case study: how a fashion brand used 60-day demand prediction to eliminate overstock and cut storage overhead by nearly a third.",
+          "Explore practical, affordable ways AI is giving smaller businesses capabilities that were once only available to enterprises.",
         views: "5.2k",
         author: "Dr. Sara Ahmed",
       },
       {
-        title: "LLM Chatbots That Actually Work: A Real Deployment Case Study",
-        category: "AI",
+        title: "Predictive Analytics: A Practical Guide for Business Owners",
+        category: "Machine Learning",
         readTime: 8,
         imageUrl:
-          "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?q=80&w=2070",
+          "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070",
         description:
-          "How we deployed a GPT-4 + RAG chatbot that auto-resolved 70% of tickets and cut response time from 14 hours to 45 seconds.",
+          "What is predictive analytics, how does it work, and what kind of results can your business realistically expect?",
         views: "3.8k",
         author: "Imran Ali",
       },
@@ -1699,24 +1584,31 @@ export const servicesData = [
     testimonials: [
       {
         quote:
-          "The ML forecasting model now generates our purchase orders automatically every Monday. We cut inventory overhead by 32% in the first quarter — the ROI was almost immediate.",
-        name: "Alexandra Kim",
-        designation: "Head of Supply Chain, Apex Fashion Group",
-        src: T4,
+          "Their predictive ML inventory engine transformed how we manage purchasing and warehouse forecasting. The AI accurately predicts demand trends weeks in advance and significantly reduced our operational waste.",
+        name: "Derek Sterling",
+        designation: "Chief Technology Officer, Apex Apparel Group",
+        src: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1200&auto=format&fit=crop",
       },
       {
         quote:
-          "Our AI chatbot auto-resolves 70% of support tickets and our customers get a response in 45 seconds instead of 14 hours. It's transformed how we think about customer service.",
-        name: "Carlos Rivera",
-        designation: "VP Customer Experience, LuxeDecor Direct",
-        src: T3,
+          "The NLP-powered recommendation engine completely changed our customer experience. Users now receive personalized supplement suggestions instantly through natural conversation flows.",
+        name: "Dr. Elena Rostova",
+        designation: "Founder, Vitality Bio-Nutrient Co.",
+        src: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1200&auto=format&fit=crop",
       },
       {
         quote:
-          "The computer vision system catches defects our human inspectors were missing. Customer returns dropped 67% and our inspection team can now focus on continuous improvement instead of manual checking.",
-        name: "Ingrid Larsson",
-        designation: "Quality Director, Precision Manufacturing Co.",
-        src: T6,
+          "Their AI-driven TikTok trend scraper helped us identify viral products before competitors even noticed them. It became the backbone of our multi-store dropshipping operation.",
+        name: "Marcus Thorne",
+        designation: "VP of Growth, Horizon Drop-Logistics",
+        src: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1200&auto=format&fit=crop",
+      },
+      {
+        quote:
+          "The AI intent-classification system automated most of our support operations and reduced response times from hours to seconds while routing complex cases perfectly.",
+        name: "Sophia Chen",
+        designation: "Operations Director, LuxeDecor Direct",
+        src: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=1200&auto=format&fit=crop",
       },
     ],
     faqs: [
@@ -1802,9 +1694,7 @@ export const servicesData = [
       "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=2070",
   },
 
-  // ═══════════════════════════════════════════════════════════════
-  // 6. GRAPHIC DESIGN
-  // ═══════════════════════════════════════════════════════════════
+  // 6. Graphic Design
   {
     slug: "graphic-design",
     title: "Graphic Design",
@@ -1819,7 +1709,7 @@ export const servicesData = [
     sectionDesc:
       "From brand identities and logo suites to social media graphics and packaging design — we create visuals that are strategically beautiful and built to make a lasting impression.",
     sectionImage:
-      "https://images.unsplash.com/photo-1626785774625-0b1c2c4eab67?q=80&w=2071",
+      "https://images.unsplash.com/photo-1545235617-9465d2a55698?q=80&w=2080",
     tabs: [
       {
         title: "Branding",
@@ -1904,7 +1794,7 @@ export const servicesData = [
     processTitle: "Creativity That",
     processHighlight: "Inspires",
     processImage:
-      "https://images.unsplash.com/photo-1626785774625-0b1c2c4eab67?q=80&w=2071",
+      "https://images.unsplash.com/photo-1545235617-9465d2a55698?q=80&w=2080",
     processDesc:
       "Great design isn't accidental — it's the result of a structured creative process that combines strategic thinking with artistic execution.",
     processFeatures: [
@@ -1919,81 +1809,69 @@ export const servicesData = [
         "https://images.unsplash.com/photo-1561070791-2526d30994b5?q=80&w=2064",
       projects: [
         {
-          slug: "logo-brand-identity",
-          title: "Complete Brand Identity System",
-          desc: "A full brand identity package — logo suite, color palette, typography system, and 60+ page brand guidelines — delivered for a DTC wellness startup.",
+          slug: "logo-design",
+          title: "Logo & Brand Mark Design",
+          desc: "Unique, versatile logo designs that represent your brand identity across every medium and scale.",
           image:
-            "https://images.unsplash.com/photo-1626785774625-0b1c2c4eab67?q=80&w=2071",
-          tech: ["Adobe Illustrator", "Adobe Photoshop", "Figma", "InDesign"],
+            "https://images.unsplash.com/photo-1545235617-9465d2a55698?q=80&w=2080",
+          tech: ["Adobe Illustrator", "Adobe Photoshop", "Figma"],
           features: [
-            "Primary & Secondary Logo Suite with Icon System",
-            "Full Color Palette with Psychological Rationale",
-            "Typography Hierarchy (Display, Body, Caption)",
-            "60+ Page Brand Guidelines Document",
-            "Business Card, Letterhead & Stationery Design",
+            "3–5 Unique Initial Concepts",
+            "Scalable Vector Files (AI, EPS, SVG)",
+            "Full Color, Mono & Reversed Versions",
+            "Unlimited Revision Rounds",
+            "Complete Logo Usage Guidelines",
           ],
           overview:
-            "A DTC wellness supplement startup needed a brand identity that could compete with premium brands like Healf and AG1. We conducted competitor analysis and customer persona research, then built a complete brand identity system — minimalist wordmark logo, earthy science-backed color palette, and a comprehensive 60-page brand guidelines document. The brand launched to market in 8 weeks and was immediately positioned as a premium alternative in its category.",
+            "Your logo is the foundation of your brand — it appears everywhere from your website and packaging to social media and business cards. We create logos that are simple enough to be instantly recognizable, versatile enough to work everywhere, and distinctive enough to stand out in your market.",
           results: [
-            "Instant Premium Brand Positioning at Launch",
-            "Brand Guidelines Adopted Across 4 Product Lines",
-            "3x Higher Perceived Value vs Pre-Rebrand",
+            "Instant Brand Recognition",
+            "Professional First Impressions",
+            "Versatile Across All Media",
           ],
         },
         {
-          slug: "social-media-ad-creatives",
-          title: "Meta & TikTok Ad Creative Suite – 68% Higher CTR",
-          desc: "50+ scroll-stopping ad creatives for a DTC activewear brand that increased click-through rate by 68% and cut cost-per-click by 31%.",
+          slug: "social-media-graphics",
+          title: "Social Media Graphics & Ad Creatives",
+          desc: "Scroll-stopping graphics and ad creatives for Instagram, Facebook, TikTok, and LinkedIn.",
           image:
             "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?q=80&w=2074",
-          tech: [
-            "Adobe Photoshop",
-            "Illustrator",
-            "Figma",
-            "Canva Pro",
-            "CapCut",
-          ],
+          tech: ["Adobe Photoshop", "Illustrator", "Figma", "Canva Pro"],
           features: [
-            "50+ Meta (Facebook & Instagram) Ad Creatives",
-            "TikTok Static & Motion Ad Thumbnails",
-            "A/B Tested Hook Variations for Each Creative",
-            "Platform-Correct Aspect Ratios (1:1, 4:5, 9:16)",
-            "Reusable Brand-Consistent Template System",
+            "Instagram Feed & Story Templates",
+            "Facebook Cover & Ad Creatives",
+            "LinkedIn Banner & Post Design",
+            "TikTok Thumbnail & Overlay Design",
+            "Reusable Brand-Consistent Templates",
           ],
           overview:
-            "A DTC activewear brand's Meta ad performance had plateaued — their existing creatives were generic and blended into the feed. We designed 50+ static and motion ad creatives across multiple hooks, benefit angles, and visual styles. Every batch was structured for systematic A/B testing. After replacing the old creative library with the new one, the brand saw a 68% improvement in click-through rate, a 31% reduction in cost-per-click, and a significant improvement in overall ROAS within the first 30 days.",
+            "In a saturated social media landscape, only the most visually compelling content stops the scroll. We design strategic, brand-consistent graphics that are built for engagement — combining eye-catching visuals with clear messaging that drives clicks, follows, and conversions.",
           results: [
-            "68% Improvement in Ad Click-Through Rate",
-            "31% Reduction in Cost-Per-Click",
-            "Significant ROAS Improvement Within 30 Days",
+            "Higher Engagement & CTR",
+            "Consistent Brand Presence",
+            "Stronger Social Media Growth",
           ],
         },
         {
-          slug: "packaging-design",
-          title: "Product Packaging & Brand Refresh",
-          desc: "A complete packaging redesign and brand refresh for a premium skincare line — 3D mockups, print-ready files, and updated brand identity delivered in 6 weeks.",
+          slug: "brand-identity",
+          title: "Complete Brand Identity System",
+          desc: "A comprehensive brand identity package — everything you need to present your business professionally.",
           image:
-            "https://images.unsplash.com/photo-1584208124888-4f9f791b4b28?q=80&w=2070",
-          tech: [
-            "Adobe Illustrator",
-            "Photoshop",
-            "InDesign",
-            "Figma",
-            "Blender (3D Mockups)",
-          ],
+            "https://images.unsplash.com/photo-1561070791-2526d30994b5?q=80&w=2064",
+          tech: ["Illustrator", "Photoshop", "InDesign", "Figma"],
           features: [
-            "Primary & Secondary Packaging Design (Box, Label, Insert)",
-            "Photorealistic 3D Product Mockups for E-commerce",
-            "Print-Ready CMYK Files with Bleed & Safe Zone",
-            "Updated Brand Identity (Logo, Colors, Typography)",
-            "Amazon A+ Content Modules & Brand Store Design",
+            "Primary & Secondary Logo Suite",
+            "Full Color Palette with Usage Rules",
+            "Typography Hierarchy System",
+            "60+ Page Brand Guidelines Document",
+            "Stationery & Business Card Design",
           ],
           overview:
-            "A premium DTC skincare brand selling on Amazon and their own site needed a packaging and brand overhaul to compete at a higher price point. We redesigned their full packaging suite — primary boxes, product labels, inserts, and outer cartons — in a clean, minimalist aesthetic with botanical illustration details. We delivered photorealistic 3D mockups for their e-commerce listings and updated their Amazon A+ Content modules with the new brand direction. The refresh contributed to a 44% improvement in Amazon conversion rate within 60 days.",
+            "A complete brand identity system gives your business the visual consistency and professionalism that builds trust. We deliver everything — logos, colors, fonts, patterns, icons, and a comprehensive brand guidelines document — so your entire team presents the brand consistently everywhere.",
           results: [
-            "44% Improvement in Amazon Listing Conversion Rate",
-            "Premium Pricing Tier Achieved Post-Rebrand",
-            "Full Print-Ready File Suite Delivered in 6 Weeks",
+            "Consistent Brand Across All Channels",
+            "Premium, Professional Image",
+            "Clear Market Differentiation",
           ],
         },
       ],
@@ -2003,24 +1881,24 @@ export const servicesData = [
       "Latest graphic design trends, tips, and branding strategies",
     blogPosts: [
       {
-        title: "How One Brand Increased Ad CTR by 68% With Better Creative",
-        category: "Ad Creatives",
+        title: "Graphic Design Trends Dominating 2024",
+        category: "Trends",
         readTime: 5,
         imageUrl:
-          "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?q=80&w=2074",
+          "https://images.unsplash.com/photo-1561070791-2526d30994b5?q=80&w=2064",
         description:
-          "The exact creative strategy — hooks, angles, and visual formats — that took a DTC activewear brand from stagnant Meta performance to a 68% CTR improvement.",
+          "From maximalist typography to AI-generated textures — the design trends you need to know for 2024.",
         views: "2.8k",
         author: "Fatima Khan",
       },
       {
-        title: "Why Packaging Design Drives Amazon Conversion Rates",
+        title: "Why Your Brand Needs a Proper Brand Identity (Not Just a Logo)",
         category: "Branding",
         readTime: 6,
         imageUrl:
-          "https://images.unsplash.com/photo-1584208124888-4f9f791b4b28?q=80&w=2070",
+          "https://images.unsplash.com/photo-1545235617-9465d2a55698?q=80&w=2080",
         description:
-          "A real case study: how a skincare brand's packaging and A+ Content redesign contributed to a 44% conversion rate improvement on Amazon in 60 days.",
+          "The difference between a logo and a brand identity — and why it matters for your business growth.",
         views: "3.4k",
         author: "Ali Raza",
       },
@@ -2028,24 +1906,31 @@ export const servicesData = [
     testimonials: [
       {
         quote:
-          "We replaced our ad creative library with 50+ new designs and our Meta CTR improved 68% in the first month. The A/B test structure made it easy to see exactly what was working.",
-        name: "Jordan Matthews",
-        designation: "Founder, Velo Activewear",
-        src: T1,
+          "Their creative team completely refreshed our paid advertising visuals with scroll-stopping Meta and TikTok creatives. The new graphics dramatically improved our engagement and click-through rates.",
+        name: "Austin Vance",
+        designation: "Marketing Director, AeroFit Gear",
+        src: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1200&auto=format&fit=crop",
       },
       {
         quote:
-          "The packaging redesign and 3D mockups gave us a premium look that matched our pricing. Amazon conversion went up 44% within 60 days of the new listing going live.",
-        name: "Priya Mehta",
-        designation: "Co-Founder, Luminos Skincare",
-        src: T8,
+          "They transformed our skincare brand into a premium luxury identity with stunning packaging, minimalist branding, and beautifully designed unboxing materials that elevated the entire customer experience.",
+        name: "Chloe Bennett",
+        designation: "Founder, Sol & Seed Botanicals",
+        src: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1200&auto=format&fit=crop",
       },
       {
         quote:
-          "The brand identity system they delivered was thorough, beautiful, and immediately gave us the premium positioning we needed to compete with much bigger brands.",
-        name: "Tyler Ashford",
-        designation: "CEO, Verdant Wellness Co.",
-        src: T5,
+          "The custom UI/UX graphics and icon systems they designed made our subscription experience far more intuitive and visually polished. Our storefront finally feels like a premium coffee brand.",
+        name: "Marcus Hayes",
+        designation: "Operations Lead, Grindhouse Coffee Roasters",
+        src: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1200&auto=format&fit=crop",
+      },
+      {
+        quote:
+          "Their lookbook designs and Amazon A+ content gave our seasonal collections a high-end visual presence while significantly improving the professionalism of our marketplace listings.",
+        name: "Natalie Reyes",
+        designation: "Brand Manager, Home & Hearth Co.",
+        src: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=1200&auto=format&fit=crop",
       },
     ],
     faqs: [
@@ -2130,9 +2015,7 @@ export const servicesData = [
       "https://images.unsplash.com/photo-1561070791-2526d30994b5?q=80&w=2064",
   },
 
-  // ═══════════════════════════════════════════════════════════════
-  // 7. VIDEO EDITING
-  // ═══════════════════════════════════════════════════════════════
+  // 7. Video Editing
   {
     slug: "video-editing",
     title: "Video Editing",
@@ -2147,7 +2030,7 @@ export const servicesData = [
     sectionDesc:
       "From YouTube long-form content and viral TikTok Reels to corporate brand films and Meta ad creatives — we edit videos that hold attention, communicate clearly, and get results.",
     sectionImage:
-      "https://images.unsplash.com/photo-1609619385002-f40f1df9b7eb?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     tabs: [
       {
         title: "Video Editing",
@@ -2247,85 +2130,74 @@ export const servicesData = [
         "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       projects: [
         {
-          slug: "youtube-long-form",
-          title: "YouTube Long-Form Content – 2.4x Watch Time Increase",
-          desc: "A complete YouTube content editing overhaul for a B2B SaaS company that increased average view duration by 2.4x and grew their channel by 18,000 subscribers in 6 months.",
+          slug: "youtube-editing",
+          title: "YouTube Long-Form Video Editing",
+          desc: "Professional editing for YouTube creators and brands — built for watch time, retention, and subscriber growth.",
           image:
             "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?q=80&w=2070",
           tech: [
             "Adobe Premiere Pro",
             "After Effects",
             "DaVinci Resolve",
-            "Adobe Audition",
-            "CapCut",
+            "Audition",
           ],
           features: [
-            "Custom Animated Intros with Brand Identity Integration",
-            "B-Roll & Motion Graphic Storytelling",
-            "Professional Audio Mixing & Music Licensing",
-            "Chapter Markers, Cards & End Screen Optimization",
-            "Auto-Captions with Branded Styling",
+            "Custom Animated Intros & Outros",
+            "B-Roll & Stock Footage Integration",
+            "Royalty-Free Background Music",
+            "Auto-Captions & Subtitle Styling",
+            "Optimized End Screens & Cards",
           ],
           overview:
-            "A B2B SaaS company was uploading raw screen-recorded tutorial videos with flat audio and no post-production — their average view duration was under 2 minutes on 15-minute videos. We redesigned their entire YouTube content format: animated intro, structured chapter system, dynamic B-roll cutaways, professional audio mixing, and tightly paced editing that removed dead time. Within 6 months, average view duration increased from 2 minutes to 4.8 minutes (2.4x), and the channel gained 18,000 new subscribers without increasing upload frequency.",
+            "YouTube success is built on watch time and retention. We edit your raw footage into tightly paced, engaging videos that hook viewers in the first 30 seconds and keep them watching until the end. Every edit is made with YouTube's algorithm in mind — from chapter markers and timestamps to thumbnail-ready moments.",
           results: [
-            "2.4x Increase in Average View Duration",
-            "18,000 New Subscribers in 6 Months",
-            "40% Higher Click-Through Rate on Thumbnails",
+            "Higher Average View Duration",
+            "Consistent Publishing Workflow",
+            "Faster Channel Growth",
           ],
         },
         {
-          slug: "tiktok-reels-editing",
-          title: "TikTok & Reels Content – 3.1M Views in 90 Days",
-          desc: "A short-form video content strategy and editing package for a DTC food brand that generated 3.1 million organic TikTok views and 47,000 new followers in 90 days.",
+          slug: "social-media-videos",
+          title: "Short-Form Social Media Video Editing",
+          desc: "High-energy, algorithm-optimized short videos for TikTok, Instagram Reels, and YouTube Shorts.",
           image:
             "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?q=80&w=2074",
-          tech: [
-            "Adobe Premiere Pro",
-            "CapCut Pro",
-            "After Effects",
-            "Sound Design",
-          ],
+          tech: ["Adobe Premiere Pro", "CapCut Pro", "After Effects"],
           features: [
-            "3-Second Scroll-Stopping Opening Hooks",
-            "Kinetic Text & Trendy Transition Library",
-            "Sound-Synced Cuts & Music Licensing",
-            "Animated Captions with Brand Colors",
-            "Platform-Optimized 9:16 Vertical Format",
+            "Attention-Grabbing 3-Second Hooks",
+            "Kinetic Cuts & Trendy Transitions",
+            "Animated Captions & Text Overlays",
+            "Music Sync & Sound Design",
+            "Vertical Format (9:16) Optimization",
           ],
           overview:
-            "A DTC food brand had strong products but zero social media presence. We developed a short-form content strategy and edited 3 videos per week for 90 days — each with a tested hook formula, rapid-cut pacing, sound-synced transitions, and trend-aware audio selection. The channel went from 0 to 47,000 TikTok followers and accumulated 3.1 million organic views without a single dollar in paid promotion. Several videos were picked up for TikTok's algorithmic push after exceeding the 10% share rate threshold.",
+            "Short-form content is the fastest way to grow — but only if the editing is right. We create short videos with proven viral mechanics: strong opening hooks, punchy pacing, strategic caption placement, and platform-specific optimizations. Most clients see significant engagement increases within the first batch of videos.",
           results: [
-            "3.1M Organic TikTok Views in 90 Days",
-            "47,000 New Followers Without Paid Ads",
-            "6 Videos Received Algorithm-Boosted Distribution",
+            "Viral-Ready Content Structure",
+            "Higher Watch-Through & Shares",
+            "Faster Brand & Audience Growth",
           ],
         },
         {
-          slug: "corporate-brand-film",
-          title: "Corporate Brand Film – Elevated to VC Pitch Reel",
-          desc: "A polished 3-minute brand film for a Series A startup that was used as the opening video in their $18M funding round pitch deck.",
+          slug: "corporate-video",
+          title: "Corporate & Brand Video Editing",
+          desc: "Polished, professional video editing for corporate communications, brand films, and product showcases.",
           image:
             "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?q=80&w=2070",
-          tech: [
-            "Adobe Premiere Pro",
-            "After Effects",
-            "Adobe Audition",
-            "DaVinci Resolve",
-          ],
+          tech: ["Adobe Premiere Pro", "After Effects", "Adobe Audition"],
           features: [
-            "Cinematic Color Grading (Film Look with LUT Grading)",
-            "Narrative Structure: Problem → Solution → Vision",
-            "Professional Voiceover Integration & Audio Mix",
-            "Branded Motion Graphics & Data Visualization",
-            "Founder Interview Filming Guidance & Editing",
+            "Professional Color Grading",
+            "Branded Lower Thirds & Typography",
+            "Company Logo Animation",
+            "Clean, Precise Cut Editing",
+            "Professional Voice-over Integration",
           ],
           overview:
-            "A Series A fintech startup needed a brand film that could serve as the opening video in their investor pitch deck — something that would capture their vision in 3 minutes and make VCs lean in. We worked with their founding team to structure the narrative, guide the on-camera interviews, and then produced a cinematic brand film with color grading, motion graphics, and a professional voiceover. The video was used as the opening of their pitch deck in their $18M Series A round, which closed successfully.",
+            "Your brand video is often a prospect's first impression of your company. We edit corporate videos, product showcases, testimonial compilations, and brand films with the professionalism and polish that builds trust, communicates value, and inspires confidence in your brand.",
           results: [
-            "Used as Opening Video in Successful $18M Series A Pitch",
-            "CEO Called It 'The Best Investment We Made Pre-Raise'",
-            "3-Minute Film Produced & Delivered in 12 Business Days",
+            "Elevated Brand Perception",
+            "Stronger Audience Trust",
+            "Higher-Converting Sales Videos",
           ],
         },
       ],
@@ -2335,25 +2207,24 @@ export const servicesData = [
       "Tips, trends, and strategies for video content creators and brands",
     blogPosts: [
       {
-        title:
-          "How a B2B Brand Increased YouTube Watch Time 2.4x Without More Videos",
-        category: "YouTube",
+        title: "Video Marketing Trends That Will Define 2024",
+        category: "Trends",
         readTime: 6,
         imageUrl:
-          "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?q=80&w=2070",
+          "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         description:
-          "The editing system that transformed flat screen-recordings into engaging tutorials — and grew a B2B SaaS channel by 18,000 subscribers in 6 months.",
+          "From AI-assisted editing to interactive shoppable videos — the trends reshaping video marketing this year.",
         views: "3.1k",
         author: "Omar Hussain",
       },
       {
-        title: "The 3-Second Hook Formula That Generated 3.1M TikTok Views",
+        title: "How to Hook Viewers in the First 3 Seconds (The Science)",
         category: "Short-Form Video",
         readTime: 5,
         imageUrl:
           "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?q=80&w=2074",
         description:
-          "How a DTC food brand went from 0 to 47,000 followers and 3.1M views in 90 days using a repeatable hook-and-cut framework.",
+          "The data-backed techniques top creators use to capture attention instantly and maximize watch time.",
         views: "4.5k",
         author: "Fatima Khan",
       },
@@ -2361,24 +2232,31 @@ export const servicesData = [
     testimonials: [
       {
         quote:
-          "Our average YouTube view duration went from under 2 minutes to nearly 5 minutes. The structured editing format transformed how our audience engages with our content.",
-        name: "Nathan Brooks",
-        designation: "Head of Content, CloudOps SaaS",
-        src: T1,
+          "Their video editing team transformed our raw supplier footage into high-performing TikTok Shop ads with strong 3-second hooks, dynamic captions, and viral pacing that finally stopped the scroll and increased product clicks.",
+        name: "Ryan Greenfield",
+        designation: "Founder & CEO, Aspen Trail Gear",
+        src: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1200&auto=format&fit=crop",
       },
       {
         quote:
-          "3.1 million organic TikTok views in 90 days — completely free. The hook formula and kinetic editing style they built for us made every video feel algorithm-ready from day one.",
-        name: "Isabella Fontaine",
-        designation: "Founder, Harvest & Co. (DTC Food Brand)",
-        src: T8,
+          "They completely rebuilt our Meta ad creatives from basic UGC into high-retention video ads with multiple hook variations, cinematic grading, and smooth transitions that significantly improved our CAC and viewer retention.",
+        name: "Amanda Ross",
+        designation: "Co-Founder, Sol Vibe Activewear",
+        src: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1200&auto=format&fit=crop",
       },
       {
         quote:
-          "The brand film they made opened our Series A pitch deck. Two investors mentioned it specifically in their term sheets as a reason they were excited about the company.",
-        name: "Marcus Reyes",
-        designation: "Co-Founder & CEO, Apex Fintech",
-        src: T3,
+          "Their cinematic editing and ASMR-style brand videos captured the true sensory feel of our coffee. The result was a premium storytelling experience that elevated our subscription marketing campaigns across platforms.",
+        name: "Tyler Vance",
+        designation: "Brand Director, Midnight Roast Co.",
+        src: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1200&auto=format&fit=crop",
+      },
+      {
+        quote:
+          "They produced clean explainer videos, before-and-after case studies, and AI-guided consultation clips that dramatically improved user understanding and reduced drop-off on our skincare platform.",
+        name: "Jessica Miller",
+        designation: "Managing Director, Opal & Oak Skincare",
+        src: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=1200&auto=format&fit=crop",
       },
     ],
     faqs: [
@@ -2461,19 +2339,17 @@ export const servicesData = [
     ctaButton: "Get a Quote",
     ctaLink: "/contact",
     ctaBg:
-      "https://images.unsplash.com/photo-1574717024453-3540568c7ec1?q=80&w=2070",
+      "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
 
-  // ═══════════════════════════════════════════════════════════════
-  // 8. WORDPRESS WEBSITE
-  // ═══════════════════════════════════════════════════════════════
+  // 8. WordPress Website
   {
     slug: "wordpress-website",
     title: "WordPress Website",
     desc: "Custom WordPress development and design services.",
     icon: Globe,
     heroImage:
-      "https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=2070",
+      "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=2072",
     heroTitle: "Custom WordPress Development",
     heroDesc:
       "Get a beautiful, blazing-fast, and fully secure WordPress website that's easy for your team to manage and built to grow with your business.",
@@ -2561,7 +2437,7 @@ export const servicesData = [
     capabilitiesTitle: "WordPress",
     capabilitiesHighlight: "Expertise",
     capabilitiesBg:
-      "https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=2070",
+      "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=2072",
     processSubTitle: "Our WordPress Process",
     processTitle: "Build Your WordPress",
     processHighlight: "Vision",
@@ -2578,93 +2454,83 @@ export const servicesData = [
     showcase: {
       title: "WordPress Projects",
       bgImage:
-        "https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=2070",
+        "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=2072",
       projects: [
         {
           slug: "custom-wordpress-theme",
-          title: "Custom WordPress Theme – Sub-1.8s Load Time",
-          desc: "A hand-coded, 100% custom WordPress theme for a law firm that achieved a 1.8-second load time, 98 Google PageSpeed score, and a 3x improvement in lead generation.",
+          title: "Custom WordPress Theme Development",
+          desc: "Completely custom-coded WordPress themes that are unique to your brand, optimized for speed, and easy to manage.",
           image:
             "https://images.unsplash.com/photo-1547658719-da2b51169166?q=80&w=2064",
-          tech: [
-            "PHP",
-            "WordPress",
-            "CSS3",
-            "JavaScript",
-            "ACF Pro",
-            "Timber",
-            "WP Rocket",
-          ],
+          tech: ["PHP", "WordPress", "CSS3", "JavaScript", "ACF Pro", "Timber"],
           features: [
-            "100% Custom Design — Zero Template Reliance",
-            "Fully Responsive on All Devices & Screen Sizes",
-            "SEO-Optimized Semantic HTML Structure",
-            "Sub-1.8-Second Load Time & 98 PageSpeed Score",
-            "Easy Content Management via Gutenberg & ACF",
+            "100% Custom Design — No Templates",
+            "Fully Responsive on All Devices",
+            "SEO-Optimized HTML Structure",
+            "Sub-2-Second Load Time",
+            "Easy Content Management (Gutenberg / ACF)",
           ],
           overview:
-            "A boutique law firm was running a template-based WordPress site with 5+ second load times and a PageSpeed score of 42 — hemorrhaging potential clients who bounced before the page loaded. We hand-coded a 100% custom WordPress theme from scratch, optimized every asset, implemented Redis caching, and set up global CDN delivery. The new site loads in 1.8 seconds, scores 98 on Google PageSpeed, and the firm's monthly contact form submissions tripled within the first 60 days due to the improved user experience.",
+            "Template-based WordPress sites look like everyone else's — and your business deserves better. We hand-code custom WordPress themes from the ground up, precisely matching your brand identity. Every line of code is clean, optimized, and built with performance and maintainability as core priorities.",
           results: [
-            "98 Google PageSpeed Score (Up from 42)",
-            "1.8s Load Time (Down from 5.2s)",
-            "3x More Contact Form Submissions in 60 Days",
+            "Completely Unique Brand Identity",
+            "Faster Page Speed & Core Web Vitals",
+            "Easy Team Self-Management",
           ],
         },
         {
-          slug: "wordpress-security-maintenance",
-          title: "WordPress Security Recovery & Ongoing Maintenance",
-          desc: "Emergency malware removal and security hardening for a hacked WooCommerce store — restored in 6 hours with zero data loss, then secured on an ongoing maintenance plan.",
+          slug: "wordpress-maintenance",
+          title: "WordPress Maintenance & Security",
+          desc: "Comprehensive WordPress care plans — security monitoring, backups, updates, and performance checks.",
           image:
-            "https://images.unsplash.com/photo-1614064641938-3bbee52942c7?q=80&w=2070",
+            "https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?q=80&w=2069",
           tech: [
             "WordPress",
             "Wordfence",
             "UpdraftPlus",
             "WP Rocket",
-            "Cloudflare",
             "ManageWP",
           ],
           features: [
-            "Emergency Malware Removal & Site Restore",
-            "Security Hardening (Firewall Rules, 2FA, Login Protection)",
-            "Daily Automated Off-site Backups (30-Day Retention)",
-            "Real-time Security Monitoring & Threat Alerts",
+            "Daily Automated Off-site Backups",
+            "Real-time Security Threat Monitoring",
             "Weekly Core, Theme & Plugin Updates",
+            "Monthly Performance Audits",
+            "Priority Support & Bug Fixes",
           ],
           overview:
-            "A WooCommerce store owner woke up to find their site flagged by Google as malware-infected — traffic had dropped to zero and the site was suspended by their host. We performed emergency malware removal, restored a clean backup, and had the site back online and de-indexed from Google's blocklist within 6 hours with zero data loss. We then implemented a comprehensive security hardening suite and enrolled the site in our ongoing maintenance plan. The store has had zero security incidents in the 18 months since.",
+            "A neglected WordPress site is a vulnerable one — outdated plugins are the #1 source of WordPress hacks. Our maintenance plans keep your site updated, backed up, and secure 24/7, so you never have to worry about your website going down or getting compromised.",
           results: [
-            "Site Restored in Under 6 Hours with Zero Data Loss",
-            "Removed from Google Malware Blocklist Same Day",
-            "Zero Security Incidents in 18+ Months Since",
+            "Zero Unplanned Downtime",
+            "Complete Security Protection",
+            "Always-Up-to-Date Performance",
           ],
         },
         {
-          slug: "elementor-business-website",
-          title: "Elementor Pro Business Website – Team-Editable",
-          desc: "A professional, fast-loading WordPress + Elementor Pro website for a 50-person professional services firm, fully editable by their non-technical marketing team.",
+          slug: "elementor-design",
+          title: "Elementor Pro Website Design",
+          desc: "Professional, fast-loading WordPress websites built with Elementor Pro — fully editable by your team.",
           image:
-            "https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=2070",
+            "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=2072",
           tech: [
             "WordPress",
             "Elementor Pro",
             "Elementor Theme Builder",
-            "WooCommerce",
             "CSS",
           ],
           features: [
-            "Custom Elementor Page & Template Designs",
+            "Custom Elementor Page Designs",
             "Dynamic Content & Custom Post Types",
-            "Advanced Popup & Lead Capture Forms",
-            "Full Marketing Team Editing Independence",
-            "Training Session + Video Documentation Delivered",
+            "Advanced Popup & Form Builder",
+            "WooCommerce Integration",
+            "Team Self-Editing Without a Developer",
           ],
           overview:
-            "A 50-person professional services firm needed a polished website their marketing coordinator could update independently — no developer dependency for blog posts, team member updates, or service page edits. We built their full site in Elementor Pro with a custom theme builder setup, global design system, and a reusable template library. We delivered a full training video library and a live onboarding session. Within 2 weeks of launch, the marketing team had published 8 new blog posts, updated 3 service pages, and added 5 new team members — all without a single developer request.",
+            "Elementor Pro gives your team the power to update and edit the website themselves without touching code — while still looking like it was built by a professional developer. We build the site, then hand you the keys with full training so you're never dependent on us for small changes.",
           results: [
-            "Full Team Editing Independence Achieved at Launch",
-            "8 Blog Posts Published in First 2 Weeks Without Developer",
-            "65% Faster Content Update Cycle vs Previous Site",
+            "Beautiful Professional Design",
+            "Full Team Editing Independence",
+            "Faster Content Updates",
           ],
         },
       ],
@@ -2674,50 +2540,50 @@ export const servicesData = [
       "WordPress tips, tutorials, and best practices for business owners",
     blogPosts: [
       {
-        title: "How We Got a WordPress Site to 1.8s Load Time & 98 PageSpeed",
-        category: "Speed Optimization",
+        title:
+          "The Essential WordPress Plugins Every Business Site Needs in 2024",
+        category: "WordPress",
         readTime: 7,
         imageUrl:
           "https://images.unsplash.com/photo-1547658719-da2b51169166?q=80&w=2064",
         description:
-          "The exact technical changes — caching, CDN, image optimization, and code cleanup — that took a law firm's site from 42 to 98 on Google PageSpeed.",
+          "Cut through the noise — these are the only WordPress plugins you actually need for security, SEO, speed, and forms.",
         views: "4.5k",
         author: "Hassan Raza",
       },
       {
         title:
-          "What Happens When Your WordPress Site Gets Hacked (And How to Fix It)",
-        category: "Security",
+          "Custom WordPress Theme vs Page Builder: Which Should You Choose?",
+        category: "Development",
         readTime: 6,
         imageUrl:
-          "https://images.unsplash.com/photo-1614064641938-3bbee52942c7?q=80&w=2070",
+          "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=2072",
         description:
-          "A real malware recovery case study: how we restored a hacked WooCommerce store in 6 hours and secured it against future attacks.",
+          "The honest comparison between custom theme development and Elementor — with real performance data.",
         views: "3.2k",
         author: "Ali Raza",
       },
     ],
     testimonials: [
       {
-        quote:
-          "Our site went from a 42 to a 98 PageSpeed score and loads in under 2 seconds. Monthly leads tripled within 60 days of launch — we should have done this years ago.",
-        name: "Jennifer Walsh",
-        designation: "Managing Partner, Walsh & Associates Law",
-        src: T2,
+        quote: "Our new WordPress site is fast, beautiful, and easy to manage.",
+        name: "Hassan Raza",
+        designation: "Business Owner",
+        src: WebClient1,
       },
       {
         quote:
-          "They restored our hacked WooCommerce store in under 6 hours with zero data loss. The security plan they set up since has been bulletproof — zero incidents in 18 months.",
-        name: "Tom Nakamura",
-        designation: "Founder, Artisan Goods Co.",
-        src: T7,
+          "They redesigned our WordPress store from scratch. The speed improvement and clean design completely changed how customers interact with us.",
+        name: "Marcus Hayes",
+        designation: "Operations Lead, Grindhouse Coffee Roasters",
+        src: WebClient2,
       },
       {
         quote:
-          "Our marketing coordinator now updates the website herself — blog posts, team pages, service updates — without ever asking a developer. The Elementor training was excellent.",
-        name: "Claire Dubois",
-        designation: "Marketing Director, Summit Advisory Group",
-        src: T4,
+          "Professional, fast, and easy to update. Our team manages the site with zero technical knowledge thanks to their Elementor build.",
+        name: "Natalie Reyes",
+        designation: "Brand Manager, Home & Hearth Co.",
+        src: WebClient3,
       },
     ],
     faqs: [
@@ -2802,6 +2668,6 @@ export const servicesData = [
     ctaButton: "Get a Free Quote",
     ctaLink: "/contact",
     ctaBg:
-      "https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=2070",
+      "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=2072",
   },
 ];
