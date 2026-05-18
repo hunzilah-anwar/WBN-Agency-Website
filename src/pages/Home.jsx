@@ -16,6 +16,7 @@ import FeaturedProjectImg from "../assets/featured-project.webp";
 import BlogBg from "../assets/blog-bg.jpg";
 import Counter from "../components/Counter";
 import ServicesImage from "../assets/Explore-Services.png";
+import PerformanceImg from "../assets/performance-img.jpeg";
 
 const Home = () => {
   // const projects = [
@@ -120,27 +121,24 @@ const Home = () => {
   return (
     <>
       <section
-        className="relative overflow-hidden w-full sm:min-h-screen bg-cover sm:bg-position-[85%] bg-position-[78%]
-      before:content-[''] before:absolute before:inset-0 
-      before:bg-[linear-gradient(90deg,rgba(23,33,46,0.92)_40%,rgba(0,0,0,0)_100%)] 
-      before:pointer-events-none flex items-center px-4 sm:px-12 sm:py-24 pt-40 py-20"
+        className="relative overflow-hidden w-full bg-cover sm:bg-position-[85%] bg-position-[78%] before:content-[''] before:absolute before:inset-0 before:bg-[linear-gradient(90deg,rgba(23,33,46,0.92)_40%,rgba(0,0,0,0)_100%)] before:pointer-events-none flex items-center px-4 sm:px-12 pt-35 pb-25 md:pt-40 md:pb-30"
         style={{ backgroundImage: `url(${HeroBg})` }}
       >
         <div className="z-50 max-w-2xl w-full">
-          <h1 className="font-sans text-white text-2xl md:text-5xl font-black leading-tight flex flex-col justify-start">
+          <h1 className="font-sans text-white text-2xl md:text-4xl lg:text-5xl font-black leading-tight flex flex-col justify-start">
             Where Creativity Meets{" "}
             <span className="text-secondery">Computational Power</span>
           </h1>
-          <p className="mt-4 text-gray-300 text-sm sm:max-w-xl max-w-sm font-sans">
+          <p className="mt-4 text-gray-300 text-sm lg:max-w-xl max-w-sm font-sans">
             From stunning web experiences and high-end graphics to custom tool
             development and advanced machine learning models, we provide the
             full-stack solutions your business needs to scale in the digital
             age.
           </p>
-          <form className="relative flex items-center justify-start group/form max-w-xl mt-8">
+          <form className="relative flex items-center justify-start group/form md:max-w-xl max-w-100 mt-8">
             <div className="rounded-full relative flex w-full bg-white border border-gray-200 shadow-xl overflow-hidden">
               {/* Email Icon */}
-              <div className="flex items-center justify-center sm:pl-4 pl-2 text-gray-400">
+              <div className="flex items-center justify-center md:pl-4 pl-2 text-gray-400">
                 <svg
                   className="w-5 h-5"
                   fill="none"
@@ -161,11 +159,11 @@ const Home = () => {
                 type="email"
                 required
                 placeholder="Enter your business email"
-                className="w-full bg-transparent sm:px-4 px-2 sm:py-4 py-3 md:py-5 sm:text-sm text-xs text-gray-900 outline-none placeholder:text-gray-400 font-medium"
+                className="w-full bg-transparent md:px-4 px-2 md:py-4 py-3 xl:py-5 md:text-sm text-xs text-gray-900 outline-none placeholder:text-gray-400 font-medium"
               />
 
               {/* Modern Action Button */}
-              <button className="rounded-full group/btn relative sm:px-6 px-1 sm:py-5 py-3 bg-black text-white text-[10px] sm:text-xs sm:font-black uppercase tracking-widest overflow-hidden transition-all duration-300 whitespace-nowrap cursor-pointer w-45">
+              <button className="rounded-full group/btn relative md:px-6 px-1 md:py-5 py-3 bg-black text-white text-[10px] md:text-xs md:font-black uppercase tracking-widest overflow-hidden transition-all duration-300 whitespace-nowrap cursor-pointer w-45">
                 {/* 45-Degree Hover Layer (Violet) */}
                 <div className="absolute top-[-80%] left-[-80%] w-[200%] h-[300%] z-0 bg-secondery rotate-45 translate-y-[150%] group-hover/btn:translate-y-[-30%] transition-transform duration-500 ease-out" />
 
@@ -197,7 +195,7 @@ const Home = () => {
       </section>
       <section
         style={fixedBgStyle}
-        className="relative sm:py-20 py-10 sm:px-6 px-4 border-y-2 border-[#03042a]"
+        className="relative py-10 sm:px-6 px-4 border-y-2 border-[#03042a]"
       >
         {/* Light Overlay for text readability */}
         <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12 relative z-10">
@@ -217,7 +215,7 @@ const Home = () => {
         <div className="absolute inset-0 bg-black/90"></div>
         <AgencyServices />
       </section>
-      <section className="bg-[#00042A] sm:py-28 py-10 overflow-hidden">
+      <section className="bg-[#00042A] sm:py-16 py-10 overflow-hidden">
         <div className="relative max-w-7xl mx-auto sm:px-6 px-4">
           <div className="">
             <p className="text-[10px] font-black uppercase tracking-[0.4em] text-secondery">
@@ -246,7 +244,7 @@ const Home = () => {
               outstanding client satisfaction.
             </p>
           </div>
-          <div className="grid lg:grid-cols-2 gap-20 items-center">
+          <div className="grid lg:grid-cols-2 gap-20 items-start">
             {/* LEFT CONTENT */}
             <div className="space-y-8">
               {[
@@ -307,7 +305,7 @@ const Home = () => {
               {/* MAIN IMAGE */}
               <div className="relative overflow-hidden border border-white/10">
                 <img
-                  src={ServicesImage}
+                  src={PerformanceImg}
                   alt="WBN Agency Success"
                   className="w-full h-120 object-cover"
                 />

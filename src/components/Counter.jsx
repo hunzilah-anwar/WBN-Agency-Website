@@ -24,7 +24,7 @@ const Counter = ({ value, label, light = false }) => {
   return (
     <div ref={ref} className="space-y-1 text-center">
       <h3
-        className={`text-5xl font-black tracking-tighter ${light ? "text-black" : "text-white"}`}
+        className={`md:text-5xl text-3xl font-black ${light ? "text-black" : "text-white"}`}
       >
         {count}
         {value.replace(/[0-9]/g, "")}

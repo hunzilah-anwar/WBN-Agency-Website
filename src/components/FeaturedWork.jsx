@@ -43,7 +43,7 @@ const FeaturedWork = () => {
   }
 
   return (
-    <section className="relative min-h-screen w-full bg-[#050505] overflow-hidden flex flex-col items-center justify-center sm:py-20 py-10 sm:px-6 px-4 font-sans">
+    <section className="relative min-h-screen w-full bg-[#050505] overflow-hidden flex flex-col items-center justify-center sm:py-16 py-10 sm:px-6 px-4 font-sans">
       {/* BACKGROUND */}
       <div
         className="absolute inset-0 opacity-40 grayscale bg-fixed"
