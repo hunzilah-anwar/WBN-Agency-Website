@@ -55,7 +55,7 @@ const ProjectSlider = ({ projects, parentSlug }) => {
   return (
     <div className="relative w-full rounded-2xl overflow-hidden border border-white/10 shadow-2xl bg-black/40 backdrop-blur-xl">
       <div className="grid lg:grid-cols-2">
-        <div className="h-75 lg:h-125 overflow-hidden">
+        <div className="h-full overflow-hidden">
           <AnimatePresence mode="wait">
             <motion.img
               key={index}
@@ -63,8 +63,8 @@ const ProjectSlider = ({ projects, parentSlug }) => {
               initial={{ opacity: 0, scale: 1.1 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.9 }}
-              transition={{ duration: 0.8 }}
-              className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000"
+              transition={{ duration: 0.2 }}
+              className="w-full h-full object-cover object-left transition-all duration-1000"
             />
           </AnimatePresence>
         </div>
@@ -319,7 +319,7 @@ const ServicePages = () => {
                 <img
                   src={service.sectionImage}
                   alt={service.title}
-                  className="rounded w-100 h-50 object-cover grayscale hover:grayscale-0 transition-all duration-1000"
+                  className="rounded w-100 h-50 object-cover transition-all duration-1000"
                 />
               </div>
             </div>
@@ -468,7 +468,7 @@ const ServicePages = () => {
               <div className="relative p-1 bg-linear-to-br from-cyan-500/20 to-purple-500/20 rounded-2xl">
                 <img
                   src={service.processImage}
-                  className="h-auto w-full object-cover grayscale hover:grayscale-0 transition-all duration-1000 rounded-2xl"
+                  className="h-auto w-full object-cover transition-all duration-1000 rounded-2xl"
                   alt={service.title}
                 />
               </div>

@@ -13,7 +13,7 @@ import { Link } from "react-router-dom";
 
 // Background for even sections
 const fixedBgStyle = {
-  backgroundImage: `url('https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=2070')`,
+  backgroundImage: `url('https://images.unsplash.com/photo-1759661966728-4a02e3c6ed91?q=80&w=1032&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')`,
   backgroundAttachment: "fixed",
   backgroundSize: "cover",
   backgroundPosition: "center",
@@ -89,7 +89,7 @@ const CaseStudies = () => {
           >
             <div className="relative group rounded-2xl overflow-hidden border border-white/10">
               <img
-                src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=2070&auto=format&fit=crop"
+                src="https://images.unsplash.com/photo-1759661966728-4a02e3c6ed91?q=80&w=1032&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 alt="Hero Visual"
                 className="w-full h-110 object-cover scale-105 group-hover:scale-110 transition duration-700"
               />
