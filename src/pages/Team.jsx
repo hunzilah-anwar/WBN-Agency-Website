@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { ArrowUpRight, Cpu, Zap, Globe } from "lucide-react";
 import GlowButton from "../components/GlowButton";
-import CEOImage from "../assets/Mudussir.png";
+import CEOImage from "../assets/Mudassir.png";
 import HamzaImg from "../assets/hamza-team.jpeg"
 import RahulImg from "../assets/rahul-team.jpeg"
 import MaryamImg from "../assets/maryam-team.jpeg"
