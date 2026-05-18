@@ -56,7 +56,7 @@ const FeaturedWork = () => {
       <div className="absolute inset-0 bg-black/60 z-0" />
 
       {/* HEADER */}
-      <div className="relative z-10 w-full max-w-6xl flex flex-col justify-between items-center gap-6 mb-16 pb-20">
+      <div className="relative z-10 w-full max-w-6xl flex flex-col justify-between items-center gap-6 mb-20">
         <h2 className="sm:text-5xl text-3xl font-black text-white uppercase tracking-tighter italic">
           Featured Work
         </h2>
@@ -70,7 +70,7 @@ const FeaturedWork = () => {
 
       <div className="relative">
         {/* ARROWS */}
-        <div className="absolute right-0 -top-20 flex gap-1">
+        <div className="absolute right-0 -top-15 flex gap-1">
           <button
             onClick={prev}
             className="w-14 h-14 border border-white/20 bg-black/40 text-white flex items-center justify-center hover:bg-secondery z-20 transition ease-in-out duration-300 cursor-pointer"
@@ -88,7 +88,7 @@ const FeaturedWork = () => {
 
         {/* SLIDER WRAPPER */}
         <div
-          className="relative z-10 w-full max-w-5xl overflow-hidden sm:pb-20 pb-10"
+          className="relative z-10 w-full max-w-5xl overflow-hidden sm:pb-16 pb-10"
           onMouseEnter={() => setIsPaused(true)}
           onMouseLeave={() => setIsPaused(false)}
         >

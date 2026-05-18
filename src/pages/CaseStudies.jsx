@@ -110,6 +110,7 @@ const CaseStudies = () => {
           </motion.div>
         </div>
       </section>
+      {/* SECTION 2 SERVICE CARDS */}
       <section className="py-8 relative bg-secondery overflow-hidden">
         {/* The Wrapper with Faded Edges */}
         <div className="flex overflow-hidden">

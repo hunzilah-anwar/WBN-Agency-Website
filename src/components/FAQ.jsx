@@ -10,7 +10,7 @@ const FAQ = ({ faqs }) => {
   };
 
   return (
-    <section className="w-full sm:py-20 py-10 sm:px-6 px-2 bg-[#00042A]">
+    <section className="w-full sm:py-16 py-10 sm:px-6 px-2 bg-[#00042A]">
       <div className="max-w-6xl mx-auto sm:px-6 px-2">
         
         {/* ===== Heading ===== */}
@@ -40,7 +40,7 @@ const FAQ = ({ faqs }) => {
                   onClick={() => toggleFAQ(index)}
                   className="w-full flex items-center justify-between py-5 text-left cursor-pointer"
                 >
-                  <span className="text-white text-sm md:text-2xl font-medium">
+                  <span className="text-white text-sm md:text-xl font-medium">
                     {faq.question}
                   </span>
 

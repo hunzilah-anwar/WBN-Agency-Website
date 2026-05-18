@@ -13,7 +13,7 @@ const WhitepaperSection = () => {
   };
 
   return (
-    <section className="relative w-full sm:py-24 py-10 sm:px-6 px-4 overflow-hidden bg-[#0a021a]">
+    <section className="relative w-full py-10 sm:px-6 px-4 overflow-hidden bg-[#0a021a]">
       {/* HUMAN DESIGN ELEMENT: The "Silk" Aura Gradient */}
       <div className="absolute inset-0 pointer-events-none">
         {/* Deep Indigo Base */}
@@ -30,7 +30,7 @@ const WhitepaperSection = () => {
       </div>
 
       <div className="relative z-10 max-w-6xl mx-auto">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid md:grid-cols-2 grid-cols-1 gap-8 items-center">
           {/* LEFT SIDE: Content & Form */}
           <div className="space-y-12">
             <AnimatePresence mode="wait">

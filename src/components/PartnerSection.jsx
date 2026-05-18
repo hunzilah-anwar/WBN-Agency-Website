@@ -37,7 +37,7 @@ const brandsRow = [
 
 const PartnerSection = () => {
   return (
-    <section className="relative w-full bg-[#00042A] sm:pt-20 pt-10 sm:px-6 px-4 overflow-hidden">
+    <section className="relative w-full bg-[#00042A] sm:pt-16 pt-10 sm:px-6 px-4 overflow-hidden">
       {/* BACKGROUND GLOW */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-[-20%] left-[-10%] w-200 h-200 rounded-full bg-[#00042A]/20 blur-[160px] opacity-50" />

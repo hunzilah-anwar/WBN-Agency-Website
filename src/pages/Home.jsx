@@ -121,7 +121,7 @@ const Home = () => {
   return (
     <>
       <section
-        className="relative overflow-hidden w-full bg-cover sm:bg-position-[85%] bg-position-[78%] before:content-[''] before:absolute before:inset-0 before:bg-[linear-gradient(90deg,rgba(23,33,46,0.92)_40%,rgba(0,0,0,0)_100%)] before:pointer-events-none flex items-center px-4 sm:px-12 pt-35 pb-25 md:pt-40 md:pb-30"
+        className="relative overflow-hidden w-full bg-cover sm:bg-position-[85%] bg-position-[78%] before:content-[''] before:absolute before:inset-0 before:bg-[linear-gradient(90deg,rgba(23,33,46,0.92)_40%,rgba(0,0,0,0)_100%)] before:pointer-events-none flex items-center px-4 sm:px-12 pt-35 pb-25 md:pt-45 md:pb-30"
         style={{ backgroundImage: `url(${HeroBg})` }}
       >
         <div className="z-50 max-w-2xl w-full">

@@ -147,7 +147,7 @@ const CircularTestimonials = ({
 
   return (
     <div
-      className="w-full max-w-6xl mx-auto sm:px-6 px-5 sm:py-20 py-10 overflow-visible"
+      className="w-full max-w-6xl mx-auto sm:px-6 px-5 sm:py-16 py-10 overflow-visible"
       ref={containerRef}
     >
       <div className="text-center sm:mb-20 mb-8">
