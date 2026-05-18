@@ -7,7 +7,7 @@ import HamzaImg from "../assets/hamza-team.jpeg"
 import RahulImg from "../assets/rahul-team.jpeg"
 import MaryamImg from "../assets/maryam-team.jpeg"
 import SaifImg from "../assets/saif-team.jpeg"
-import WaqasImg from "../assets/waqas-team.png"
+import WaqasImg from "../assets/waqas-team.jpeg"
 import AhadImg from "../assets/ahad-team.jpeg"
 
 /* ================= TEAM DATA ================= */
