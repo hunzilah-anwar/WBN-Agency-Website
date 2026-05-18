@@ -38,9 +38,9 @@ const FAQ = ({ faqs }) => {
                 {/* Question */}
                 <button
                   onClick={() => toggleFAQ(index)}
-                  className="w-full flex items-center justify-between py-5 text-left"
+                  className="w-full flex items-center justify-between py-5 text-left cursor-pointer"
                 >
-                  <span className="text-white text-sm md:text-3xl font-medium">
+                  <span className="text-white text-sm md:text-2xl font-medium">
                     {faq.question}
                   </span>
 

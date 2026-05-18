@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
 import { servicesData } from "../data/serviceData";
+import logo from "../assets/WBN Agency.png";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -17,14 +18,14 @@ const Footer = () => {
       </div>
 
       {/* ================= MARQUEE ================= */}
-      <div className="relative border-y border-white/5 py-4 md:py-6 mb-10 md:mb-20 overflow-hidden">
+      <div className="relative border-y border-white/5 py-4 md:py-6 mb-10 overflow-hidden">
         <div className="flex whitespace-nowrap animate-marquee">
           {Array(3)
             .fill("Partner with Us to Build Excellence • ")
             .map((text, i) => (
               <span
                 key={i}
-                className="text-[8vw] md:text-[6vw] lg:text-[5vw] font-black uppercase tracking-tighter text-transparent pr-4"
+                className="text-[6vw] md:text-[5vw] lg:text-[3vw] font-black uppercase tracking-tighter text-transparent pr-4"
                 style={{
                   WebkitTextStroke: "1px rgba(255,255,255,0.15)",
                 }}
@@ -40,10 +41,9 @@ const Footer = () => {
           {/* ================= LEFT ================= */}
           <div className="space-y-8 lg:col-span-2">
             <div className="space-y-4">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-white leading-tight tracking-tighter uppercase">
-                READY TO
-                <span className="text-secondery"> START?</span>
-              </h2>
+              <Link to="/">
+                <img src={logo} alt="Logo" className="w-30" />
+              </Link>
 
               <p className="max-w-sm text-white/70 text-xs sm:text-sm leading-relaxed">
                 We take on a limited number of projects each year to ensure deep
@@ -112,7 +112,7 @@ const Footer = () => {
             </nav>
           </div>
 
-          {/* ================= SERVICES (DUPLICATE) ================= */}
+          {/* ================= Agency Location ================= */}
           <div className="space-y-4 sm:space-y-6">
             <h2 className="text-lg sm:text-xl font-bold text-white uppercase">
               Agency Location
@@ -126,7 +126,7 @@ const Footer = () => {
         </div>
 
         {/* ================= BOTTOM ================= */}
-        <div className="mt-10 md:mt-24 pt-6 md:pt-8 border-t border-white/5">
+        <div className="mt-10 pt-6 md:pt-8 border-t border-white/5">
           <p className="text-center text-xs sm:text-sm text-white">
             &copy; {currentYear}{" "}
             <Link to={"/"} className="text-secondery underline">

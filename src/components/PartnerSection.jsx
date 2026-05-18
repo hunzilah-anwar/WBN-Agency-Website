@@ -8,34 +8,7 @@ import VideoEditing from "../assets/video-editing.png";
 import Amazon from "../assets/amazon.png";
 import { Link } from "react-router-dom";
 
-const brandsRow1 = [
-  {
-    name: "Web Development",
-    url: WebDevImg,
-  },
-  {
-    name: "Digital Marketing",
-    url: DigitalMarketingImg,
-  },
-  {
-    name: "Amazon",
-    url: Amazon,
-  },
-  {
-    name: "Tik Tok",
-    url: TiktokImg,
-  },
-  {
-    name: "Youtube",
-    url: YoutubeImg,
-  },
-  {
-    name: "Video Editing",
-    url: VideoEditing,
-  },
-];
-
-const brandsRow2 = [
+const brandsRow = [
   {
     name: "Web Development",
     url: WebDevImg,
@@ -64,7 +37,7 @@ const brandsRow2 = [
 
 const PartnerSection = () => {
   return (
-    <section className="relative w-full bg-[#00042A] sm:py-20 py-10 sm:px-6 px-4 overflow-hidden">
+    <section className="relative w-full bg-[#00042A] sm:pt-20 pt-10 sm:px-6 px-4 overflow-hidden">
       {/* BACKGROUND GLOW */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-[-20%] left-[-10%] w-200 h-200 rounded-full bg-[#00042A]/20 blur-[160px] opacity-50" />
@@ -96,23 +69,14 @@ const PartnerSection = () => {
       {/* MARQUEE ROW 1 */}
       <div className="flex overflow-hidden gap-8">
         <div className="flex min-w-full gap-8 animate-marquee">
-          {[...brandsRow1, ...brandsRow1].map((brand, i) => (
-            <LogoCard key={i} brand={brand} />
-          ))}
-        </div>
-      </div>
-
-      {/* MARQUEE ROW 2 */}
-      <div className="flex overflow-hidden gap-8 mt-10">
-        <div className="flex min-w-full gap-8 animate-marquee-reverse">
-          {[...brandsRow2, ...brandsRow2].map((brand, i) => (
+          {[...brandsRow, ...brandsRow].map((brand, i) => (
             <LogoCard key={i} brand={brand} />
           ))}
         </div>
       </div>
 
       {/* CTA */}
-      <div className="sm:mt-24 mt-10 text-center">
+      <div className="sm:mt-24 mt-10 text-center pb-20 border-b border-white/10">
         <Link to="/casestudies">
           <button className="relative sm:px-10 px-4 sm:py-5 py-2 bg-white text-black sm:font-bold font-medium uppercase sm:text-sm text-[12px] cursor-pointer tracking-widest overflow-hidden group">
             <span className="relative z-10 tracking-tight">

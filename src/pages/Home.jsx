@@ -4,7 +4,6 @@ import GlowButton from "../components/GlowButton";
 import { motion, AnimatePresence } from "framer-motion";
 import { Check, CheckIcon, ArrowUpRight, X } from "lucide-react";
 
-import TrophyImage from "../assets/web-designs-trophy.png";
 import FeaturedWork from "../components/FeaturedWork";
 import AgencyServices from "../components/AgencyServices";
 import PartnerSection from "../components/PartnerSection";
@@ -16,6 +15,8 @@ import BlogCard from "../components/BlogCard";
 import FeaturedProjectImg from "../assets/featured-project.webp";
 import BlogBg from "../assets/blog-bg.jpg";
 import Counter from "../components/Counter";
+import ServicesImage from "../assets/Explore-Services.png";
+
 const Home = () => {
   // const projects = [
   //   {
@@ -306,7 +307,7 @@ const Home = () => {
               {/* MAIN IMAGE */}
               <div className="relative overflow-hidden border border-white/10">
                 <img
-                  src={TrophyImage}
+                  src={ServicesImage}
                   alt="WBN Agency Success"
                   className="w-full h-120 object-cover"
                 />
