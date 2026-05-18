@@ -57,8 +57,6 @@ const Home = () => {
     .map((service) => service.testimonials?.[0])
     .filter(Boolean);
 
-  console.log(homeTestimonials);
-
   return (
     <>
       <section
