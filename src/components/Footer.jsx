@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
 import { servicesData } from "../data/serviceData";
-import logo from "../assets/WBN Agency.png";
+import logo from "../assets/footer-logo.png";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -42,7 +42,15 @@ const Footer = () => {
           <div className="space-y-8 lg:col-span-2">
             <div className="space-y-4">
               <Link to="/">
-                <img src={logo} alt="Logo" className="w-30" />
+                <img
+                  src={logo}
+                  alt="Logo"
+                  className="w-30"
+                  style={{
+                    filter:
+                      "brightness(0) saturate(100%) invert(30%) sepia(95%) saturate(2200%) hue-rotate(205deg) brightness(95%) contrast(95%)",
+                  }}
+                />
               </Link>
 
               <p className="max-w-sm text-white/70 text-xs sm:text-sm leading-relaxed">

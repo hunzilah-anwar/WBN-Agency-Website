@@ -17,74 +17,9 @@ import BlogBg from "../assets/blog-bg.jpg";
 import Counter from "../components/Counter";
 import ServicesImage from "../assets/Explore-Services.png";
 import PerformanceImg from "../assets/performance-img.jpeg";
+import { servicesData } from "../data/serviceData";
 
 const Home = () => {
-  // const projects = [
-  //   {
-  //     title: "Andersen Global",
-  //     category: "Web Design",
-  //     desc: "Corporate finance & consulting platform with modern UX focused on clarity, trust, and performance.",
-  //     image: "https://www.loungelizard.com/wp-content/uploads/Andersen_CS.png",
-  //     tags: ["Finance", "Corporate", "UX Design"],
-  //     tech: ["React", "UI/UX", "Tailwind"],
-  //     duration: "3 Months",
-  //     link: "#",
-  //     featured: true,
-  //   },
-  //   {
-  //     title: "Colorado Rafting",
-  //     category: "Development",
-  //     desc: "Adventure booking platform with immersive booking flow and smooth user experience for travelers.",
-  //     image:
-  //       "https://www.loungelizard.com/wp-content/uploads/ll_portfolio-ava.jpg",
-  //     tags: ["Travel", "Booking System", "UI Design"],
-  //     tech: ["Next.js", "Node.js", "MongoDB"],
-  //     duration: "2.5 Months",
-  //     link: "#",
-  //     featured: false,
-  //   },
-  //   {
-  //     title: "E-Commerce Store",
-  //     category: "Shopify",
-  //     desc: "High converting online store with optimized checkout flow and conversion-focused UI design.",
-  //     image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30",
-  //     tags: ["E-Commerce", "Shopify", "Conversion"],
-  //     tech: ["Shopify", "Liquid", "JS"],
-  //     duration: "4 Months",
-  //     link: "#",
-  //     featured: true,
-  //   },
-  // ];
-  const yourData = [
-    {
-      quote:
-        "The integration of Meta AI into the classic Wayfarer silhouette is seamless. It’s the first time wearable tech actually feels like a fashion statement rather than a gadget.",
-      name: "Elena Rodriguez",
-      designation: "Creative Director @ Vogue",
-      src: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1374&auto=format&fit=crop",
-    },
-    {
-      quote:
-        "In-lens intelligence during my training sessions is a total game changer. Having my stats visible without breaking my stride is exactly what the future of performance looks like.",
-      name: "Marcus Chen",
-      designation: "Pro Ironman Athlete",
-      src: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1374&auto=format&fit=crop",
-    },
-    {
-      quote:
-        "We've been waiting for hands-free connectivity that doesn't look bulky. These glasses are a masterpiece of engineering and style. Digital Silk really captured the essence.",
-      name: "Julian Vane",
-      designation: "Tech Entrepreneur",
-      src: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1374&auto=format&fit=crop",
-    },
-    {
-      quote:
-        "The audio quality and voice command responsiveness are incredible. I can manage my entire digital life while keeping my phone in my pocket. Pure freedom.",
-      name: "Sarah Jenkins",
-      designation: "Digital Nomad",
-      src: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1374&auto=format&fit=crop",
-    },
-  ];
   const faqs = [
     {
       question:
@@ -118,10 +53,16 @@ const Home = () => {
     backgroundPosition: "center",
   };
 
+  const homeTestimonials = servicesData
+    .map((service) => service.testimonials?.[0])
+    .filter(Boolean);
+
+  console.log(homeTestimonials);
+
   return (
     <>
       <section
-        className="relative overflow-hidden w-full bg-cover sm:bg-position-[85%] bg-position-[78%] before:content-[''] before:absolute before:inset-0 before:bg-[linear-gradient(90deg,rgba(23,33,46,0.92)_40%,rgba(0,0,0,0)_100%)] before:pointer-events-none flex items-center px-4 sm:px-12 pt-35 pb-25 md:pt-45 md:pb-30"
+        className="relative overflow-hidden w-full bg-cover sm:bg-position-[85%] bg-position-[78%] before:content-[''] before:absolute before:inset-0 before:bg-[linear-gradient(90deg,rgba(23,33,46,0.92)_40%,rgba(0,0,0,0)_100%)] before:pointer-events-none flex items-center px-4 sm:px-12 pt-35 pb-25 md:pt-45 md:pb-35"
         style={{ backgroundImage: `url(${HeroBg})` }}
       >
         <div className="z-50 max-w-2xl w-full">
@@ -332,7 +273,7 @@ const Home = () => {
       <PartnerSection />
       <section className="bg-[#00042A]">
         <CircularTestimonials
-          testimonials={yourData}
+          testimonials={homeTestimonials}
           autoplay={true}
           colors={{
             arrowBackground: "#050505",
